@@ -33,7 +33,12 @@ rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm
 
 rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-sudo dnf install google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts
+#Performance Tweak
+bash -c 'echo "vm.swappiness=1" >> /etc/sysctl.conf'
+bash -c 'echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf'
+sysctl -p /etc/sysctl.conf
+
+dnf install google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts
 
 git clone https://github.com/ryanoasis/nerd-fonts.git
 chmod +x ./nerd-fonts/install.sh
