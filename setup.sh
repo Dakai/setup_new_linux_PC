@@ -33,7 +33,13 @@ rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm
 
 rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-dnf -y install git
+sudo dnf install google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts
+
+git clone https://github.com/ryanoasis/nerd-fonts.git
+chmod +x ./nerd-fonts/install.sh
+./nerd-fonts/install.sh jetbrains
+
+dnf install zsh wget -y
 
 #setup Vim
 dnf -y install vim
