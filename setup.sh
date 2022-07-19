@@ -35,6 +35,10 @@ rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release
 
 dnf -y install git
 dnf -y install vim
+mkdir -p ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/colors ~/.vim/plugged
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 dnf -y install neovim
 
 dnf copr enable kwizart/fedy -y
