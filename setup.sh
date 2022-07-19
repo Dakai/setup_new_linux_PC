@@ -34,12 +34,21 @@ rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm
 rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 dnf -y install git
-dnf -y install vim
-mkdir -p ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/colors ~/.vim/plugged
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+#setup Vim
+dnf -y install vim
+mkdir -p /home/dakai/.vim /home/dakai/.vim/autoload /home/dakai/.vim/backup /home/dakai/.vim/colors /home/dakai/.vim/plugged
+curl -fLo /home/dakai/.vim/autoload/plug.vim --create-dirs \
+	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln ./.vimrc /home/dakai/.vimrc
+
+#Setup neovim
 dnf -y install neovim
+mkdir -p /home/dakai/.config/nvim
+ln ./coc-settings.json /home/dakai/.config/nvim/coc-settings.json
+ln ./coc.vim /home/dakai/.config/nvim/coc.vim
+ln ./init.vim /home/dakai/.config/nvim/init.vim
+ln ./plug.vim /home/dakai/.config/nvim/plug.vim
 
 dnf copr enable kwizart/fedy -y
 dnf install fedy -y
