@@ -8,10 +8,7 @@ then
 else
 	echo -e "\n You have proper permissions, continue\n"
 fi
-#install KODI
-dnf -y install kodi
 
-#install Plex
 cat > /etc/yum.repos.d/plex.repo << "EOF"
 [Plexrepo]
 name=plexrepo
@@ -21,7 +18,9 @@ gpgkey=https://downloads.plex.tv/plex-keys/PlexSign.key
 gpgcheck=1
 EOF
 
-dnf install plexmediaserver -y
+#install Kodi & Plex
+dnf -y install kodi plexmediaserver
+
 systemctl start plexmediaserver
 systemctl enable plexmediaserver
 
