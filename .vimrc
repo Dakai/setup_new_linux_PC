@@ -98,3 +98,4 @@ let g:indentLine_color_gui = '#CCCCD6'
 let g:indentLine_char = '┆'
 let g:airline_theme = 'embark'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
