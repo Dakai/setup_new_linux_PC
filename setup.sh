@@ -33,6 +33,10 @@ rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm
 
 rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+rpm -Uhv https://mkvtoolnix.download/fedora/bunkus-org-repo-2-4.noarch.rpm
+
+dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+
 #Performance Tweak
 bash -c 'echo "vm.swappiness=1" >> /etc/sysctl.conf'
 bash -c 'echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf'
@@ -61,7 +65,7 @@ cat > /etc/ld.so.conf.d/gtk3.conf << "EOF"
 EOF
 ldconfig
 
-dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift anydesk tailscale
+dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift anydesk tailscale mkvtoolnix mkvtoolnix-gui sublime-text
 
 git clone https://github.com/ryanoasis/nerd-fonts.git
 chmod +x ./nerd-fonts/install.sh
