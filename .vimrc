@@ -1,4 +1,3 @@
-set termguicolors
 set encoding=UTF-8
 set hid                     " fix airline slow
 set nocompatible            " disable compatibility to old-time vi
@@ -56,6 +55,9 @@ set shiftwidth=2
 " Disable quote concealing in JSON files
 let g:vim_json_conceal=0
 
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
@@ -73,18 +75,26 @@ Plug 'preservim/nerdtree'
 Plug 'mileszs/ack.vim'
 Plug 'psliwka/vim-smoothie'
 Plug 'ryanoasis/vim-devicons'
+"Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 call plug#end()
 
+colorscheme embark
+let g:embark_terminal_italics = 1
+set background=dark
+"let g:lightline = {
+"\ 'colorscheme': 'embark',
+"\ }
 let NERDTreeShowHidden=1
-colorscheme gruvbox
-set background=light
+"colorscheme gruvbox
+"set background=light
 "Indent Line Plug Conf
 let g:indentLine_color_term = 255
 " GVim
 let g:indentLine_color_gui = '#CCCCD6'
 let g:indentLine_char = '┆'
-
+let g:airline_theme = 'embark'
 let g:airline#extensions#tabline#enabled = 1
