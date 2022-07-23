@@ -65,7 +65,7 @@ cat > /etc/ld.so.conf.d/gtk3.conf << "EOF"
 EOF
 ldconfig
 
-dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift anydesk tailscale mkvtoolnix mkvtoolnix-gui sublime-text
+dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift anydesk tailscale mkvtoolnix mkvtoolnix-gui sublime-text alcarte
 
 git clone https://github.com/ryanoasis/nerd-fonts.git
 chmod +x ./nerd-fonts/install.sh
@@ -86,7 +86,7 @@ ln ./plug.vim /home/dakai/.config/nvim/plug.vim
 
 #Setup Alacritty
 mkdir -p /home/dakai/.config/alacritty
-ln ./alacritty.yml /home/dakai/.config/alacritty/alacritty.yml 
+ln ./alacritty.yml /home/dakai/.config/alacritty/alacritty.yml
 
 systemctl enable --now syncthing@USER.service
 
