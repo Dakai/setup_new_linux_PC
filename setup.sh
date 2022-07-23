@@ -37,18 +37,26 @@ rpm -Uhv https://mkvtoolnix.download/fedora/bunkus-org-repo-2-4.noarch.rpm
 
 dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
 
+#install tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+
 #Performance Tweak
-bash -c 'echo "vm.swappiness=1" >> /etc/sysctl.conf'
-bash -c 'echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf'
+if ! grep -q 'vm.swappiness=1' /etc/sysctl.conf; then
+	bash -c 'echo "vm.swappiness=1" >> /etc/sysctl.conf'
+	echo 'append "vm.swappiness=1" >> /etc/sysctl.conf'
+fi
+
+if ! grep -q 'vm.vfs_cache_pressure=50' /etc/sysctl.conf; then
+	bash -c 'echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf'
+	echo 'append "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf'
+fi
+
 sysctl -p /etc/sysctl.conf
 
 dnf copr enable kwizart/fedy -y
 dnf copr enable elxreno/preload -y
-dnf copr enable dawid/better_fonts
+dnf copr enable dawid/better_fonts -y
 dnf copr enable atim/zerotier-one -y
-
-#install tailscale
-dnf config-manager --add-repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo\ -y
 
 #insatll anydesk
 cat > /etc/yum.repos.d/AnyDesk-Fedora.repo << "EOF"
@@ -65,7 +73,7 @@ cat > /etc/ld.so.conf.d/gtk3.conf << "EOF"
 EOF
 ldconfig
 
-dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift anydesk tailscale mkvtoolnix mkvtoolnix-gui sublime-text alacarte
+dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift anydesk sublime-text alacarte
 
 git clone https://github.com/ryanoasis/nerd-fonts.git
 chmod +x ./nerd-fonts/install.sh
