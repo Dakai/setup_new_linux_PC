@@ -97,8 +97,6 @@ mkdir -p /home/dakai/.config/alacritty
 ln ./alacritty.yml /home/dakai/.config/alacritty/alacritty.yml
 chown -R dakai:dakai /home/dakai/.config/
 
-systemctl enable --now syncthing@USER.service
-
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
 
 if grep -q 'socks4 127.0.0.1' /etc/proxychains.conf ; then
@@ -106,5 +104,9 @@ if grep -q 'socks4 127.0.0.1' /etc/proxychains.conf ; then
 	bash -c 'echo "socks5 127.0.0.1 10808" >> /etc/proxychains.conf'
 fi
 
+echo -e "\n systemctl --user enable --now syncthing.service \n"
+
 systemctl enable --now tailscaled
 tailscale up
+
+
