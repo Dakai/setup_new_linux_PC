@@ -113,6 +113,8 @@ if grep -q 'socks4 127.0.0.1' /etc/proxychains.conf ; then
 	bash -c 'echo "socks5 127.0.0.1 10808" >> /etc/proxychains.conf'
 fi
 
+sudo systemctl enable zerotier-one.service
+sudo systemctl start zerotier-one.service
 echo -e "\n systemctl --user enable --now syncthing.service \n"
 
 systemctl enable --now tailscaled
