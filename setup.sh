@@ -76,7 +76,7 @@ dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-tt
 #git clone https://github.com/ryanoasis/nerd-fonts.git
 #chmod +x ./nerd-fonts/install.sh
 #./nerd-fonts/install.sh jetbrains
-
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 #setup Vim
 mkdir -p /home/dakai/.vim /home/dakai/.vim/autoload /home/dakai/.vim/backup /home/dakai/.vim/colors /home/dakai/.vim/plugged
 curl -fLo /home/dakai/.vim/autoload/plug.vim --create-dirs \
