@@ -33,7 +33,7 @@ rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm
 
 rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-rpm -Uhv https://mkvtoolnix.download/fedora/bunkus-org-repo-2-4.noarch.rpm
+#rpm -Uhv https://mkvtoolnix.download/fedora/bunkus-org-repo-2-4.noarch.rpm
 
 dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
 
@@ -73,11 +73,13 @@ cat > /etc/ld.so.conf.d/gtk3.conf << "EOF"
 EOF
 ldconfig
 
+wget https://download.copr.fedorainfracloud.org/results/dawid/better_fonts/fedora-34-x86_64/02077386-archivo-black-fonts/archivo-black-fonts-1.001-1.fc34.noarch.rpm
+dnf install -y localinstall ./archivo-black-fonts-1.001-1.fc34.noarch.rpm
 dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift anydesk sublime-text alacarte
 
-git clone https://github.com/ryanoasis/nerd-fonts.git
-chmod +x ./nerd-fonts/install.sh
-./nerd-fonts/install.sh jetbrains
+#git clone https://github.com/ryanoasis/nerd-fonts.git
+#chmod +x ./nerd-fonts/install.sh
+#./nerd-fonts/install.sh jetbrains
 
 #setup Vim
 mkdir -p /home/dakai/.vim /home/dakai/.vim/autoload /home/dakai/.vim/backup /home/dakai/.vim/colors /home/dakai/.vim/plugged
@@ -103,8 +105,10 @@ systemctl enable --now syncthing@USER.service
 
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
 
-truncate -s -"$(tail -n1 /etc/proxychains.conf | wc -c)" /etc/proxychains.conf
-bash -c 'echo "socks5 127.0.0.1 10808" >> /etc/proxychains.conf'
+if grep -q 'socks4 127.0.0.1' /etc/proxychains.conf ; then
+	truncate -s -"$(tail -n1 /etc/proxychains.conf | wc -c)" /etc/proxychains.conf
+	bash -c 'echo "socks5 127.0.0.1 10808" >> /etc/proxychains.conf'
+fi
 
 systemctl enable --now tailscaled
 tailscale up
