@@ -71,7 +71,7 @@ rm -f /tmp/anydesk_6.2.0-1_x86_64.rpm
 
 wget https://download.copr.fedorainfracloud.org/results/dawid/better_fonts/fedora-34-x86_64/02077386-archivo-black-fonts/archivo-black-fonts-1.001-1.fc34.noarch.rpm
 dnf install -y localinstall ./archivo-black-fonts-1.001-1.fc34.noarch.rpm
-dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift sublime-text alacarte
+dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift sublime-text alacarte fcitx5 fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-qt-module igt-gpu-tools
 
 #git clone https://github.com/ryanoasis/nerd-fonts.git
 #chmod +x ./nerd-fonts/install.sh
