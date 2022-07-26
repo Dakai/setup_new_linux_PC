@@ -59,15 +59,26 @@ dnf copr enable dawid/better_fonts -y
 dnf copr enable atim/zerotier-one -y
 
 #insatll anydesk
-rm /etc/yum.repos.d/AnyDesk-Fedora.repo
+wget https://www.mirrorservice.org/sites/download.opensuse.org/tumbleweed/repo/oss/x86_64/libgtkglext-x11-1_0-0-1.2.0git20110529-7.20.x86_64.rpm
+wget https://www.mirrorservice.org/sites/download.opensuse.org/tumbleweed/repo/oss/i586/libgtkglext-x11-1_0-0-1.2.0git20110529-7.20.i586.rpm
+dnf install -y localinstall libgtkglext-x11-1_0-0-1.2.0git20110529-7.20.x86_64.rpm
+dnf install -y localinstall libgtkglext-x11-1_0-0-1.2.0git20110529-7.20.i586.rpm
 
 cat > /etc/ld.so.conf.d/gtk3.conf << "EOF"
 /usr/lib64/gtk-3.0/modules
 EOF
 ldconfig
-wget -c 'https://download.anydesk.com/linux/anydesk_6.2.0-1_x86_64.rpm' -P /tmp
-rpm -ivh --nodeps /tmp/anydesk_6.2.0-1_x86_64.rpm
-rm -f /tmp/anydesk_6.2.0-1_x86_64.rpm
+
+cat > /etc/yum.repos.d/AnyDesk-Fedora.repo << "EOF" 
+[anydesk]
+name=AnyDesk Fedora - stable
+baseurl=http://rpm.anydesk.com/fedora/$basearch/
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://keys.anydesk.com/repos/RPM-GPG-KEY
+EOF
+
+dnf install anydesk -y
 
 wget https://download.copr.fedorainfracloud.org/results/dawid/better_fonts/fedora-34-x86_64/02077386-archivo-black-fonts/archivo-black-fonts-1.001-1.fc34.noarch.rpm
 dnf install -y localinstall ./archivo-black-fonts-1.001-1.fc34.noarch.rpm
@@ -82,10 +93,12 @@ XMODIFIERS="@im=fcitx5"
 EOF
 chown dakai:dakai /home/dakai/.pam_environment
 ln ./fcitx5.desktop /home/dakai/.config/autostart/fcitx5.desktop
+
 #git clone https://github.com/ryanoasis/nerd-fonts.git
 #chmod +x ./nerd-fonts/install.sh
 #./nerd-fonts/install.sh jetbrains
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
 #setup Vim
 mkdir -p /home/dakai/.vim /home/dakai/.vim/autoload /home/dakai/.vim/backup /home/dakai/.vim/colors /home/dakai/.vim/plugged
 curl -fLo /home/dakai/.vim/autoload/plug.vim --create-dirs \
