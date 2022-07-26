@@ -69,7 +69,7 @@ cat > /etc/ld.so.conf.d/gtk3.conf << "EOF"
 EOF
 ldconfig
 
-cat > /etc/yum.repos.d/AnyDesk-Fedora.repo << "EOF" 
+cat > /etc/yum.repos.d/AnyDesk-Fedora.repo << "EOF"
 [anydesk]
 name=AnyDesk Fedora - stable
 baseurl=http://rpm.anydesk.com/fedora/$basearch/
@@ -82,7 +82,7 @@ dnf install anydesk -y
 
 wget https://download.copr.fedorainfracloud.org/results/dawid/better_fonts/fedora-34-x86_64/02077386-archivo-black-fonts/archivo-black-fonts-1.001-1.fc34.noarch.rpm
 dnf install -y localinstall ./archivo-black-fonts-1.001-1.fc34.noarch.rpm
-dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift sublime-text alacarte fcitx5 fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-qt-module ffmpeg libva libva-utils intel-media-driver 
+dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift sublime-text alacarte fcitx5 fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-qt-module ffmpeg libva libva-utils intel-media-driver
 
 touch /home/dakai/.pam_environment
 #~/.xprofile for X11
@@ -94,30 +94,11 @@ EOF
 chown dakai:dakai /home/dakai/.pam_environment
 ln ./fcitx5.desktop /home/dakai/.config/autostart/fcitx5.desktop
 
-#git clone https://github.com/ryanoasis/nerd-fonts.git
-#chmod +x ./nerd-fonts/install.sh
-#./nerd-fonts/install.sh jetbrains
-#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
-#setup Vim
-mkdir -p /home/dakai/.vim /home/dakai/.vim/autoload /home/dakai/.vim/backup /home/dakai/.vim/colors /home/dakai/.vim/plugged
-curl -fLo /home/dakai/.vim/autoload/plug.vim --create-dirs \
-	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-ln ./.vimrc /home/dakai/.vimrc
-chown -R dakai:dakai /home/dakai/.vim
-chown dakai:dakai /home/dakai/.vimrc
-
-#Setup neovim
-mkdir -p /home/dakai/.config/nvim
-ln ./coc-settings.json /home/dakai/.config/nvim/coc-settings.json
-ln ./coc.vim /home/dakai/.config/nvim/coc.vim
-ln ./init.vim /home/dakai/.config/nvim/init.vim
-ln ./plug.vim /home/dakai/.config/nvim/plug.vim
-
-#Setup Alacritty
-mkdir -p /home/dakai/.config/alacritty
-ln ./alacritty.yml /home/dakai/.config/alacritty/alacritty.yml
-chown -R dakai:dakai /home/dakai/.config/
+#nerdfont jetBrains Mono
+wget -c https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip -P /tmp
+unzip /tmp/JetBrainsMono.zip "JetBrains Mono Regular Nerd Font Complete Mono.ttf" -d /tmp
+mv /tmp/"JetBrains Mono Regular Nerd Font Complete Mono.ttf" /home/dakai/.local/share/fonts
+rm -f /tmp/JetBrainsMono.zip
 
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
 
@@ -132,5 +113,3 @@ echo -e "\n systemctl --user enable --now syncthing.service \n"
 
 systemctl enable --now tailscaled
 tailscale up
-
-
