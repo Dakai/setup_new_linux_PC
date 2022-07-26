@@ -1,21 +1,21 @@
+#Check if user is root
+if [ "$EUID" -ne 0 ]
+then
+	echo -e "\n You need to be root user or run with sudo \n"
+	exit
+else
+	echo -e "\n You have proper permissions, continue\n"
+fi
+
+#su dotfiles
 #setup Vim
-mkdir -p /home/dakai/.vim /home/dakai/.vim/autoload /home/dakai/.vim/backup /home/dakai/.vim/colors /home/dakai/.vim/plugged
-curl -fLo /home/dakai/.vim/autoload/plug.vim --create-dirs \
-	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-ln ./.vimrc /home/dakai/.vimrc
-chown -R dakai:dakai /home/dakai/.vim
-chown dakai:dakai /home/dakai/.vimrc
-
-#Setup neovim
-mkdir -p /home/dakai/.config/nvim
-ln ./coc-settings.json /home/dakai/.config/nvim/coc-settings.json
-ln ./coc.vim /home/dakai/.config/nvim/coc.vim
-ln ./init.vim /home/dakai/.config/nvim/init.vim
-ln ./plug.vim /home/dakai/.config/nvim/plug.vim
-
-#Setup Alacritty
-mkdir -p /home/dakai/.config/alacritty
-ln ./alacritty.yml /home/dakai/.config/alacritty/alacritty.yml
-chown -R dakai:dakai /home/dakai/.config/
-
-
+#mkdir -p /root/.vim /root/.vim/autoload /root/.vim/backup /root/.vim/colors /root/.vim/plugged
+#curl -fLo /root/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#ln -s /home/dakai/setup_new_fedora_PC/vimrc /root/.vimrc
+#
+##Setup neovim
+#mkdir -p /root/.config/nvim
+#ln -s /home/dakai/setup_new_fedora_PC/coc-settings.json /root/.config/nvim/coc-settings.json
+#ln -s /home/dakai/setup_new_fedora_PC/coc.vim /root/.config/nvim/coc.vim
+#ln -s /home/dakai/setup_new_fedora_PC/init.vim /root/.config/nvim/init.vim
+#ln -s /home/dakai/setup_new_fedora_PC/plug.vim /root/.config/nvim/plug.vim
