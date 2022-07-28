@@ -136,8 +136,6 @@ export NVM_DIR="$HOME/.nvm"
 
 #pactl load-module module-raop-discover #Fedora enable shair-port discovery
 #android cmd-line tools
-export ANDROID_HOME=$HOME/android 
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools 
-export PATH=$PATH:$ANDROID_HOME/tools/bin 
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_SDK_ROOT=$HOME/android
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin
+#ref: https://stackoverflow.com/questions/60440509/android-command-line-tools-sdkmanager-always-shows-warning-could-not-create-se
