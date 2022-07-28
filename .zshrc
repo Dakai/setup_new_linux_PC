@@ -135,3 +135,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #pactl load-module module-raop-discover #Fedora enable shair-port discovery
+#android cmd-line tools
+export ANDROID_HOME=/home/dakai/android 
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools 
+export PATH=$PATH:$ANDROID_HOME/tools/bin 
+export PATH=$PATH:$ANDROID_HOME/platform-tools
