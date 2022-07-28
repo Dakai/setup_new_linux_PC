@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR=vim
 # Path to your oh-my-zsh installation.
-export ZSH="/home/dakai/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -136,7 +136,7 @@ export NVM_DIR="$HOME/.nvm"
 
 #pactl load-module module-raop-discover #Fedora enable shair-port discovery
 #android cmd-line tools
-export ANDROID_HOME=/home/dakai/android 
+export ANDROID_HOME=$HOME/android 
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools 
 export PATH=$PATH:$ANDROID_HOME/tools/bin 
