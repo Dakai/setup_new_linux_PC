@@ -7,7 +7,8 @@ call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
-Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
+"Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
+Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'mileszs/ack.vim'
 Plug 'psliwka/vim-smoothie'
@@ -22,6 +23,9 @@ Plug 'mxw/vim-jsx'
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 Plug 'SirVer/ultisnips'
 Plug 'mlaursen/vim-react-snippets'
+Plug 'elzr/vim-json'
+"Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+"Plug 'dart-lang/dart-vim-plugin'
 " Plug 'skywind3000/asyncrun.vim'
 "Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
 "Plug 'hankchiutw/flutter-reload.vim'
@@ -50,8 +54,6 @@ Plug 'mlaursen/vim-react-snippets'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 "Plug 'overcache/NeoSolarized'
 "Plug 'joshdick/onedark.vim'
-"Plug 'dart-lang/dart-vim-plugin'
-"Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 "Plug 'cocopon/iceberg.vim'
 "Plug 'EdenEast/nightfox.nvim'
 "Plug 'itchyny/lightline.vim'
@@ -65,7 +67,10 @@ let g:coc_global_extensions = [
 			\ 'coc-styled-components',
 			\ 'coc-pairs',
 			\ 'coc-eslint',
-			\ 'coc-prettier'
+			\ 'coc-prettier',
+			\ 'coc-json',
+			\'coc-snippets'
+			"\ 'coc-flutter-tools'
 			\ ]
 " coc-prettier setup
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
@@ -74,11 +79,11 @@ let NERDTreeShowHidden=1
 "color nightfox
 "color iceberg
 "colorscheme onedark
-colorscheme gruvbox
-set background=light
-"set background=dark
-"colorscheme embark
-"let g:embark_terminal_italics = 1
+"colorscheme gruvbox
+"set background=light
+set background=dark
+colorscheme embark
+let g:embark_terminal_italics = 1
 
 " let g:lightline = {
 " \ 'colorscheme': 'embark',
