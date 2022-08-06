@@ -2,7 +2,9 @@
 ## Install Packages
 	sudo dnf -y update
 	sudo dnf install -y git gcc-c++ make nodejs
-	
+
+## Install bun
+	curl https://bun.sh/install | bash
 
 ## Install React Native CLI
 	npm install -g react-native-cli
@@ -43,3 +45,14 @@ Start a new terminal
 	cd ProjectName
 	react-native run-android
 
+## Enable Hermes android
+Open android/app/build.gradle file in project directory,
+	project.ext.react = [
+		enableHermes: true
+		]
+
+Edit package.json file
+	"script": {
+		//...
+		"android:clean": "cd android && ./gradlew clean && cd ..",
+		},

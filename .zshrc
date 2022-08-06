@@ -139,3 +139,10 @@ export NVM_DIR="$HOME/.nvm"
 export ANDROID_SDK_ROOT=$HOME/android
 export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin
 #ref: https://stackoverflow.com/questions/60440509/android-command-line-tools-sdkmanager-always-shows-warning-could-not-create-se
+
+# bun completions
+[ -s "/home/dakai/.bun/_bun" ] && source "/home/dakai/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
