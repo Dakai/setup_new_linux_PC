@@ -6,7 +6,11 @@ set termguicolors
 call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'scrooloose/nerdcommenter'
 "Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
@@ -18,12 +22,12 @@ Plug 'morhetz/gruvbox'
 "Terminal Integration
 Plug 'nikvdp/neomux'
 Plug 'Yggdroot/indentLine'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
-Plug 'SirVer/ultisnips'
-Plug 'mlaursen/vim-react-snippets'
-Plug 'elzr/vim-json'
+Plug 'ap/vim-css-color'
+"Plug 'pangloss/vim-javascript'
+"Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+"Plug 'SirVer/ultisnips'
+"Plug 'mlaursen/vim-react-snippets'
+"Plug 'elzr/vim-json'
 "Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 "Plug 'dart-lang/dart-vim-plugin'
 " Plug 'skywind3000/asyncrun.vim'
@@ -60,21 +64,44 @@ Plug 'elzr/vim-json'
 "Plug 'bluz71/vim-nightfly-guicolors'
 call plug#end()
 "let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
+" coc config
 let g:coc_global_extensions = [
-			\ 'coc-tsserver',
-			\ 'coc-emmet',
-			\ 'coc-css',
-			\ 'coc-styled-components',
+			\	'coc-snippets',
 			\ 'coc-pairs',
+			\ 'coc-tsserver',
 			\ 'coc-eslint',
 			\ 'coc-prettier',
+			\ 'coc-styled-components',
 			\ 'coc-json',
-			\'coc-snippets'
+			"\ 'coc-emmet',
+			"\ 'coc-css',
 			"\ 'coc-flutter-tools'
 			\ ]
 " coc-prettier setup
-command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+"command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 let NERDTreeShowHidden=1
+let g:NERDTreeGitStatusWithFlags = 1
+let g:NERDTreeIgnore = ['^node_modules$']
+" sync open file with NERDTree
+" Check if NERDTree is open or active
+"function! IsNERDTreeOpen()
+"	 return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+"endfunction
+"" Call NERDTreeFind iff NERDTree is active, current window contains a
+"" modifiable
+"" " file, and we're not in vimdiff
+"function! SyncTree()
+"	if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+"		NERDTreeFind
+"		wincmd p
+"	endif
+"endfunction
+"" Highlight currently open buffer in NERDTree
+"autocmd BufEnter * call SyncTree()
+
 "colorscheme dracula
 "color nightfox
 "color iceberg
@@ -88,7 +115,8 @@ let g:embark_terminal_italics = 1
 " let g:lightline = {
 " \ 'colorscheme': 'embark',
 " \ }
-"colorscheme nightflylet g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+"colorscheme nightflylet
+"g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 
 "Indent Line Plug Conf
 let g:indentLine_color_term = 255
@@ -98,5 +126,7 @@ let g:indentLine_char = '┆'
 
 "Map Snippet trigger to shift+tab
 let g:UltiSnipsExpandTrigger="<s-tab>"
+"lightline
+"set noshowmode
 "enable airline tab
 let g:airline#extensions#tabline#enabled = 1

@@ -13,7 +13,6 @@
     "python"
   ],
   "javascript.autoClosingTags": true,
-  "typescript.autoClosingTags": true,
   "javascript.suggestionActions.enabled": false,
   "emmet.includeLanguages": [
     "javascript",
@@ -22,5 +21,6 @@
     "typescriptreact",
     "html"
   ],
-  "codeLens.enable": false
+  "codeLens.enable": false,
+  "javascript.validate.enable": false
 }
