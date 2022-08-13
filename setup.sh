@@ -139,5 +139,13 @@ sudo systemctl enable zerotier-one.service
 sudo systemctl start zerotier-one.service
 echo -e "\n systemctl --user enable --now syncthing.service \n"
 
+#stop Gnome-software and packagekitd from autostarting because of their huge RAM usage
+dconf write /org/gnome/software/allow-updates false
+dconf write /org/gnome/software/download-updates false
+mkdir -pv ~/.config/autostart && cp /etc/xdg/autostart/org.gnome.Software.desktop ~/.config/autostart/
+echo "X-GNOME-Autostart-enabled=false" >> ~/.config/autostart/org.gnome.Software.desktop
+dconf write /org/gnome/desktop/search-providers/disabled "['org.gnome.Software.desktop']"
+
+#enable talscaled
 systemctl enable --now tailscaled
 tailscale up
