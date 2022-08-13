@@ -37,8 +37,9 @@ Source rc file
 
 ## Install SDK packages
 
-Android 9 -> Api Level 28
-sdkmanager "platform-tools" "platforms;android-28" "build-tools;28.0.3" "add-ons;addon-google_apis-google-24"
+Android 12 -> Api Level 31
+
+    sdkmanager "platform-tools" "platforms;android-31" "build-tools;31.0.0" "add-ons;addon-google_apis-google-24"
 
 ## Init React Native Project
 
