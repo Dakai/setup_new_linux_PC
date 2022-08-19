@@ -1,8 +1,10 @@
 if has("nvim")
 	let g:plug_home = stdpath('data') . '/plugged'
 endif
+if (has("termguicolors"))
+  set termguicolors
+endif
 
-set termguicolors
 call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -15,7 +17,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'mileszs/ack.vim'
-Plug 'psliwka/vim-smoothie'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
@@ -23,7 +24,16 @@ Plug 'morhetz/gruvbox'
 Plug 'nikvdp/neomux'
 Plug 'Yggdroot/indentLine'
 Plug 'ap/vim-css-color'
-"Plug 'pangloss/vim-javascript'
+"Plug 'psliwka/vim-smoothie'
+Plug 'karb94/neoscroll.nvim'
+Plug 'edkolev/tmuxline.vim'
+"Js syntax highlighting
+Plug 'pangloss/vim-javascript'
+Plug 'jonstoler/werewolf.vim'
+"Jsx syntax highlighting
+"Plug 'maxmellon/vim-jsx-pretty'
+"Js syntax highlighting
+"Plug 'yuezk/vim-js'
 "Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 "Plug 'SirVer/ultisnips'
 "Plug 'mlaursen/vim-react-snippets'
@@ -44,8 +54,6 @@ Plug 'ap/vim-css-color'
 ""Plug 'flazz/vim-colorschemes'
 "Plug 'mhinz/neovim-remote'
 "Plug 'tribela/vim-transparent'
-"Plug 'yuezk/vim-js'
-"Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'honza/vim-snippets'
 ""https://getaround.tech/setting-up-vim-for-react/
 ""Syntax Highlight
@@ -107,9 +115,9 @@ let g:NERDTreeIgnore = ['^node_modules$']
 "color iceberg
 "colorscheme onedark
 "colorscheme gruvbox
+colorscheme embark
 "set background=light
 set background=dark
-colorscheme embark
 let g:embark_terminal_italics = 1
 
 " let g:lightline = {
@@ -130,3 +138,15 @@ let g:UltiSnipsExpandTrigger="<s-tab>"
 "set noshowmode
 "enable airline tab
 let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#whitespace#skip_indent_check_ft =
+  \  {'js': ['mixed-indent-file']}
+"let g:airline#extensions#whitespace#mixed_indent_algo = 2
+"let g:airline#extensions#c_like_langs=
+			\ ['arduino', 'c', 'cpp', 'cuda', 'go', 'javascript', 'ld', 'php', 'js', 'jsx']
+"silent! call airline#extensions#whitespace#disable()
+let g:airline#extensions#whitespace#enabled = 0
+
+let g:werewolf_day_themes = ['embark']
+let g:werewolf_night_themes = ['gruvbox']
+let g:werewolf_day_start = 8
+let g:werewolf_day_end = 18
