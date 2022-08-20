@@ -30,6 +30,13 @@ Plug 'edkolev/tmuxline.vim'
 "Js syntax highlighting
 Plug 'pangloss/vim-javascript'
 Plug 'jonstoler/werewolf.vim'
+
+"CPP env
+Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'vim-syntastic/syntastic'
+Plug 'rhysd/vim-clang-format'
+"CPP env end
+
 "Jsx syntax highlighting
 "Plug 'maxmellon/vim-jsx-pretty'
 "Js syntax highlighting
@@ -162,3 +169,4 @@ let g:syntastic_cpp_cpplint_exec = 'cpplint'
 " The following two lines are optional. Configure it to your liking!
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+nnoremap <Leader>f :<C-u>ClangFormat<CR>
