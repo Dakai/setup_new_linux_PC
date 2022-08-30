@@ -1,6 +1,6 @@
 runtime ./plug.vim
 runtime ./coc.vim
-
+lua require('neoscroll').setup()
 "toogle rainbow_active
 "let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
@@ -117,3 +117,8 @@ autocmd BufWritePre * :%s/\s\+$//e"
 
 " Disable quote concealing in JSON files
 let g:vim_json_conceal=0
+" More space
+res +5
+
+"Clang CPP autoformat
+nnoremap <Leader>f :<C-u>ClangFormat<CR>

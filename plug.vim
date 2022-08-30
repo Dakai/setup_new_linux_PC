@@ -6,7 +6,7 @@ if (has("termguicolors"))
 endif
 
 call plug#begin()
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'preservim/nerdtree'
 Plug 'scrooloose/nerdtree'
@@ -30,13 +30,14 @@ Plug 'edkolev/tmuxline.vim'
 "Js syntax highlighting
 Plug 'pangloss/vim-javascript'
 Plug 'jonstoler/werewolf.vim'
-
+"Plug 'tribela/vim-transparent'
 "CPP env
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'vim-syntastic/syntastic'
 Plug 'rhysd/vim-clang-format'
 "CPP env end
-
+Plug 'tpope/vim-surround'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 "Jsx syntax highlighting
 "Plug 'maxmellon/vim-jsx-pretty'
 "Js syntax highlighting
@@ -60,7 +61,6 @@ Plug 'rhysd/vim-clang-format'
 "Plug 'wesQ3/vim-windowswap'
 ""Plug 'flazz/vim-colorschemes'
 "Plug 'mhinz/neovim-remote'
-"Plug 'tribela/vim-transparent'
 "Plug 'honza/vim-snippets'
 ""https://getaround.tech/setting-up-vim-for-react/
 ""Syntax Highlight
@@ -70,7 +70,6 @@ Plug 'rhysd/vim-clang-format'
 "Plug 'w0rp/ale'
 "Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
 "Plug 'mlaursen/vim-react-snippets'
-"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 "Plug 'overcache/NeoSolarized'
 "Plug 'joshdick/onedark.vim'
 "Plug 'cocopon/iceberg.vim'
@@ -89,6 +88,7 @@ let g:coc_global_extensions = [
 			\ 'coc-prettier',
 			\ 'coc-styled-components',
 			\ 'coc-json',
+			\ 'coc-clangd',
 			"\ 'coc-emmet',
 			"\ 'coc-css',
 			"\ 'coc-flutter-tools'
@@ -163,10 +163,14 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 
+"let g:syntastic_cpp_compiler = 'clang++'
+"let g:syntastic_cpp_compiler_options = ' -std=c++17 -stdlib=libc++'
+"let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_checkers = ['cpplint']
 let g:syntastic_c_checkers = ['cpplint']
 let g:syntastic_cpp_cpplint_exec = 'cpplint'
 " The following two lines are optional. Configure it to your liking!
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-nnoremap <Leader>f :<C-u>ClangFormat<CR>
+
+let g:mkdp_auto_start = 1

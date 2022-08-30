@@ -2,53 +2,19 @@
 
 ## LSP
 
-###coc.nvim
-install coc.nvim via vim-plug
+### coc.nvim
+
+install coc.nvim via vim-plug in $HOME/.config/nvim/plug.vim
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-### Install ccls
+### coc.nvim settings for linting
 
-    sudo dnf -y update
-    sudo dnf install -y clang clang-devel llvm-devel
-    git clone --depth=1 --recursive https://github.com/MaskRay/ccls
-    cd ccls
-    cmake -H. -BRelease -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/path/to/clang+llvm-xxx
-    cmake --build Release
+Also in $HOME/.config/nvim/plug.vim
 
-install it
-
-    sudo cmake --build Release --target install
-
-### ccls configuration
-
-add .ccls file in the project folder.
-
-    clang
-    # add this to support `.h` files as C++ headers
-    %h -x
-    %h c++-header
-
-### coc.nvim settings
-
-add setting to coc-settings.json in nvim config dir (~/.config/nvim)
-
-    	"languageserver": {
-    		"ccls": {
-    			"command": "ccls",
-    			"args": ["--log-file=/tmp/ccls.log", "-v=1"],
-    			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
-    			"rootPatterns": [".ccls", "compile_commands.json"],
-    			"initializationOptions": {
-    				 "cache": {
-    					 "directory": "/tmp/ccls"
-    				 },
-    				 "client": {
-    					"snippetSupport": true
-    				 }
-    			 }
-    		}
-    	}
+    let g:coc_global_extensions = [
+    	\ 'coc-clangd'
+    ]
 
 ### Syntax Highlighting
 
