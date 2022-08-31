@@ -39,7 +39,8 @@ Plug 'rhysd/vim-clang-format'
 Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 "Jsx syntax highlighting
-"Plug 'maxmellon/vim-jsx-pretty'
+Plug 'maxmellon/vim-jsx-pretty'
+
 "Js syntax highlighting
 "Plug 'yuezk/vim-js'
 "Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
