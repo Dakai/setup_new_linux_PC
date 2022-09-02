@@ -88,7 +88,14 @@ rpm --import https://packages.microsoft.com/keys/microsoft.asc
 dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
 sudo dnf update --refresh
 
-dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift sublime-text alacarte fcitx5 fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-qt-module ffmpeg libva libva-utils intel-media-driver wqy-zenhei-fonts net-tools microsoft-edge-stable mscore-fonts
+dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift sublime-text alacarte fcitx5 fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-qt-module ffmpeg libva libva-utils intel-media-driver wqy-zenhei-fonts net-tools microsoft-edge-stable rpm-build ttmkfdir cabextract
+
+#install ms fonts
+mkdir -p $HOME/rpmbuild/{RPMS/noarch,BUILD}
+echo '_topdir' > ~/.rpmmacros
+wget https://gist.githubusercontent.com/ervinb/f5042369a1447fedc804a09d87e60997/raw/msttcorefonts-2.5-1.spec
+rpmbuild -bb msttcorefonts-2.5-1.spec
+dnf install -y ~/rpmbuild/RPMS/noarch/msttcorefonts-2.5-1.noarch.rpm
 
 touch /home/dakai/.pam_environment
 #~/.xprofile for X11
