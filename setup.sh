@@ -121,6 +121,7 @@ chown -R dakai:dakai /home/dakai/.vim
 chown dakai:dakai /home/dakai/.vimrc
 
 #Setup neovim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 mkdir -p /home/dakai/.config/nvim
 ln ./coc-settings.json /home/dakai/.config/nvim/coc-settings.json
 ln ./coc.vim /home/dakai/.config/nvim/coc.vim
