@@ -122,3 +122,6 @@ res +5
 
 "Clang CPP autoformat
 nnoremap <Leader>f :<C-u>ClangFormat<CR>
+
+"python 3
+"let g:python3_host_prog="/usr/local/bin/python3"
