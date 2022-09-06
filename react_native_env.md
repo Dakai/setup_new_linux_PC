@@ -23,7 +23,7 @@
 Go to [Android Studio](https://developer.android.com/studio/index.html) and scroll down to the bottom and download cmdline-tools
 
     mkdir -p ~/android/cmdline-tools
-    unzip ~/Download/sdk-tools-linux-\*.zip -d ~/android/cmdline-tools
+    unzip ~/Download/commandlinetools-\*.zip -d ~/android/cmdline-tools
     mv ~/android/cmdline-tools/cmdline-tools ~/android/cmdline-tools/tools
 
 ## Set PATH in .zshrc or .bashrc

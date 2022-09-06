@@ -147,3 +147,6 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/c
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+
+# bun completions
+[ -s "/Users/dakai/.bun/_bun" ] && source "/Users/dakai/.bun/_bun"
