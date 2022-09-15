@@ -88,7 +88,7 @@ rpm --import https://packages.microsoft.com/keys/microsoft.asc
 dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
 sudo dnf update --refresh
 
-dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift sublime-text alacarte fcitx5 fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-qt-module ffmpeg libva libva-utils intel-media-driver wqy-zenhei-fonts net-tools microsoft-edge-stable rpm-build ttmkfdir cabextract
+dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift sublime-text alacarte fcitx5 fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-qt-module ffmpeg libva libva-utils intel-media-driver wqy-zenhei-fonts net-tools microsoft-edge-stable rpm-build ttmkfdir cabextract cups hplip hplip-gui
 
 #install ms fonts
 mkdir -p $HOME/rpmbuild/{RPMS/noarch,BUILD}
