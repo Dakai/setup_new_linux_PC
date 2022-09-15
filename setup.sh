@@ -1,5 +1,7 @@
 #!/bin/bash
 
+wget https://www.fontsquirrel.com/fonts/download/fira-sans-compressed
+
 #Check if user is root
 if [ "$EUID" -ne 0 ]
 then
