@@ -17,3 +17,9 @@ Scripts and dot files for setting up a new Fedora PC for my daily usage.
 2. add the following flags in launching Edge command(gtk-version=4 to enable Fcitx5 in Edge Wayland, same as Chrome above)
 
    -enable-features=UseOzonePlatform -ozone-platform=wayland --gtk-version=4
+
+### Enable Deep sleep mode
+
+    sudo grubby --args="mem_sleep_default=deep" --update-kernel=ALL
+
+reboot and 'cat /sys/power/mem_sleep ' to verify deep mode is enabled by square bracked.
