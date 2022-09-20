@@ -1,4 +1,4 @@
-sudo dnf install -y dnf
+sudo dnf install -y zsh
 sudo usermod -s $(which zsh) dakai
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions

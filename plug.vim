@@ -29,7 +29,7 @@ Plug 'karb94/neoscroll.nvim'
 Plug 'edkolev/tmuxline.vim'
 "Js syntax highlighting
 Plug 'pangloss/vim-javascript'
-Plug 'jonstoler/werewolf.vim'
+"Plug 'jonstoler/werewolf.vim'
 "Plug 'tribela/vim-transparent'
 "CPP env
 Plug 'jackguo380/vim-lsp-cxx-highlight'
@@ -154,10 +154,10 @@ let g:airline#extensions#tabline#enabled = 1
 "silent! call airline#extensions#whitespace#disable()
 let g:airline#extensions#whitespace#enabled = 0
 
-let g:werewolf_day_themes = ['embark']
-let g:werewolf_night_themes = ['gruvbox']
-let g:werewolf_day_start = 8
-let g:werewolf_day_end = 18
+"let g:werewolf_day_themes = ['embark']
+"let g:werewolf_night_themes = ['gruvbox']
+"let g:werewolf_day_start = 8
+"let g:werewolf_day_end = 18
 
 " c++ syntax highlighting
 let g:cpp_class_scope_highlight = 1

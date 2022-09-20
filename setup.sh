@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget https://www.fontsquirrel.com/fonts/download/fira-sans-compressed
+#wget https://www.fontsquirrel.com/fonts/download/fira-sans-compressed
 
 #Check if user is root
 if [ "$EUID" -ne 0 ]
@@ -56,15 +56,16 @@ fi
 sysctl -p /etc/sysctl.conf
 
 dnf copr enable kwizart/fedy -y
+dnf copr enable zeno/scrcpy -y
 dnf copr enable elxreno/preload -y
 dnf copr enable dawid/better_fonts -y
 dnf copr enable atim/zerotier-one -y
 
 #insatll anydesk
-wget https://www.mirrorservice.org/sites/download.opensuse.org/tumbleweed/repo/oss/x86_64/libgtkglext-x11-1_0-0-1.2.0git20110529-7.20.x86_64.rpm
-wget https://www.mirrorservice.org/sites/download.opensuse.org/tumbleweed/repo/oss/i586/libgtkglext-x11-1_0-0-1.2.0git20110529-7.20.i586.rpm
-dnf install -y localinstall libgtkglext-x11-1_0-0-1.2.0git20110529-7.20.x86_64.rpm
-dnf install -y localinstall libgtkglext-x11-1_0-0-1.2.0git20110529-7.20.i586.rpm
+wget https://download.opensuse.org/tumbleweed/repo/oss/x86_64/libgtkglext-x11-1_0-0-1.2.0git20110529-7.21.x86_64.rpm
+wget https://download.opensuse.org/tumbleweed/repo/oss/i586/libgtkglext-x11-1_0-0-1.2.0git20110529-7.21.i586.rpm
+dnf install -y libgtkglext-x11-1_0-0-1.2.0git20110529-7.20.x86_64.rpm
+dnf install -y libgtkglext-x11-1_0-0-1.2.0git20110529-7.20.i586.rpm
 
 cat > /etc/ld.so.conf.d/gtk3.conf << "EOF"
 /usr/lib64/gtk-3.0/modules
@@ -90,7 +91,7 @@ rpm --import https://packages.microsoft.com/keys/microsoft.asc
 dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
 sudo dnf update --refresh
 
-dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift sublime-text alacarte fcitx5 fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-qt-module ffmpeg libva libva-utils intel-media-driver wqy-zenhei-fonts net-tools microsoft-edge-stable rpm-build ttmkfdir cabextract cups hplip hplip-gui levien-inconsolata-fonts mozilla-fira-sans-fonts
+dnf install -y alacritty google-noto-sans-cjk-ttc-fonts google-noto-serif-cjk-ttc-fonts zsh wget vim neovim fedy preload fontconfig-font-replacements fontconfig-enhanced-defaults zerotier-one syncthing tmux proxychains-ng timeshift sublime-text alacarte fcitx5 fcitx5-autostart fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-qt-module ffmpeg libva libva-utils intel-media-driver wqy-zenhei-fonts net-tools microsoft-edge-stable rpm-build ttmkfdir cabextract cups hplip hplip-gui levien-inconsolata-fonts mozilla-fira-sans-fonts scrcpy nodejs
 
 #install ms fonts
 mkdir -p $HOME/rpmbuild/{RPMS/noarch,BUILD}

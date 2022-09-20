@@ -95,6 +95,8 @@ alias fgrep='fgrep --colour=auto'
 alias ls="exa"
 alias ll="exa -alh"
 alias tree="exa --tree"
+
+alias yay="sudo dnf upgrade"
 #alias cat="bat"
 # User configuration
 
@@ -150,3 +152,16 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 
 # bun completions
 [ -s "/Users/dakai/.bun/_bun" ] && source "/Users/dakai/.bun/_bun"
+
+#npm global packages
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
+# Preserve MANPATH if you already defined it somewhere in your config.
+# # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
+#export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
+
+# bun completions
+[ -s "/home/dakai/.bun/_bun" ] && source "/home/dakai/.bun/_bun"

@@ -15,7 +15,9 @@
 
 ## Install JDK
 
-    sudo dnf install -y java-1.8.0-openjdk
+    sudo dnf install java-11-openjdk.x86_64 -y
+    sudo dnf install java-11-openjdk-devel.x86_64
+    sudo alternative --config java
     java --version
 
 ## Install Android SDK
