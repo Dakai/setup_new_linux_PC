@@ -40,7 +40,9 @@ Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 "Jsx syntax highlighting
 Plug 'maxmellon/vim-jsx-pretty'
-
+Plug 'xiyaowong/nvim-transparent'
+"Transparent
+"Plug 'miyakogi/seiya.vim'
 "Js syntax highlighting
 "Plug 'yuezk/vim-js'
 "Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
@@ -175,3 +177,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:mkdp_auto_start = 1
+let g:transparent_enabled = v:true

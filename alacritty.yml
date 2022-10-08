@@ -62,10 +62,12 @@ window:
   padding:
     x: 0
     y: 0
-  decorations: none
+      #decorations: none
   position:
     x: 120
     y: 120
+  #hidpi_factor: 1.0
+  opacity: 0.8
 
 schemes:
   name: &embark
@@ -131,13 +133,15 @@ draw_bold_text_with_bright_colors: true
 font:
   # Normal (roman) font face
   normal:
-    #family: Hack
+    #family: Hack Nerd Font
+    #family: Hack Nerd Font
     family: JetBrainsMono Nerd Font Mono
     # The `style` can be specified to pick a specific face.
     style: Regular
 
   # Bold font face
   bold:
+    #family: Hack Nerd Font
     #family: Hack
     family: JetBrainsMono Nerd Font Mono
       #family: JetBrains Mono
@@ -146,14 +150,15 @@ font:
 
   # Italic font face
   italic:
-    family: JetBrainsMono Nerd Font Mono
+    family: Hack Nerd Font
+    #family: JetBrainsMono Nerd Font Mono
       #family: JetBrains Mono
     #family: Hack
     # The `style` can be specified to pick a specific face.
     style: Italic
 
   # Point size of the font
-  size: 12.0
+  size: 11.5
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -175,7 +180,8 @@ debug.render_timer: false
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#opacity: 1.0
+#opacity: 0.0
+  #window.opacity: 0.6
 # Startup Mode (changes require restart)
 #
 # Values for `startup_mode`:
