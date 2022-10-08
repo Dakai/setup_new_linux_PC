@@ -96,7 +96,6 @@ alias ls="exa"
 alias ll="exa -alh"
 alias tree="exa --tree"
 
-alias yay="sudo dnf upgrade"
 #alias cat="bat"
 # User configuration
 
@@ -128,8 +127,8 @@ alias yay="sudo dnf upgrade"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #export PATH=/home/pi/.local/bin:$PATH
 #export PATH=/home/dakai/.local/bin:$PATH
-export PATH="$HOME/.local/bin:$PATH"
-eval $(thefuck --alias)
+#export PATH="$HOME/.local/bin:$PATH"
+##eval $(thefuck --alias)
 
 
 export NVM_DIR="$HOME/.nvm"
@@ -165,3 +164,11 @@ export PATH="$PATH:$NPM_PACKAGES/bin"
 
 # bun completions
 [ -s "/home/dakai/.bun/_bun" ] && source "/home/dakai/.bun/_bun"
+
+export GRADLE_USER_HOME="$HOME/.gradle"
+
+#alacritty hack for blur
+if [[ $(ps --no-header -p $PPID -o comm) =~ '^alacritty$' ]]; then
+        for wid in $(xdotool search --pid $PPID); do
+            xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
+fi
