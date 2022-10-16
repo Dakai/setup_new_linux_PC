@@ -22,9 +22,13 @@ or
 
 ### restore packages from pacman.lst
 
-	cat ./pacman.lst | xargs yay -S --needed --noconfirm
+    cat ./pacman.lst | xargs yay -S --needed --noconfirm
 
-### setup overview shorcut key to Meta
+#### how to generate pacman.lst
+
+      pacman -Qqe | grep -v "$(pacman -Qqm)" > pacman.lst
+
+### setup overview shorcut key to Meta (Optional)
 
     kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview"
     qdbus org.kde.KWin /KWin reconfigure
