@@ -13,8 +13,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdcommenter'
-"Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
-Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
+Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
+"Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline'
