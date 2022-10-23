@@ -32,3 +32,11 @@ or
 
     kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview"
     qdbus org.kde.KWin /KWin reconfigure
+
+### setup tmux
+
+#### install plugin manager
+
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+#### install tmux resurrected

@@ -61,7 +61,8 @@ set ttyfast                 " Speed up scrolling in Vim
 "" set spell                 " enable spell check (may need to download language package)
 "" set noswapfile            " disable creating swap file
 "" set backupdir=~/.cache/vim " Directory to store backup files.
-set re=1		    " force it to use an older regex engine to speed up syntax parsing.
+"set re=1	    " force it to use an older regex engine to speed up syntax parsing.
+set re=0		    " force it to use the new regex engine to speed up syntax parsing.
 let mapleader = "\<space>"  "change leader key to space
 "Space + w to :w command
 noremap <Leader>w :w<CR>

@@ -67,7 +67,7 @@ window:
     x: 120
     y: 120
   #hidpi_factor: 1.0
-  opacity: 0.8
+  #opacity: 0.8
 
 schemes:
   name: &embark

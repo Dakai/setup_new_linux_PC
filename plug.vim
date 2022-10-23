@@ -175,6 +175,7 @@ let g:syntastic_cpp_cpplint_exec = 'cpplint'
 " The following two lines are optional. Configure it to your liking!
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
+"markddown preview auto start
 let g:mkdp_auto_start = 1
-let g:transparent_enabled = v:true
+"nvim-transparent
+"let g:transparent_enabled = v:true
