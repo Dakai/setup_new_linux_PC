@@ -40,3 +40,9 @@ or
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 #### install tmux resurrected
+
+add plugin to tmux.conf
+
+    set -g @plugin 'tmux-plugins/tmux-resurrect'
+
+Hit prefix + I(ctrl+B, shift+i) to fetch the plugin and source it. You should now be able to use the plugin.
