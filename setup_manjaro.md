@@ -33,6 +33,11 @@ or
     kwriteconfig5 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,,invokeShortcut,Overview"
     qdbus org.kde.KWin /KWin reconfigure
 
+### setup application luancher shorcut key to Meta (Optional)
+
+    kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu"
+    qdbus org.kde.KWin /KWin reconfigure
+
 ### setup tmux
 
 #### install plugin manager
