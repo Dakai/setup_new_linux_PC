@@ -6,15 +6,23 @@ if (has("termguicolors"))
 endif
 
 call plug#begin()
+"Astro
+Plug 'wuelnerdotexe/vim-astro'
+Plug 'wavded/vim-stylus'
+Plug 'neovim/nvim-lspconfig'
+"Plug 'virchau13/tree-sitter-astro'
+Plug 'wfxr/minimap.vim'
+"Plug 'gorbit99/codewindow.nvim'
 "Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'preservim/nerdtree'
+"Plug 'preservim/map.vim'nerdtree'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plug 'jcharum/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdcommenter'
-Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
-"Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
+"Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
+Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline'
@@ -41,6 +49,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 "Jsx syntax highlighting
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'xiyaowong/nvim-transparent'
+"fcitx5 in neovim
+"Plug 'tonyfettes/fcitx5.nvim'
+"Plug 'gen740/SmoothCursor.nvim'
 "Transparent
 "Plug 'miyakogi/seiya.vim'
 "Js syntax highlighting
@@ -139,7 +150,7 @@ let g:embark_terminal_italics = 1
 "Indent Line Plug Conf
 let g:indentLine_color_term = 255
 " GVim
-let g:indentLine_color_gui = '#CCCCD6'
+let g:indentLine_color_gui = '#616a74'
 let g:indentLine_char = '┆'
 
 "Map Snippet trigger to shift+tab
