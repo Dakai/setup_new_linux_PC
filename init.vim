@@ -1,6 +1,8 @@
 runtime ./plug.vim
 runtime ./coc.vim
 lua require('neoscroll').setup()
+"Astro Setup
+lua require'lspconfig'.astro.setup{}
 "toogle rainbow_active
 "let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
@@ -128,3 +130,11 @@ nnoremap <Leader>f :<C-u>ClangFormat<CR>
 "let g:python3_host_prog="/usr/local/bin/python3"
 "
 let g:loaded_perl_provider = 0
+
+"Enable Astro tree-sitter
+autocmd BufRead,BufEnter *.astro set filetype=astro
+"
+let g:astro_typescript = 'enable'
+let g:astro_stylus = 'enable'
+
+
