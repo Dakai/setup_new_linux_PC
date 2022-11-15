@@ -51,3 +51,9 @@ add plugin to tmux.conf
     set -g @plugin 'tmux-plugins/tmux-resurrect'
 
 Hit prefix + I(ctrl+B, shift+i) to fetch the plugin and source it. You should now be able to use the plugin.
+
+### Install fonts and configuration
+
+    yay -S ttf-twemoji ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-2048-em ttf-jetbrians-mono noto-fonts noto-fonts-cjk
+    rm ~/.config/fontconfig/fonts.conf
+    ln ./fonts.conf ~/.config/fontconfig/fonts.conf
