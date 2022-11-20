@@ -153,7 +153,7 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 [ -s "/Users/dakai/.bun/_bun" ] && source "/Users/dakai/.bun/_bun"
 
 #npm global packages
-NPM_PACKAGES="${HOME}/.npm-packages"
+NPM_PACKAGES="${HOME}/.npm-global"
 
 export PATH="$PATH:$NPM_PACKAGES/bin"
 
