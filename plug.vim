@@ -10,6 +10,10 @@ call plug#begin()
 Plug 'wuelnerdotexe/vim-astro'
 Plug 'wavded/vim-stylus'
 Plug 'neovim/nvim-lspconfig'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'branch': 'release/0.x'
+  \ }
 "Plug 'virchau13/tree-sitter-astro'
 Plug 'wfxr/minimap.vim'
 "Plug 'gorbit99/codewindow.nvim'
@@ -99,7 +103,7 @@ let g:coc_global_extensions = [
 			\ 'coc-pairs',
 			\ 'coc-tsserver',
 			\ 'coc-eslint',
-			\ 'coc-prettier',
+			"\ 'coc-prettier',
 			\ 'coc-styled-components',
 			\ 'coc-json',
 			\ 'coc-clangd',

@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
+    "astro",
     "css",
     "sass",
     "scss",
