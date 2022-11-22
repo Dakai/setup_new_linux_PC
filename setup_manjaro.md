@@ -20,13 +20,17 @@ or
 
     sudo pacman -S yay --noconfirm
 
+### Enable Chaotic AUR Repo
+
+https://aur.chaotic.cx/
+
 ### restore packages from pacman.lst
 
     cat ./pacman.lst | xargs yay -S --needed --noconfirm
 
 #### how to generate pacman.lst
 
-      pacman -Qqe | grep -v "$(pacman -Qqm)" > pacman.lst
+    pacman -Qqe | grep -v "$(pacman -Qqm)" > pacman.lst
 
 ### setup overview shorcut key to Meta (Optional)
 
