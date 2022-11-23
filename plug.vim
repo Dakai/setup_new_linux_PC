@@ -6,14 +6,15 @@ if (has("termguicolors"))
 endif
 
 call plug#begin()
+Plug 'lukas-reineke/indent-blankline.nvim'
 "Astro
 Plug 'wuelnerdotexe/vim-astro'
 Plug 'wavded/vim-stylus'
 Plug 'neovim/nvim-lspconfig'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'branch': 'release/0.x'
-  \ }
+"Plug 'prettier/vim-prettier', {
+"  \ 'do': 'yarn install --frozen-lockfile --production',
+"  \ 'branch': 'release/0.x'
+"  \ }
 "Plug 'virchau13/tree-sitter-astro'
 Plug 'wfxr/minimap.vim'
 "Plug 'gorbit99/codewindow.nvim'
@@ -34,7 +35,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 "Terminal Integration
 Plug 'nikvdp/neomux'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 Plug 'ap/vim-css-color'
 "Plug 'psliwka/vim-smoothie'
 Plug 'karb94/neoscroll.nvim'
@@ -103,7 +104,7 @@ let g:coc_global_extensions = [
 			\ 'coc-pairs',
 			\ 'coc-tsserver',
 			\ 'coc-eslint',
-			"\ 'coc-prettier',
+			\ 'coc-prettier',
 			\ 'coc-styled-components',
 			\ 'coc-json',
 			\ 'coc-clangd',
@@ -152,10 +153,10 @@ let g:embark_terminal_italics = 1
 "g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 
 "Indent Line Plug Conf
-let g:indentLine_color_term = 255
-" GVim
-let g:indentLine_color_gui = '#616a74'
-let g:indentLine_char = '┆'
+"let g:indentLine_color_term = 255
+"" GVim
+"let g:indentLine_color_gui = '#616a74'
+"let g:indentLine_char = '┆'
 
 "Map Snippet trigger to shift+tab
 let g:UltiSnipsExpandTrigger="<s-tab>"
