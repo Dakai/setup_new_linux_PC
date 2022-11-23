@@ -11,6 +11,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'wuelnerdotexe/vim-astro'
 Plug 'wavded/vim-stylus'
 Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
 "Plug 'prettier/vim-prettier', {
 "  \ 'do': 'yarn install --frozen-lockfile --production',
 "  \ 'branch': 'release/0.x'
@@ -54,6 +55,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 "Jsx syntax highlighting
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'xiyaowong/nvim-transparent'
+"Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 "fcitx5 in neovim
 "Plug 'tonyfettes/fcitx5.nvim'
 "Plug 'gen740/SmoothCursor.nvim'
@@ -61,7 +63,6 @@ Plug 'xiyaowong/nvim-transparent'
 "Plug 'miyakogi/seiya.vim'
 "Js syntax highlighting
 "Plug 'yuezk/vim-js'
-"Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 "Plug 'SirVer/ultisnips'
 "Plug 'mlaursen/vim-react-snippets'
 "Plug 'elzr/vim-json'
