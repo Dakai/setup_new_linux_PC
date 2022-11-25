@@ -61,3 +61,7 @@ Hit prefix + I(ctrl+B, shift+i) to fetch the plugin and source it. You should no
     yay -S ttf-twemoji ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-2048-em ttf-jetbrians-mono noto-fonts noto-fonts-cjk
     rm ~/.config/fontconfig/fonts.conf
     ln ./fonts.conf ~/.config/fontconfig/fonts.conf
+
+### Embark Theme for Konsole
+
+    ln ./Embark.colorscheme ~/.local/share/konsole/Embark.colorscheme
