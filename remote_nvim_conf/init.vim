@@ -1,8 +1,8 @@
 runtime ./plug.vim
-runtime ./coc.vim
+"runtime ./coc.vim
 lua require('neoscroll').setup()
 "Astro Setup
-lua require'lspconfig'.astro.setup{}
+"lua require'lspconfig'.astro.setup{}
 
 "lua << EOF
 "require'lspinstall'.setup()
@@ -133,7 +133,7 @@ let g:vim_json_conceal=0
 res +5
 
 "Clang CPP autoformat
-nnoremap <Leader>f :<C-u>ClangFormat<CR>
+"nnoremap <Leader>f :<C-u>ClangFormat<CR>
 
 "python 3
 "let g:python3_host_prog="/usr/local/bin/python3"
@@ -141,9 +141,9 @@ nnoremap <Leader>f :<C-u>ClangFormat<CR>
 let g:loaded_perl_provider = 0
 
 "Enable Astro tree-sitter
-autocmd BufRead,BufEnter *.astro set filetype=astro
+"autocmd BufRead,BufEnter *.astro set filetype=astro
 "
-let g:astro_typescript = 'enable'
-let g:astro_stylus = 'enable'
+"let g:astro_typescript = 'enable'
+"let g:astro_stylus = 'enable'
 
 
