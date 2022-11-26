@@ -65,3 +65,12 @@ Hit prefix + I(ctrl+B, shift+i) to fetch the plugin and source it. You should no
 ### Embark Theme for Konsole
 
     ln ./Embark.colorscheme ~/.local/share/konsole/Embark.colorscheme
+
+### Neovim Plugin Manager
+
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    mkdir -p /home/dakai/.config/nvim
+    ln ./coc-settings.json /home/dakai/.config/nvim/coc-settings.json
+    ln ./coc.vim /home/dakai/.config/nvim/coc.vim
+    ln ./init.vim /home/dakai/.config/nvim/init.vim
+    ln ./plug.vim /home/dakai/.config/nvim/plug.vim
