@@ -1,16 +1,15 @@
 runtime ./plug.vim
 runtime ./coc.vim
-lua require('neoscroll').setup()
-"Astro Setup
-lua require'lspconfig'.astro.setup{}
+runtime ./lspconfig.lua
 
-"lua << EOF
-"require'lspinstall'.setup()
-"local servers = require'lspinstall'.installed_servers()
-"for _, server in pairs(servers) do
-"  require'lspconfig'[server].setup{}
-"end
-"EOF
+lua require('neoscroll').setup()
+"Astro LSP Setup
+lua require('mason').setup()
+lua require('mason-lspconfig').setup({ensure_installed = { "tsserver", "tailwindcss","astro" }})
+lua require'lspconfig'.astro.setup{}
+"lua require'lspconfig'.eslint.setup{}
+"lua require'lspconfig'.tsserver.setup{}
+"lua require'lspconfig'.quick_lint_js.setup{}
 
 "toogle rainbow_active
 "let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
@@ -145,5 +144,3 @@ autocmd BufRead,BufEnter *.astro set filetype=astro
 "
 let g:astro_typescript = 'enable'
 let g:astro_stylus = 'enable'
-
-

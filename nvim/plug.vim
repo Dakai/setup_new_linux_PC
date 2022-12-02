@@ -9,15 +9,19 @@ call plug#begin()
 Plug 'lukas-reineke/indent-blankline.nvim'
 "Astro
 Plug 'wuelnerdotexe/vim-astro'
-Plug 'wavded/vim-stylus'
+Plug 'iloginow/vim-stylus'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'kabouzeid/nvim-lspinstall'
+"Pretty pretty debug info
+Plug 'folke/lsp-colors.nvim'
+Plug 'folke/trouble.nvim'
 "Plug 'prettier/vim-prettier', {
 "  \ 'do': 'yarn install --frozen-lockfile --production',
 "  \ 'branch': 'release/0.x'
 "  \ }
 "Plug 'virchau13/tree-sitter-astro'
-Plug 'wfxr/minimap.vim'
+"Plug 'wfxr/minimap.vim'
 "Plug 'gorbit99/codewindow.nvim'
 "Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -26,14 +30,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "Plug 'jcharum/vim-nerdtree-syntax-highlight'
-Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/nerdcommenter'
 "Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
-Plug 'ryanoasis/vim-devicons'
 Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 "Terminal Integration
 Plug 'nikvdp/neomux'
 "Plug 'Yggdroot/indentLine'
@@ -54,7 +57,7 @@ Plug 'tpope/vim-surround'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 "Jsx syntax highlighting
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'xiyaowong/nvim-transparent'
+"Plug 'xiyaowong/nvim-transparent'
 "Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 "fcitx5 in neovim
 "Plug 'tonyfettes/fcitx5.nvim'
@@ -96,6 +99,8 @@ Plug 'xiyaowong/nvim-transparent'
 "Plug 'EdenEast/nightfox.nvim'
 "Plug 'itchyny/lightline.vim'
 "Plug 'bluz71/vim-nightfly-guicolors'
+"Plug 'nvim-tree/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 "let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
