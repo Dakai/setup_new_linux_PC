@@ -1,27 +1,10 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "astro",
-    "css",
-    "sass",
-    "scss",
-    "markdown",
-    "html",
-    "json",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "python"
-  ],
+  "coc.preferences.formatOnSave": true,
   "javascript.autoClosingTags": true,
   "javascript.suggestionActions.enabled": false,
-  "emmet.includeLanguages": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "html"
-  ],
   "codeLens.enable": false,
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "diagnostic.errorSign": ">>",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": ">>"
 }

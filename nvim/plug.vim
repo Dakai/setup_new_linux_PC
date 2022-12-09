@@ -6,16 +6,48 @@ if (has("termguicolors"))
 endif
 
 call plug#begin()
-Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim' " Show indent guide lines
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
+Plug 'scrooloose/nerdtree' " File system explorer
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'mileszs/ack.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'nikvdp/neomux' " tmux Integration
+Plug 'edkolev/tmuxline.vim' " tmux Integration
+Plug 'ap/vim-css-color' " Color name highlighter
+Plug 'karb94/neoscroll.nvim' " Smooth Scroll
+Plug 'tpope/vim-surround' " Add surround easy
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'maxmellon/vim-jsx-pretty' " React syntax jsx tsx highlighting
+
+"CPP env
+Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'vim-syntastic/syntastic'
+Plug 'rhysd/vim-clang-format'
+"CPP env end
+
+"Plug 'pangloss/vim-javascript' "JavaScript bundle for vim, syntax highlighting and improved indentation.
+
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-treesitter/nvim-treesitter'
+"Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+"Plug 'nvim-telescope/telescope-file-browser.nvim'
+"Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 "Astro
-Plug 'wuelnerdotexe/vim-astro'
-Plug 'iloginow/vim-stylus'
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'neovim/nvim-lspconfig'
+"Plug 'iloginow/vim-stylus' " CSS auto complete
+"Plug 'williamboman/mason.nvim' " nvim-lsp-installer
+"Plug 'williamboman/mason-lspconfig.nvim'
+"Plug 'neovim/nvim-lspconfig'
 "Pretty pretty debug info
-Plug 'folke/lsp-colors.nvim'
-Plug 'folke/trouble.nvim'
+"Plug 'folke/lsp-colors.nvim'
+"Plug 'folke/trouble.nvim'
+
+"Vim plugin for automatically highlighting other uses of the word under the cursor using either LSP, Tree-sitter, or regex matching.
+"Plug 'RRethy/vim-illuminate'
+
 "Plug 'prettier/vim-prettier', {
 "  \ 'do': 'yarn install --frozen-lockfile --production',
 "  \ 'branch': 'release/0.x'
@@ -24,39 +56,18 @@ Plug 'folke/trouble.nvim'
 "Plug 'wfxr/minimap.vim'
 "Plug 'gorbit99/codewindow.nvim'
 "Plug 'tpope/vim-fugitive'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'preservim/map.vim'nerdtree'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "Plug 'jcharum/vim-nerdtree-syntax-highlight'
 "Plug 'scrooloose/nerdcommenter'
-"Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
-Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
-Plug 'mileszs/ack.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 "Plug 'morhetz/gruvbox'
 "Terminal Integration
-Plug 'nikvdp/neomux'
 "Plug 'Yggdroot/indentLine'
-Plug 'ap/vim-css-color'
 "Plug 'psliwka/vim-smoothie'
-Plug 'karb94/neoscroll.nvim'
-Plug 'edkolev/tmuxline.vim'
-"Js syntax highlighting
-Plug 'pangloss/vim-javascript'
 "Plug 'jonstoler/werewolf.vim'
 "Plug 'tribela/vim-transparent'
-"CPP env
-Plug 'jackguo380/vim-lsp-cxx-highlight'
-Plug 'vim-syntastic/syntastic'
-Plug 'rhysd/vim-clang-format'
-"CPP env end
-Plug 'tpope/vim-surround'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
 "Jsx syntax highlighting
-Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'xiyaowong/nvim-transparent'
 "Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 "fcitx5 in neovim
@@ -99,8 +110,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'EdenEast/nightfox.nvim'
 "Plug 'itchyny/lightline.vim'
 "Plug 'bluz71/vim-nightfly-guicolors'
-"Plug 'nvim-tree/nvim-web-devicons'
-Plug 'ryanoasis/vim-devicons'
 call plug#end()
 "let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 

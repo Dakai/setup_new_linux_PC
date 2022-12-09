@@ -1,12 +1,12 @@
 runtime ./plug.vim
 runtime ./coc.vim
-runtime ./lspconfig.lua
+"runtime ./lspconfig.lua
 
 lua require('neoscroll').setup()
 "Astro LSP Setup
-lua require('mason').setup()
-lua require('mason-lspconfig').setup({ensure_installed = { "tsserver", "tailwindcss","astro" }})
-lua require'lspconfig'.astro.setup{}
+"lua require('mason').setup()
+"lua require('mason-lspconfig').setup({ensure_installed = { "tsserver", "tailwindcss","astro" }})
+"lua require'lspconfig'.astro.setup{}
 "lua require'lspconfig'.eslint.setup{}
 "lua require'lspconfig'.tsserver.setup{}
 "lua require'lspconfig'.quick_lint_js.setup{}
