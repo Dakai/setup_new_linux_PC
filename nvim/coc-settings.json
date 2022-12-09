@@ -4,7 +4,8 @@
   "javascript.suggestionActions.enabled": false,
   "codeLens.enable": false,
   "javascript.validate.enable": false,
-  "diagnostic.errorSign": ">>",
-  "diagnostic.warningSign": "⚠",
-  "diagnostic.infoSign": ">>"
+  "diagnostic.errorSign": " ",
+  "diagnostic.warningSign": "⚠ ",
+  "diagnostic.infoSign": " ",
+  "diagnostic.hintSign": " "
 }
