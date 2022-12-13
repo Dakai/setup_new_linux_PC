@@ -7,7 +7,7 @@ endif
 
 call plug#begin()
 Plug 'lukas-reineke/indent-blankline.nvim' " Show indent guide lines
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do':'yarn install --frozen-lockfile'}
 Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'scrooloose/nerdtree' " File system explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -22,11 +22,11 @@ Plug 'karb94/neoscroll.nvim' " Smooth Scroll
 Plug 'tpope/vim-surround' " Add surround easy
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'maxmellon/vim-jsx-pretty' " React syntax jsx tsx highlighting
-
-"CPP env
-Plug 'jackguo380/vim-lsp-cxx-highlight'
-Plug 'vim-syntastic/syntastic'
-Plug 'rhysd/vim-clang-format'
+"
+""CPP env
+"Plug 'jackguo380/vim-lsp-cxx-highlight'
+"Plug 'vim-syntastic/syntastic'
+"Plug 'rhysd/vim-clang-format'
 "CPP env end
 
 "Plug 'pangloss/vim-javascript' "JavaScript bundle for vim, syntax highlighting and improved indentation.
