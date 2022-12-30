@@ -95,7 +95,7 @@ alias fgrep='fgrep --colour=auto'
 alias ls="exa"
 alias ll="exa -alh"
 alias tree="exa --tree"
-
+alias yoy='sudo pacman -Sy && sudo powerpill -Su && paru -Su'
 #alias cat="bat"
 # User configuration
 
