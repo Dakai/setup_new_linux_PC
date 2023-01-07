@@ -32,6 +32,7 @@ bzip2
 ccze
 chaotic-keyring
 chaotic-mirrorlist
+clash-meta
 cmatrix
 comtool
 cool-retro-term
@@ -59,12 +60,14 @@ ethtool
 exa
 exfatprogs
 f2fs-tools
+fastfetch
 fcitx5-chinese-addons
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-material-color
 fcitx5-pinyin-zhwiki
 fcitx5-qt
+fd
 ffmpeg
 ffmpegthumbs
 file
@@ -132,9 +135,11 @@ kinit
 kio-extras
 kmenuedit
 konsole
+kooha
 kscreen
 kscreenlocker
 ksshaskpass
+ksuperkey
 ksysguard
 ksystemlog
 kwallet-pam
@@ -240,6 +245,7 @@ pamac-cli
 pamac-gtk
 pamac-tray-icon-plasma
 partitionmanager
+paru
 pciutils
 perl
 perl-file-mimeinfo
@@ -256,6 +262,7 @@ plasma-workspace
 plasma5-applets-window-appmenu-git
 poppler-data
 powerdevil
+powerpill
 powertop
 preload
 procps-ng
@@ -276,6 +283,7 @@ ranger
 read-edid
 realvnc-vnc-viewer
 reiserfsprogs
+ripgrep
 rsync
 ruby
 s-nail
@@ -308,6 +316,7 @@ tar
 telegram-desktop
 terminus-font
 texinfo
+the_silver_searcher
 thunderbird
 timeshift-autosnap-manjaro
 tmux
@@ -337,6 +346,7 @@ virt-viewer
 vlc
 vulkan-intel
 vulkan-radeon
+waydroid
 wget
 which
 wireless-regdb
@@ -364,6 +374,7 @@ xorg-server
 xorg-twm
 xorg-xinit
 xorg-xkill
+xorg-xlsclients
 xz
 yakuake
 yarn
