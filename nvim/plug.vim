@@ -22,6 +22,7 @@ Plug 'karb94/neoscroll.nvim' " Smooth Scroll
 Plug 'tpope/vim-surround' " Add surround easy
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'maxmellon/vim-jsx-pretty' " React syntax jsx tsx highlighting
+Plug 'psliwka/vim-smoothie'
 "
 ""CPP env
 "Plug 'jackguo380/vim-lsp-cxx-highlight'
@@ -63,7 +64,6 @@ Plug 'maxmellon/vim-jsx-pretty' " React syntax jsx tsx highlighting
 "Plug 'morhetz/gruvbox'
 "Terminal Integration
 "Plug 'Yggdroot/indentLine'
-"Plug 'psliwka/vim-smoothie'
 "Plug 'jonstoler/werewolf.vim'
 "Plug 'tribela/vim-transparent'
 
