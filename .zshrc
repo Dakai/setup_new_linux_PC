@@ -176,7 +176,7 @@ export GRADLE_USER_HOME="$HOME/.gradle"
 #Wayland fix for flameshot
 export QT_SCREEN_SCALE_FACTORS="1;1"
 
-function lazygit() {
+function lg() {
     git add .
     git commit -a -m "$1"
     git push
