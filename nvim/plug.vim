@@ -9,8 +9,6 @@ call plug#begin()
 Plug 'lukas-reineke/indent-blankline.nvim' " Show indent guide lines
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do':'yarn install --frozen-lockfile'}
 Plug 'dakai/embark-theme-vim', { 'as': 'embark', 'branch': 'main' }
-Plug 'scrooloose/nerdtree' " File system explorer
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline'
@@ -23,7 +21,14 @@ Plug 'tpope/vim-surround' " Add surround easy
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'maxmellon/vim-jsx-pretty' " React syntax jsx tsx highlighting
 Plug 'psliwka/vim-smoothie'
-"
+Plug 'scrooloose/nerdtree' " File system explorer
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+"Plug 'nvim-telescope/telescope-file-browser.nvim'
+"Plug 'nvim-treesitter/nvim-treesitter'
+
 ""CPP env
 "Plug 'jackguo380/vim-lsp-cxx-highlight'
 "Plug 'vim-syntastic/syntastic'
