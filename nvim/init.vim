@@ -80,6 +80,8 @@ noremap <Leader>w :w<CR>
 noremap <Leader>q :q<CR>
 "Space + n to Toggle NerdTree
 noremap <silent> <Leader>n :NERDTreeToggle <Enter>
+"Space + t to Toggle telescope file search
+noremap <silent> <Leader>t :Telescope find_files<Enter>
 "Space i to insert
 nmap <Leader>i i
 

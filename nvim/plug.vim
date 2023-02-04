@@ -24,11 +24,12 @@ Plug 'psliwka/vim-smoothie'
 Plug 'scrooloose/nerdtree' " File system explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-"Plug 'nvim-lua/plenary.nvim'
-"Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-"Plug 'nvim-telescope/telescope-file-browser.nvim'
-"Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
+Plug 'xiyaowong/nvim-transparent'
 ""CPP env
 "Plug 'jackguo380/vim-lsp-cxx-highlight'
 "Plug 'vim-syntastic/syntastic'
@@ -73,7 +74,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'tribela/vim-transparent'
 
 "Jsx syntax highlighting
-"Plug 'xiyaowong/nvim-transparent'
 "Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 "fcitx5 in neovim
 "Plug 'tonyfettes/fcitx5.nvim'
@@ -214,4 +214,4 @@ let g:syntastic_check_on_wq = 0
 "markddown preview auto start
 let g:mkdp_auto_start = 1
 "nvim-transparent
-"let g:transparent_enabled = v:true
+let g:transparent_enabled = v:true
