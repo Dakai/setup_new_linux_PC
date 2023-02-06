@@ -1,5 +1,7 @@
 runtime ./plug.vim
 runtime ./coc.vim
+lua require('neoscroll').setup()
+
 "runtime ./lspconfig.lua
 
 "lua require('neoscroll').setup()
@@ -82,6 +84,9 @@ noremap <Leader>q :q<CR>
 noremap <silent> <Leader>n :NERDTreeToggle <Enter>
 "Space + t to Toggle telescope file search
 noremap <silent> <Leader>t :Telescope find_files<Enter>
+"Space + f to Toggle telescope file search
+noremap <silent> <Leader>g :Telescope live_grep<Enter>
+
 "Space i to insert
 nmap <Leader>i i
 
@@ -159,3 +164,7 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+set cursorline
+set cursorlineopt=number
+autocmd ColorScheme * highlight CursorLineNr cterm=bold term=bold gui=bold
+"lua require('reticle').setup {follow = {cursorline = true,cursorcolumn = false,},always_show_cl_number = true,}

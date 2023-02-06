@@ -20,7 +20,7 @@ Plug 'karb94/neoscroll.nvim' " Smooth Scroll
 Plug 'tpope/vim-surround' " Add surround easy
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'maxmellon/vim-jsx-pretty' " React syntax jsx tsx highlighting
-Plug 'psliwka/vim-smoothie'
+Plug 'karb94/neoscroll.nvim'
 Plug 'scrooloose/nerdtree' " File system explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
@@ -30,6 +30,7 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 
 Plug 'xiyaowong/nvim-transparent'
+"Plug 'Tummetott/reticle.nvim'
 ""CPP env
 "Plug 'jackguo380/vim-lsp-cxx-highlight'
 "Plug 'vim-syntastic/syntastic'
@@ -38,10 +39,9 @@ Plug 'xiyaowong/nvim-transparent'
 
 "Plug 'pangloss/vim-javascript' "JavaScript bundle for vim, syntax highlighting and improved indentation.
 
+"Plug 'psliwka/vim-smoothie'
 "Plug 'nvim-lua/plenary.nvim'
 "Plug 'nvim-treesitter/nvim-treesitter'
-"Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-"Plug 'nvim-telescope/telescope-file-browser.nvim'
 "Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 "Astro
 "Plug 'iloginow/vim-stylus' " CSS auto complete
