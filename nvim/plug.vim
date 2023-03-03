@@ -23,6 +23,8 @@ Plug 'maxmellon/vim-jsx-pretty' " React syntax jsx tsx highlighting
 Plug 'karb94/neoscroll.nvim'
 Plug 'scrooloose/nerdtree' " File system explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Exafunction/codeium.vim'
+Plug 'linty-org/key-menu.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -215,3 +217,14 @@ let g:syntastic_check_on_wq = 0
 let g:mkdp_auto_start = 1
 "nvim-transparent
 let g:transparent_enabled = v:true
+
+"codeium config
+let g:codeium_no_map_tab = 1
+let g:airline_section_y = '{…}%3{codeium#GetStatusString()}'
+"set statusline+=\{…\}%3{codeium#GetStatusString()}
+"imap <script><silent><nowait><expr> <Leader>c codeium#Accept()
+imap <script><silent><nowait><expr> <M-[> codeium#Accept()
+imap <script><silent><nowait><expr> <M-Right> codeium#Accept()
+imap <script><silent><nowait><expr> <M-Left> codeium#Complete()
+imap <M-Up>   <Cmd>call codeium#CycleCompletions(1)<CR>
+imap <M-Down>   <Cmd>call codeium#CycleCompletions(-1)<CR>
