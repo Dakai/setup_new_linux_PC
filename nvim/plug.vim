@@ -223,8 +223,7 @@ let g:codeium_no_map_tab = 1
 let g:airline_section_y = '{…}%3{codeium#GetStatusString()}'
 "set statusline+=\{…\}%3{codeium#GetStatusString()}
 "imap <script><silent><nowait><expr> <Leader>c codeium#Accept()
-imap <script><silent><nowait><expr> <M-[> codeium#Accept()
-imap <script><silent><nowait><expr> <M-Right> codeium#Accept()
-imap <script><silent><nowait><expr> <M-Left> codeium#Complete()
-imap <M-Up>   <Cmd>call codeium#CycleCompletions(1)<CR>
-imap <M-Down>   <Cmd>call codeium#CycleCompletions(-1)<CR>
+imap <script><silent><nowait><expr> <M-l> codeium#Accept()
+imap <script><silent><nowait><expr> <M-j> codeium#Complete()
+imap <M-i>   <Cmd>call codeium#CycleCompletions(1)<CR>
+imap <M-k>   <Cmd>call codeium#CycleCompletions(-1)<CR>
