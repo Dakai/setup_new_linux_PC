@@ -31,6 +31,10 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 
+"ChatGPT
+Plug 'MunifTanjim/nui.nvim'
+Plug 'dpayne/CodeGPT.nvim'
+
 Plug 'xiyaowong/nvim-transparent'
 "Plug 'Tummetott/reticle.nvim'
 ""CPP env
