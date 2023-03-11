@@ -96,6 +96,8 @@ alias ls="exa"
 alias ll="exa -alh"
 alias tree="exa --tree"
 alias yo='sudo pacman -Sy && sudo powerpill -Su && paru -Su'
+alias gps='git push'
+alias gas='aic && gps'
 #alias cat="bat"
 # User configuration
 
