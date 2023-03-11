@@ -182,6 +182,12 @@ function lg() {
     git push
 }
 
+function aic() {
+    git add .
+   	aicommits
+}
+
+
 #foot integration
 #function osc7 {
 #    local LC_ALL=C
