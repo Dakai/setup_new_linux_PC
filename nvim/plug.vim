@@ -34,6 +34,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
 "ChatGPT
 Plug 'MunifTanjim/nui.nvim'
 Plug 'dpayne/CodeGPT.nvim'
+Plug 'jackMort/ChatGPT.nvim'
 
 Plug 'xiyaowong/nvim-transparent'
 "Plug 'Tummetott/reticle.nvim'
