@@ -188,8 +188,12 @@ function aic() {
     git add .
    	aicommits
 }
-
-
+# bind  Alt+l to right arrow
+bindkey "^[l" forward-char
+# bind  Alt+j to left arrow
+bindkey "^[j" backward-char
+bindkey "^[i" up-line-or-search
+bindkey "^[k" down-line-or-search
 #foot integration
 #function osc7 {
 #    local LC_ALL=C
