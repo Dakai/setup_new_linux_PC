@@ -1,6 +1,7 @@
 runtime ./plug.vim
 runtime ./coc.vim
 lua require('neoscroll').setup()
+lua require('chatgpt').setup()
 
 "runtime ./lspconfig.lua
 
