@@ -88,6 +88,9 @@ noremap <silent> <Leader>n :NERDTreeToggle <Enter>
 noremap <silent> <Leader>t :Telescope find_files<Enter>
 "Space + f to Toggle telescope file search
 noremap <silent> <Leader>g :Telescope live_grep<Enter>
+"Space + v to Toggle NeoAI
+noremap <silent> <Leader>v :NeoAI<Enter>
+
 
 "Space i to insert
 nmap <Leader>i i
