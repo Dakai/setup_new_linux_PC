@@ -34,13 +34,13 @@ Plug 'nvim-treesitter/nvim-treesitter'
 "ChatGPT
 "Plug 'MunifTanjim/nui.nvim'
 "Plug 'dpayne/CodeGPT.nvim'
-"Plug 'jackMort/ChatGPT.nvim'
 
 Plug 'xiyaowong/nvim-transparent'
 
 "ChatGPT
 Plug 'MunifTanjim/nui.nvim'
 Plug 'Bryley/neoai.nvim'
+
 "Plug 'Tummetott/reticle.nvim'
 ""CPP env
 "Plug 'jackguo380/vim-lsp-cxx-highlight'
