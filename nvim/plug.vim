@@ -32,11 +32,15 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 
 "ChatGPT
-Plug 'MunifTanjim/nui.nvim'
-Plug 'dpayne/CodeGPT.nvim'
-Plug 'jackMort/ChatGPT.nvim'
+"Plug 'MunifTanjim/nui.nvim'
+"Plug 'dpayne/CodeGPT.nvim'
+"Plug 'jackMort/ChatGPT.nvim'
 
 Plug 'xiyaowong/nvim-transparent'
+
+"ChatGPT
+Plug 'MunifTanjim/nui.nvim'
+Plug 'Bryley/neoai.nvim'
 "Plug 'Tummetott/reticle.nvim'
 ""CPP env
 "Plug 'jackguo380/vim-lsp-cxx-highlight'
@@ -135,6 +139,8 @@ let g:coc_global_extensions = [
 			\ 'coc-styled-components',
 			\ 'coc-json',
 			\ 'coc-clangd',
+			\ 'coc-webview',
+			\ 'coc-markdown-preview-enhanced'
 			"\ 'coc-emmet',
 			"\ 'coc-css',
 			"\ 'coc-flutter-tools'
