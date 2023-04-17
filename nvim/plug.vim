@@ -13,6 +13,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive' " vim Airline dependencies
 Plug 'nikvdp/neomux' " tmux Integration
 Plug 'edkolev/tmuxline.vim' " tmux Integration
 Plug 'ap/vim-css-color' " Color name highlighter
@@ -73,7 +74,6 @@ Plug 'Bryley/neoai.nvim'
 "Plug 'virchau13/tree-sitter-astro'
 "Plug 'wfxr/minimap.vim'
 "Plug 'gorbit99/codewindow.nvim'
-"Plug 'tpope/vim-fugitive'
 "Plug 'preservim/map.vim'nerdtree'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "Plug 'jcharum/vim-nerdtree-syntax-highlight'
