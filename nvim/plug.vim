@@ -19,19 +19,21 @@ Plug 'edkolev/tmuxline.vim' " tmux Integration
 Plug 'ap/vim-css-color' " Color name highlighter
 Plug 'karb94/neoscroll.nvim' " Smooth Scroll
 Plug 'tpope/vim-surround' " Add surround easy
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-Plug 'maxmellon/vim-jsx-pretty' " React syntax jsx tsx highlighting
+"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+"Plug 'maxmellon/vim-jsx-pretty' " React syntax jsx tsx highlighting
 Plug 'karb94/neoscroll.nvim'
 Plug 'scrooloose/nerdtree' " File system explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Exafunction/codeium.vim'
-Plug 'linty-org/key-menu.nvim'
+"Plug 'linty-org/key-menu.nvim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 
+Plug 'neovim/nvim-lspconfig'
+Plug 'davidosomething/format-ts-errors.nvim'
 "ChatGPT
 "Plug 'MunifTanjim/nui.nvim'
 "Plug 'dpayne/CodeGPT.nvim'
