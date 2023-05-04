@@ -75,10 +75,8 @@ echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/deb
 sudo apt-get update && sudo apt-get install yarn
 ```
 
-### install ai-shell
-
-`npm install -g @builder.io/ai-shell`
+### install YAI
 
 ```
-
+curl -sS https://raw.githubusercontent.com/ekkinox/yai/main/install.sh | bash
 ```
