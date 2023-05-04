@@ -181,6 +181,12 @@ colorscheme embark
 set background=dark
 let g:embark_terminal_italics = 1
 
+" the following lines are required to enabled nvim-treesitter be default.
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = { enable = true }
+}
+EOF
 " let g:lightline = {
 " \ 'colorscheme': 'embark',
 " \ }
