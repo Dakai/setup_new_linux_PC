@@ -1,8 +1,9 @@
-# Setup new Debian VPS
+Setup new Arch (BTW) VPS
 
 ## New User
 
 ```
+pacman -S sudo vi
 useradd {username}
 passwd {username}
 mkdir /home/{username}
@@ -12,7 +13,15 @@ chown {username}:{username} /home/{username}
 ### root privileges
 
 ```
+groupadd sudo
 usermod -aG sudo username
+```
+
+### config sudo group and let user sudo no passwd
+
+```
+echo "%sudo ALL=(ALL)" >> /etc/sudoers
+echo "{username} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 ```
 
 ### disable root login
@@ -45,12 +54,6 @@ sudo systemctl restart ssh
 chsh -s /bin/bash
 ```
 
-### user sudo no passwd
-
-```
-echo "{username} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-```
-
 ### make VPS recognize alacritty
 
 ```
@@ -62,21 +65,13 @@ wget https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritt
 ### install nodeJS
 
 ```
-curl -sL https://deb.nodesource.com/setup_19.x | sudo -E bash -
-```
-
-#### install yarn
-
-```
-curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
-
-echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
-sudo apt-get update && sudo apt-get install yarn
+sudo pacman -S nodejs npm yarn
 ```
 
 ### install YAI
 
 ```
+sudo pacman -S curl
+mkdir ~/.config
 curl -sS https://raw.githubusercontent.com/ekkinox/yai/main/install.sh | bash
 ```

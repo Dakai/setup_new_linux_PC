@@ -205,3 +205,5 @@ bindkey "^[k" down-line-or-search
 #    print -n "\e]7;file://${HOSTNAME}${uri}\e\\"
 #}
 #add-zsh-hook -Uz chpwd osc7
+export DENO_INSTALL="/home/dakai/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
