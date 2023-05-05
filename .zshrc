@@ -207,3 +207,4 @@ bindkey "^[k" down-line-or-search
 #add-zsh-hook -Uz chpwd osc7
 export DENO_INSTALL="/home/dakai/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+source '/usr/share/zsh/plugins/zsh-thefuck-git/zsh-thefuck.plugin.zsh'
