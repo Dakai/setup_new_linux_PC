@@ -15,7 +15,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive' " vim Airline dependencies
 Plug 'nikvdp/neomux' " tmux Integration
-Plug 'edkolev/tmuxline.vim' " tmux Integration
+"Plug 'edkolev/tmuxline.vim' " tmux Integration
 Plug 'ap/vim-css-color' " Color name highlighter
 Plug 'karb94/neoscroll.nvim' " Smooth Scroll
 Plug 'tpope/vim-surround' " Add surround easy

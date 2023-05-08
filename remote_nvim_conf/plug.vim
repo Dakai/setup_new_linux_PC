@@ -40,7 +40,7 @@ Plug 'nikvdp/neomux'
 "Plug 'ap/vim-css-color'
 "Plug 'psliwka/vim-smoothie'
 Plug 'karb94/neoscroll.nvim'
-Plug 'edkolev/tmuxline.vim'
+"Plug 'edkolev/tmuxline.vim'
 "Js syntax highlighting
 "Plug 'pangloss/vim-javascript'
 "Plug 'jonstoler/werewolf.vim'
