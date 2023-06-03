@@ -91,7 +91,6 @@ noremap <silent> <Leader>g :Telescope live_grep<Enter>
 "Space + v to Toggle NeoAI
 noremap <silent> <Leader>v :NeoAI<Enter>
 
-
 "Space i to insert
 nmap <Leader>i i
 
@@ -108,7 +107,6 @@ map <Down> <Nop>
 ""nnoremap gj j
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
-"
 ""Remove trailing
 autocmd FileType dart,vim,c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e
 "To display the status line always
@@ -124,7 +122,7 @@ set shiftwidth=2
 let g:airline_powerline_fonts = 1
 ""set guifont=FiraCode\ Nerd\ Font\ Mono:h11
 ""set guifont=Fira\ Mono\ for\ Powerline:h11
-set guifont=JetBrainsMono\ Nerd\ Font:h11
+"set guifont=JetBrainsMono\ Nerd\ Font:h11
 let g:neovide_remember_window_size = v:true
 ""let g:neovide_transparency=0.8
 let g:neovide_cursor_antialiasing=v:true
