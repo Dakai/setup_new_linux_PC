@@ -141,7 +141,7 @@ let g:coc_global_extensions = [
 			\ 'coc-prettier',
 			\ 'coc-styled-components',
 			\ 'coc-json',
-			\ 'coc-clangd',
+			"\ 'coc-clangd',
 			"\ 'coc-webview',
 			"\ 'coc-markdown-preview-enhanced'
 			"\ 'coc-emmet',
