@@ -88,6 +88,8 @@ noremap <silent> <Leader>n :NERDTreeToggle <Enter>
 noremap <silent> <Leader>t :Telescope find_files<Enter>
 "Space + f to Toggle telescope file search
 noremap <silent> <Leader>g :Telescope live_grep<Enter>
+"Space + r to Toggle telescope last windnow
+noremap <silent> <Leader>r :Telescope resume<Enter>
 "Space + v to Toggle NeoAI
 noremap <silent> <Leader>v :NeoAI<Enter>
 
@@ -171,7 +173,17 @@ set cursorline
 set cursorlineopt=number
 autocmd ColorScheme * highlight CursorLineNr cterm=bold term=bold gui=bold
 "lua require('reticle').setup {follow = {cursorline = true,cursorcolumn = false,},always_show_cl_number = true,}
-"
+
+" From https://www.reddit.com/r/neovim/comments/13y3thq/whats_a_very_simple_config_change_that_you_cant/
+" Remap y to ygv<esc> in visual mode so the cursor does not jump back to where you started the selection.
+vnoremap y ygv<esc>
+" Alt+backspace delete entire word
+"call nvim_set_keymap("n", "<A-BS>", "bved", { })
+" Enter in normal mode to delete entire word and into insert mode
+call nvim_set_keymap('n', '<cr>', 'ciw', { })
+"move highlighted text up and down"
+call nvim_set_keymap("v", "K", ":m '<-2<CR>gv==jgvo<esc>=jgvo", {})
+call nvim_set_keymap("v", "J", ":m '>+1<CR>gv==kgvo<esc>=kgvo", {})
 lua << EOF
 require('neoai').setup{
     -- Below are the default options, feel free to override what you would like changed
