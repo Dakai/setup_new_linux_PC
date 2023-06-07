@@ -37,7 +37,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'davidosomething/format-ts-errors.nvim'
 "ChatGPT
 "Plug 'MunifTanjim/nui.nvim'
-"Plug 'dpayne/CodeGPT.nvim'
+Plug 'dpayne/CodeGPT.nvim'
 
 Plug 'xiyaowong/nvim-transparent'
 
