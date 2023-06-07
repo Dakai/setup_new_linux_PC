@@ -1,6 +1,6 @@
 runtime ./plug.vim
 "runtime ./coc.vim
-lua require('neoscroll').setup()
+"lua require('neoscroll').setup()
 "Astro Setup
 "lua require'lspconfig'.astro.setup{}
 

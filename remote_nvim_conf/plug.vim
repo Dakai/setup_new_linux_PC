@@ -39,7 +39,7 @@ Plug 'nikvdp/neomux'
 "Plug 'Yggdroot/indentLine'
 "Plug 'ap/vim-css-color'
 "Plug 'psliwka/vim-smoothie'
-Plug 'karb94/neoscroll.nvim'
+"Plug 'karb94/neoscroll.nvim'
 "Plug 'edkolev/tmuxline.vim'
 "Js syntax highlighting
 "Plug 'pangloss/vim-javascript'
