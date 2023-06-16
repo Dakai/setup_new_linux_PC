@@ -1,0 +1,33 @@
+{
+    "workspace.library": [
+        "/home/dakai/.config/nvim",
+        "/home/dakai/.local/share/nvim/site",
+        "/home/dakai/.local/share/nvim/lazy/lazy.nvim",
+        "/home/dakai/.local/share/nvim/lazy/lualine.nvim",
+        "/home/dakai/.local/share/nvim/lazy/nerdtree-git-plugin",
+        "/home/dakai/.local/share/nvim/lazy/embark-theme-vim",
+        "/home/dakai/.local/share/nvim/lazy/nerdtree",
+        "/home/dakai/.local/share/nvim/lazy/vim-devicons",
+        "/home/dakai/.local/share/nvim/lazy/LuaSnip",
+        "/home/dakai/.local/share/nvim/lazy/cmp-nvim-lsp",
+        "/home/dakai/.local/share/nvim/lazy/nvim-cmp",
+        "/home/dakai/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/home/dakai/.local/share/nvim/lazy/mason.nvim",
+        "/home/dakai/.local/share/nvim/lazy/nvim-lspconfig",
+        "/home/dakai/.local/share/nvim/lazy/lsp-zero.nvim",
+        "/usr/share/nvim/runtime",
+        "/usr/share/nvim/runtime/pack/dist/opt/matchit",
+        "/usr/lib/nvim",
+        "/home/dakai/.local/share/nvim/lazy/nerdtree-git-plugin/after",
+        "/home/dakai/.local/share/nvim/lazy/cmp-nvim-lsp/after",
+        "/home/dakai/.config/nvim/after",
+        "/home/dakai/.local/state/nvim/lazy/readme",
+        "${3rd}/luassert/library",
+        "${3rd}/OpenResty/library"
+    ],
+    "runtime.version": "LuaJIT",
+    "diagnostics.globals": [
+        "vim",
+        "ngx"
+    ]
+}
