@@ -49,7 +49,6 @@ require('lazy').setup({
     "nvim-tree/nvim-web-devicons",
   }
 },
-{ 'echasnovski/mini.base16', version = false},
   {'nvim-tree/nvim-web-devicons'}
 })
 
