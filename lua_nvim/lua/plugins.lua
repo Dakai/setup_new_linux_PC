@@ -21,9 +21,7 @@ require('lazy').setup({
     vim.cmd('colorscheme embark')
   end},
   {'hoob3rt/lualine.nvim'},
-  {'preservim/nerdtree'},
   {'Xuyuanp/nerdtree-git-plugin'},
-  {'ryanoasis/vim-devicons'},
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
@@ -43,7 +41,16 @@ require('lazy').setup({
       {'hrsh7th/cmp-nvim-lsp'},
       {'L3MON4D3/LuaSnip'},
     }
+  },
+  {'onsails/lspkind-nvim'},
+  {"nvim-tree/nvim-tree.lua",
+  version = "*",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
   }
+},
+{ 'echasnovski/mini.base16', version = false},
+  {'nvim-tree/nvim-web-devicons'}
 })
 
 local lsp = require('lsp-zero').preset({})

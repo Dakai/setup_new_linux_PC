@@ -5,8 +5,8 @@ lualine.setup{
   options = {
     icons_enabled = true,
     theme = 'embark',
-    section_separators = { left = '>', right = '<' },
-    component_separators = { left = '>', right = '<' },
+    section_separators = { left = '', right = '' },
+    component_separators = { left = '', right = '' },
     disabled_filetypes = {}
   },
   sections =  {
@@ -21,10 +21,10 @@ lualine.setup{
       {'diagnostics', 
         source = { 'nvim_diagnostics'}, 
         symbols = {
-          error = '',
-          warn = '',
-          info = '',
-          hint = '' 
+          error = ' ',
+          warn = ' ',
+          info = ' ',
+          hint = ' ' 
         }
       },
       'encoding',
