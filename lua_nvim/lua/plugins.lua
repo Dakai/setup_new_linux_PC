@@ -17,45 +17,49 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  {'dakai/embark-theme-vim', config = function()
-    vim.cmd('colorscheme embark')
-  end},
-  {'hoob3rt/lualine.nvim'},
-  {'Xuyuanp/nerdtree-git-plugin'},
+  {
+    'dakai/embark-theme-vim',
+    config = function()
+      vim.cmd('colorscheme embark')
+    end
+  },
+  { 'hoob3rt/lualine.nvim' },
+  { 'Xuyuanp/nerdtree-git-plugin' },
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
     dependencies = {
       -- LSP Support
-      {'neovim/nvim-lspconfig'},
+      { 'neovim/nvim-lspconfig' },
       {
         'williamboman/mason.nvim',
         build = function()
-          pcall(vim.cmd, 'MasonUpdate')
+          vim.cmd('MasonUpdate')
         end,
       },
-      {'williamboman/mason-lspconfig.nvim'},
+      { 'williamboman/mason-lspconfig.nvim' },
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'L3MON4D3/LuaSnip'},
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'L3MON4D3/LuaSnip' },
     }
   },
-  {'onsails/lspkind-nvim'},
-  {"nvim-tree/nvim-tree.lua",
-  version = "*",
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
-  }
-},
-  {'nvim-tree/nvim-web-devicons'}
+  { 'onsails/lspkind-nvim' },
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    }
+  },
+  { 'nvim-tree/nvim-web-devicons' }
 })
 
 local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+  lsp.default_keymaps({ buffer = bufnr })
 end)
 
 lsp.setup()
