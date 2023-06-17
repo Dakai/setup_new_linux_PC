@@ -1,7 +1,7 @@
 local status, lualine = pcall(require, 'lualine')
 if (not status) then return end
 
-lualine.setup{
+lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'embark',
@@ -9,22 +9,23 @@ lualine.setup{
     component_separators = { left = '', right = '' },
     disabled_filetypes = {}
   },
-  sections =  {
-    lualine_a = {'mode'},
-    lualine_b = {'branch'},
+  sections = {
+    lualine_a = { 'mode' },
+    lualine_b = { 'branch' },
     lualine_c = { {
       'filename',
       file_status = true, -- display file status
-      path = 0 -- 0 = just filename
+      path = 0            -- 0 = just filename
     } },
     lualine_x = {
-      {'diagnostics', 
-        source = { 'nvim_diagnostics'}, 
+      {
+        'diagnostics',
+        source = { 'nvim_diagnostics' },
         symbols = {
           error = ' ',
           warn = ' ',
           info = ' ',
-          hint = ' ' 
+          hint = ' '
         }
       },
       'encoding',
@@ -34,5 +35,5 @@ lualine.setup{
     lualine_z = { 'location' }
   },
   tabline = {},
-  extensions = {'fugitive'}
+  extensions = { 'fugitive' }
 }

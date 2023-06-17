@@ -54,7 +54,8 @@ require('lazy').setup({
       "nvim-tree/nvim-web-devicons",
     }
   },
-  { 'nvim-tree/nvim-web-devicons' }
+  { 'nvim-tree/nvim-web-devicons' },
+  { 'nvim-treesitter/nvim-treesitter' }
 })
 
 local lsp = require('lsp-zero').preset({})
