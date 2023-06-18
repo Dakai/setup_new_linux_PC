@@ -58,7 +58,9 @@ require('lazy').setup({
     }
   },
   { 'nvim-tree/nvim-web-devicons' },
-  { 'nvim-treesitter/nvim-treesitter' }
+  { 'nvim-treesitter/nvim-treesitter' },
+  { 'windwp/nvim-ts-autotag' },
+  { 'windwp/nvim-autopairs' },
 })
 
 local lsp = require('lsp-zero').preset({})
