@@ -5,10 +5,11 @@ ts.setup {
   highlight = {
     enable = true,
     disable = {},
+    additional_vim_regex_highlighting = true,
   },
   indent = {
     enable = true,
-    disable = {},
+    disable = { 'yaml' },
   },
   ensure_installed = {
     "markdown",
@@ -23,7 +24,9 @@ ts.setup {
     "swift",
     "css",
     "html",
-    "lua"
+    "lua",
+    "python",
+    "javascript",
   },
   autotag = {
     enable = true,
