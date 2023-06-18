@@ -64,6 +64,7 @@ require('lazy').setup({
   { 'windwp/nvim-autopairs' },
   { 'nvim-telescope/telescope.nvim' },
   { 'nvim-telescope/telescope-file-browser.nvim' },
+  { 'akinsho/nvim-bufferline.lua' }
 })
 
 local lsp = require('lsp-zero').preset({})
