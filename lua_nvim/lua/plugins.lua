@@ -23,7 +23,7 @@ require('lazy').setup({
       vim.cmd('colorscheme embark')
     end
   },
-  { 'hoob3rt/lualine.nvim' },
+  { 'nvim-lualine/lualine.nvim' },
   { 'Xuyuanp/nerdtree-git-plugin' },
   {
     'VonHeikemen/lsp-zero.nvim',
