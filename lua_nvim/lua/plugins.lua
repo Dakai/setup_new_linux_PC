@@ -17,6 +17,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  { 'nvim-lua/plenary.nvim' },
   {
     'dakai/embark-theme-vim',
     config = function()
@@ -61,6 +62,8 @@ require('lazy').setup({
   { 'nvim-treesitter/nvim-treesitter' },
   { 'windwp/nvim-ts-autotag' },
   { 'windwp/nvim-autopairs' },
+  { 'nvim-telescope/telescope.nvim' },
+  { 'nvim-telescope/telescope-file-browser.nvim' },
 })
 
 local lsp = require('lsp-zero').preset({})
