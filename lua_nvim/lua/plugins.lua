@@ -17,6 +17,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  { 'xiyaowong/nvim-transparent' },
   { 'nvim-lua/plenary.nvim' },
   {
     'dakai/embark-theme-vim',
@@ -82,6 +83,7 @@ require('lazy').setup({
       vim.keymap.set('i', '<M-j>', function() return vim.fn['codeium#Complete']() end, { expr = true })
     end
   },
+  { 'davidosomething/format-ts-errors.nvim' }
 })
 
 local lsp = require('lsp-zero').preset({})
