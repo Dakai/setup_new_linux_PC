@@ -83,7 +83,10 @@ require('lazy').setup({
       vim.keymap.set('i', '<M-j>', function() return vim.fn['codeium#Complete']() end, { expr = true })
     end
   },
-  { 'davidosomething/format-ts-errors.nvim' }
+  { 'davidosomething/format-ts-errors.nvim' },
+  { 'jose-elias-alvarez/null-ls.nvim' },
+  { 'MunifTanjim/prettier.nvim' },
+  { 'lewis6991/gitsigns.nvim' }
 })
 
 local lsp = require('lsp-zero').preset({})

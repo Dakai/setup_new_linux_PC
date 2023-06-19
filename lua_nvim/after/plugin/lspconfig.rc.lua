@@ -87,3 +87,5 @@ nvim_lsp.lua_ls.setup {
     }
   }
 }
+
+nvim_lsp.tailwindcss.setup {}

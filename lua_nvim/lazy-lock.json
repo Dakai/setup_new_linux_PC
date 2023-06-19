@@ -5,6 +5,7 @@
   "codeium.vim": { "branch": "main", "commit": "99714b06b85e79d9247066f7612e9cc55458bcf1" },
   "embark-theme-vim": { "branch": "main", "commit": "ecc648f0d4ac7c7fc0b44a3d2c50621d2987ba85" },
   "format-ts-errors.nvim": { "branch": "main", "commit": "95a2455fc3691bef6f2aad57ffded99e898c0955" },
+  "gitsigns.nvim": { "branch": "main", "commit": "3ef12dfdc293969fac736a7a580d6ae1f57ea406" },
   "indent-blankline.nvim": { "branch": "master", "commit": "7075d7861f7a6bbf0de0298c83f8a13195e6ec01" },
   "lazy.nvim": { "branch": "main", "commit": "c1aad95243f0d180f41348be26b2417547fb168b" },
   "lsp-zero.nvim": { "branch": "v2.x", "commit": "cf38e6034f2d776ebd16304a334b79543d1ffa60" },
@@ -14,6 +15,7 @@
   "mason.nvim": { "branch": "main", "commit": "f7f81ab41b153e2902ebded401a8a0a6abe28607" },
   "neoscroll.nvim": { "branch": "master", "commit": "d7601c26c8a183fa8994ed339e70c2d841253e93" },
   "nerdtree-git-plugin": { "branch": "master", "commit": "e1fe727127a813095854a5b063c15e955a77eafb" },
+  "null-ls.nvim": { "branch": "main", "commit": "bbaf5a96913aa92281f154b08732be2f57021c45" },
   "nvim-autopairs": { "branch": "master", "commit": "e8f7dd7a72de3e7b6626c050a802000e69d53ff0" },
   "nvim-cmp": { "branch": "main", "commit": "fa492591fecdc41798cd5d3d1713232a5088fba0" },
   "nvim-cokeline": { "branch": "main", "commit": "7fb6753c8fb90eebb6b56f86fc6e65468a23c81c" },
@@ -24,6 +26,7 @@
   "nvim-ts-autotag": { "branch": "main", "commit": "6be1192965df35f94b8ea6d323354f7dc7a557e4" },
   "nvim-web-devicons": { "branch": "master", "commit": "14b3a5ba63b82b60cde98d0a40319d80f25e8301" },
   "plenary.nvim": { "branch": "master", "commit": "36aaceb6e93addd20b1b18f94d86aecc552f30c4" },
+  "prettier.nvim": { "branch": "main", "commit": "d98e732cb73690b07c00c839c924be1d1d9ac5c2" },
   "telescope-file-browser.nvim": { "branch": "master", "commit": "87dfaa9a9c251388cf4f01b9d4078c29d1fc8803" },
   "telescope.nvim": { "branch": "master", "commit": "00cf15074a2997487813672a75f946d2ead95eb0" }
 }
