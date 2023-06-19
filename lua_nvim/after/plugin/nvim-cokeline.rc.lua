@@ -9,10 +9,21 @@ local dark = get_hex("Normal", "bg")
 local text = get_hex("Comment", "fg")
 local grey = get_hex("ColorColumn", "bg")
 local light = get_hex("Comment", "fg")
-local high = "#a6d120"
+-- local high = "#a6d120"
+local high = "#63f2f1"
 
 require("cokeline").setup(
   {
+    sidebar = {
+      filetype = 'NvimTree',
+      components = {
+        {
+          text = "  NvimTree",
+          fg = dark,
+          bg = high,
+          style = 'bold'
+        } }
+    },
     default_hl = {
       fg = function(buffer)
         if buffer.is_focused then
