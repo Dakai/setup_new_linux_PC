@@ -27,9 +27,12 @@ local on_attach = function(client, bufnr)
   end
 end
 
+local capabilities = require('cmp_nvim_lsp').update_capabilitis(lsp.protocol.make_client_capabilities())
+
 -- TypeScript
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
+  capabilities = capabilities,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" },
   handlers = {
@@ -72,6 +75,7 @@ nvim_lsp.tsserver.setup {
 
 nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
