@@ -73,7 +73,15 @@ require('lazy').setup({
   },
   { "lukas-reineke/indent-blankline.nvim" },
   { 'karb94/neoscroll.nvim', },
-  { 'Exafunction/codeium.vim' },
+  {
+    'Exafunction/codeium.vim',
+    config = function()
+      vim.g.codeium_no_map_tab = 1
+      vim.keymap.set('i', '<M-i>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+      vim.keymap.set('i', '<M-k>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+      vim.keymap.set('i', '<M-j>', function() return vim.fn['codeium#Complete']() end, { expr = true })
+    end
+  },
 })
 
 local lsp = require('lsp-zero').preset({})
