@@ -5,12 +5,14 @@ local get_hex = require("cokeline/utils").get_hex
 local red = vim.g.terminal_color_1
 local yellow = vim.g.terminal_color_4
 local space = { text = " " }
-local dark = get_hex("Normal", "bg")
-local text = get_hex("Comment", "fg")
+-- local dark = get_hex("Normal", "bg")
+-- local text = get_hex("Comment", "fg")
 local grey = get_hex("ColorColumn", "bg")
 local light = get_hex("Comment", "fg")
 -- local high = "#a6d120"
 local high = "#63f2f1"
+local text = "#caddaf"
+local dark = "#2d2b40"
 
 require("cokeline").setup(
   {
