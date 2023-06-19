@@ -72,9 +72,7 @@ require('lazy').setup({
     config = true
   },
   { "lukas-reineke/indent-blankline.nvim" },
-  {
-    'karb94/neoscroll.nvim',
-  },
+  { 'karb94/neoscroll.nvim', },
   { 'Exafunction/codeium.vim' },
 })
 
