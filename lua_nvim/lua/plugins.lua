@@ -72,6 +72,10 @@ require('lazy').setup({
     config = true
   },
   { "lukas-reineke/indent-blankline.nvim" },
+  {
+    'karb94/neoscroll.nvim',
+  },
+  { 'Exafunction/codeium.vim' },
 })
 
 local lsp = require('lsp-zero').preset({})
