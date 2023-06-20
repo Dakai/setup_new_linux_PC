@@ -9,6 +9,25 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
+--vim.api.nvim_set_keymap('n', '<Space>f', ':lua require("vim.diagnostic").open_float({scope="cursor"})<CR>', {silent = true})
+
+vim.keymap.set('n', '<Space>f', function()
+    -- If we find a floating window, close it.
+    local found_float = false
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        if vim.api.nvim_win_get_config(win).relative ~= '' then
+            vim.api.nvim_win_close(win, true)
+            found_float = true
+        end
+    end
+
+    if found_float then
+        return
+    end
+
+    vim.diagnostic.open_float(nil, { focus = false, scope = 'cursor' })
+end, { desc = 'Toggle Diagnostics' })
+
 -- https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#show-line-diagnostics-automatically-in-hover-window
 -- You will likely want to reduce updatetime which affects CursorHold
 -- note: this setting is global and should be set only once
