@@ -49,7 +49,9 @@ require('lazy').setup({
       { 'L3MON4D3/LuaSnip' },
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
       { 'hrsh7th/nvim-cmp' },
+      {'rafamadriz/friendly-snippets'}
     }
   },
   {
@@ -99,11 +101,3 @@ require('lazy').setup({
     end
   }
 })
-
-local lsp = require('lsp-zero').preset({})
-
-lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({ buffer = bufnr })
-end)
-
-lsp.setup()
