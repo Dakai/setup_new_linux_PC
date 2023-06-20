@@ -87,9 +87,9 @@ require('lazy').setup({
     end
   },
   --{ 'davidosomething/format-ts-errors.nvim' },
-  -- { 'jose-elias-alvarez/null-ls.nvim' },
-  --{ 'MunifTanjim/prettier.nvim' },
-   { 'lewis6991/gitsigns.nvim' },
+  { 'jose-elias-alvarez/null-ls.nvim' },
+  { 'MunifTanjim/prettier.nvim' },
+  { 'lewis6991/gitsigns.nvim' },
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features

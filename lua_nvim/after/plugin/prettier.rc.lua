@@ -13,6 +13,5 @@ prettier.setup {
     "scss",
     "less",
     "python",
-    "php"
   }
 }
