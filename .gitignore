@@ -3,3 +3,4 @@
 *.rpm
 *.zip
 *.log
+lua_nvim/lazy-lock.json
