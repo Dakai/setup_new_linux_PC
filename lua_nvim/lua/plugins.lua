@@ -120,11 +120,20 @@ require("lazy").setup({
   {
     "dpayne/CodeGPT.nvim",
     dependencies = {
-      'nvim-lua/plenary.nvim',
-      'MunifTanjim/nui.nvim',
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
     },
     config = function()
       require("codegpt.config")
-    end
+    end,
+  },
+  {
+    "roobert/tailwindcss-colorizer-cmp.nvim",
+    -- optionally, override the default options:
+    config = function()
+      require("tailwindcss-colorizer-cmp").setup({
+        color_square_width = 2,
+      })
+    end,
   },
 })

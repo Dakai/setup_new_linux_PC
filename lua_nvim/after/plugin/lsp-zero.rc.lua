@@ -1,7 +1,7 @@
 local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+  lsp.default_keymaps({ buffer = bufnr })
 end)
 
 -- (Optional) Configure lua language server for neovim
@@ -27,24 +27,26 @@ cmp.setup({
       select = true
     }),
   }),
-sources = cmp.config.sources({
-    {name = 'path'},
-    {name = 'nvim_lsp'},
-    {name = 'buffer', keyword_length = 3},
-    {name = 'luasnip', keyword_length = 2},
+  sources = cmp.config.sources({
+    { name = 'path' },
+    { name = 'nvim_lsp' },
+    { name = 'buffer',  keyword_length = 3 },
+    { name = 'luasnip', keyword_length = 2 },
   }),
-formatting = {
+  formatting = {
+
+    -- format = require("tailwindcss-colorizer-cmp").formatter,
     format = lspkind.cmp_format({
-      mode = 'symbol_text', -- show only symbol annotations
-      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+      mode = 'symbol_text',  -- show only symbol annotations
+      maxwidth = 50,         -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
       ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
 
       -- The function below will be called before any actual modifications from lspkind
       -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-      --before = function (entry, vim_item)
-      --  ...
-      --  return vim_item
-      --end
+      before = function(entry, vim_item)
+        vim_item = require('tailwindcss-colorizer-cmp').formatter(entry, vim_item)
+        return vim_item
+      end
     })
   }
 })
