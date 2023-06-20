@@ -17,6 +17,7 @@ vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {
 local protocol = require('vim.lsp.protocol')
 
 local on_attach = function(client, bufnr)
+  buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   -- format on save
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_create_autocmd("BufWritePre", {
@@ -27,7 +28,7 @@ local on_attach = function(client, bufnr)
   end
 end
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(protocol.make_client_capabilities())
 
 -- TypeScript
 nvim_lsp.tsserver.setup {
