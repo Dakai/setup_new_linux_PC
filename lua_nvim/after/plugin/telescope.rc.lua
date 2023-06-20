@@ -49,7 +49,7 @@ vim.keymap.set('n', ';f',
       hidden = true
     })
   end)
-vim.keymap.set('n', '<Space>f',
+vim.keymap.set('n', '<Space>t',
   function()
     builtin.find_files({
       no_ignore = false,
