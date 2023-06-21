@@ -2,7 +2,6 @@ local status, null_ls = pcall(require, "null-ls")
 if not status then
   return
 end
-
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
   sources = {
@@ -22,7 +21,7 @@ null_ls.setup({
         callback = function()
           -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
           -- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
-          vim.lsp.buf.formatting_sync()
+          vim.lsp.buf.format({async = false})
         end,
       })
     end
@@ -30,6 +29,3 @@ null_ls.setup({
 
 })
 
-require("null-ls").setup({
-  -- you can reuse a shared lspconfig on_attach callback here
-})
