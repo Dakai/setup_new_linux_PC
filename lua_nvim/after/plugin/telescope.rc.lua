@@ -58,7 +58,19 @@ vim.keymap.set("n", ";f", function()
 		respect_gitignore = false,
 		no_ignore = true,
 		hidden = true,
-		file_ignore_patterns = { "node_modules", ".git", ".next", ".lock", "package-lock.json" },
+		file_ignore_patterns = {
+			"node_modules",
+			".git",
+			".next",
+			".lock",
+			"package-lock.json",
+			".jpg",
+			"jpeg",
+			"png",
+			"PNG",
+			"JPEG",
+			"JPG",
+		},
 	})
 end)
 vim.keymap.set("n", "<Space>t", function()
@@ -66,7 +78,19 @@ vim.keymap.set("n", "<Space>t", function()
 		respect_gitignore = false,
 		no_ignore = true,
 		hidden = true,
-		file_ignore_patterns = { "node_modules", ".git", ".next", ".lock", "package-lock.json" },
+		file_ignore_patterns = {
+			"node_modules",
+			".git",
+			".next",
+			".lock",
+			"package-lock.json",
+			".jpg",
+			"jpeg",
+			"png",
+			"PNG",
+			"JPEG",
+			"JPG",
+		},
 	})
 end)
 vim.keymap.set("n", "<Space>g", function()
@@ -74,7 +98,19 @@ vim.keymap.set("n", "<Space>g", function()
 		respect_gitignore = false,
 		no_ignore = true,
 		hidden = false,
-		file_ignore_patterns = { "node_modules", ".git", ".next", ".lock", "package-lock.json" },
+		file_ignore_patterns = {
+			"node_modules",
+			".git",
+			".next",
+			".lock",
+			"package-lock.json",
+			".jpg",
+			"jpeg",
+			"png",
+			"PNG",
+			"JPEG",
+			"JPG",
+		},
 	})
 end)
 vim.keymap.set("n", "<Space>b", function()
