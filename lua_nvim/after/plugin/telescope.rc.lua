@@ -70,6 +70,7 @@ vim.keymap.set("n", ";f", function()
 			"PNG",
 			"JPEG",
 			"JPG",
+			"ico",
 		},
 	})
 end)
@@ -90,6 +91,7 @@ vim.keymap.set("n", "<Space>t", function()
 			"PNG",
 			"JPEG",
 			"JPG",
+			"ico",
 		},
 	})
 end)
@@ -110,6 +112,7 @@ vim.keymap.set("n", "<Space>g", function()
 			"PNG",
 			"JPEG",
 			"JPG",
+			"ico",
 		},
 	})
 end)
