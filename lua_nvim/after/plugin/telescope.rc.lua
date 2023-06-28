@@ -55,20 +55,27 @@ vim.api.nvim_set_keymap(
 
 vim.keymap.set("n", ";f", function()
 	builtin.find_files({
-		no_ignore = false,
+		respect_gitignore = false,
+		no_ignore = true,
 		hidden = true,
-		file_ignore_patterns = { "node_modules" },
+		file_ignore_patterns = { "node_modules", ".git", ".next", ".lock", "package-lock.json" },
 	})
 end)
 vim.keymap.set("n", "<Space>t", function()
 	builtin.find_files({
-		no_ignore = false,
+		respect_gitignore = false,
+		no_ignore = true,
 		hidden = true,
-		file_ignore_patterns = { "node_modules" },
+		file_ignore_patterns = { "node_modules", ".git", ".next", ".lock", "package-lock.json" },
 	})
 end)
 vim.keymap.set("n", "<Space>g", function()
-	builtin.live_grep()
+	builtin.live_grep({
+		respect_gitignore = false,
+		no_ignore = true,
+		hidden = false,
+		file_ignore_patterns = { "node_modules", ".git", ".next", ".lock", "package-lock.json" },
+	})
 end)
 vim.keymap.set("n", "<Space>b", function()
 	builtin.buffers()
