@@ -71,3 +71,7 @@ vim.cmd([[
     autocmd BufWritePre * %s/\s\+$//e
   augroup END
 ]])
+
+-- Enable 'splitright' option
+vim.opt.splitright = true
+
