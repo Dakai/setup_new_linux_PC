@@ -217,5 +217,6 @@ require("lazy").setup({
     --  desc = "Toggle Flash Search",
     --},
   },
-}
+},
+{'nvim-treesitter/nvim-treesitter-context'}
 })
