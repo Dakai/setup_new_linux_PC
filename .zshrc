@@ -192,9 +192,9 @@ function aic() {
 # bind  Alt+l to right arrow
 bindkey "^[l" forward-char
 # bind  Alt+j to left arrow
-bindkey "^[j" backward-char
-bindkey "^[i" up-line-or-search
-bindkey "^[k" down-line-or-search
+bindkey "^[h" backward-char
+bindkey "^[k" up-line-or-search
+bindkey "^[j" down-line-or-search
 #foot integration
 #function osc7 {
 #    local LC_ALL=C
@@ -212,5 +212,3 @@ source '/usr/share/zsh/plugins/zsh-thefuck-git/zsh-thefuck.plugin.zsh'
 
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
-bindkey "^[l" forward-char
-bindkey "^[j" backward-char
