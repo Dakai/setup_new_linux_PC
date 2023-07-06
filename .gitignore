@@ -5,3 +5,6 @@
 *.log
 /lua_nvim/lazy-lock.json
 lua_nvim/lazy-lock.json
+*lazy*
+*lock*
+lazy-lock.json
