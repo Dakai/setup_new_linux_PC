@@ -56,8 +56,8 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv==jgvo<esc>=jgvo", {})
 vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv==kgvo<esc>=kgvo", {})
 
--- Map gt to next tab
-vim.api.nvim_set_keymap('n', 'gT', ':tabprev<CR>', { noremap = true, silent = true })
+-- Map gt to next buff
+vim.api.nvim_set_keymap('n', 'gT', ':bp<CR>', { noremap = true, silent = true })
 
--- Map gT to previous tab
-vim.api.nvim_set_keymap('n', 'gt', ':tabnext<CR>', { noremap = true, silent = true })
+-- Map gT to previous buff
+vim.api.nvim_set_keymap('n', 'gt', ':bn<CR>', { noremap = true, silent = true })
