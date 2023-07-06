@@ -189,9 +189,7 @@ function aic() {
     git add .
    	aicommits
 }
-# bind  Alt+l to right arrow
 bindkey "^[l" forward-char
-# bind  Alt+j to left arrow
 bindkey "^[h" backward-char
 bindkey "^[k" up-line-or-search
 bindkey "^[j" down-line-or-search
@@ -209,6 +207,4 @@ bindkey "^[j" down-line-or-search
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 source '/usr/share/zsh/plugins/zsh-thefuck-git/zsh-thefuck.plugin.zsh'
-
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-
