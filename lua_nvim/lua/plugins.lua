@@ -219,5 +219,10 @@ require("lazy").setup({
   },
 },
 {'nvim-treesitter/nvim-treesitter-context'},
-  {'RRethy/vim-illuminate'}
+  {'RRethy/vim-illuminate'},
+  --{ 'echasnovski/mini.animate', version = '*' ,
+	--	config = function()
+  --    require('mini.animate').setup()
+	--	end,
+  --},
 })
