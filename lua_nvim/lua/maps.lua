@@ -36,6 +36,9 @@ vim.api.nvim_set_keymap("n", "<Space>w", ":w<CR>", { noremap = true })
 -- map <Space>q to quit neovim
 vim.api.nvim_set_keymap("n", "<Space>q", ":q<CR>", { noremap = true })
 
+-- map <Space>d to delele buffer
+vim.api.nvim_set_keymap("n", "<Space>d", ":bd<CR>", { noremap = true })
+
 vim.api.nvim_set_keymap("n", "<Space>m", "<Plug>MarkdownPreviewToggle", {})
 
 -- From https://www.reddit.com/r/neovim/comments/13y3thq/whats_a_very_simple_config_change_that_you_cant/
