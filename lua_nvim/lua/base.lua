@@ -29,7 +29,7 @@ vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 
 vim.opt.shell = 'zsh'
-vim.opt.backupskip =  {"*.bak", "*/tmp/*"}
+vim.opt.backupskip = { "*.bak", "*/tmp/*" }
 -- incremental search in split window
 vim.opt.inccommand = 'split'
 -- ignore case when searching for a pattern
@@ -48,7 +48,7 @@ vim.opt.si = true
 -- No wrap lines
 vim.opt.wrap = false
 -- vim.opt.backspace = 'start,eol,indent'
-vim.opt.path:append {'**'} -- Finding files - Search down into subfolders
+vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
 
 -- Undercurl
@@ -62,16 +62,15 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   command = "set nopaste"
 })
 -- Add asterisks in block comments
-vim.opt.formatoptions:append {'r'}
+vim.opt.formatoptions:append { 'r' }
 
 --"remove trailing on save
-vim.cmd([[
-  augroup TrimWhitespace
-    autocmd!
-    autocmd BufWritePre * %s/\s\+$//e
-  augroup END
-]])
+--vim.cmd([[
+--  augroup TrimWhitespace
+--    autocmd!
+--    autocmd BufWritePre * %s/\s\+$//e
+--  augroup END
+--]])
 
 -- Enable 'splitright' option
 vim.opt.splitright = true
-

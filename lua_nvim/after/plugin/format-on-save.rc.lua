@@ -52,7 +52,7 @@ format_on_save.setup({
     -- Concatenate formatters
     python = {
       formatters.remove_trailing_whitespace,
-      formatters.shell({ cmd = "tidy-imports" }),
+      -- formatters.shell({ cmd = "tidy-imports" }),
       formatters.black,
     },
 
