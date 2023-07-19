@@ -97,7 +97,7 @@ require("lazy").setup({
   { 'davidosomething/format-ts-errors.nvim' },
   --{ "jose-elias-alvarez/null-ls.nvim" },
   { "elentok/format-on-save.nvim" },
-  -- { "MunifTanjim/prettier.nvim" },
+  --{ "MunifTanjim/prettier.nvim" },
   { "lewis6991/gitsigns.nvim" },
   {
     "kylechui/nvim-surround",
