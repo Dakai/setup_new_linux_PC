@@ -14,6 +14,16 @@ local high = "#63f2f1"
 local text = "#caddaf"
 local dark = "#2d2b40"
 
+function get_second_to_last_dir(path)
+  local dirs = {}
+  for dir in string.gmatch(path, "([^/]+)") do
+    table.insert(dirs, dir)
+  end
+
+  local name = dirs[#dirs - 1]
+  return name .. "/"
+end
+
 require("cokeline").setup(
   {
     sidebar = {
@@ -85,7 +95,8 @@ require("cokeline").setup(
       },
       {
         text = function(buffer)
-          return buffer.unique_prefix .. buffer.filename .. "⠀"
+          --return buffer.unique_prefix .. buffer.filename .. "⠀"
+          return get_second_to_last_dir(buffer.path) .. buffer.filename .. "⠀"
         end,
         style = function(buffer)
           return buffer.is_focused and "bold" or nil
