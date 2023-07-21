@@ -11,6 +11,7 @@ format_on_save.setup({
     html = formatters.lsp,
     java = formatters.lsp,
     javascript = formatters.lsp,
+    typescript = formatters.lsp,
     svelte = formatters.lsp,
     json = formatters.lsp,
     lua = formatters.lsp,
@@ -23,7 +24,7 @@ format_on_save.setup({
     scss = formatters.lsp,
     sh = formatters.shfmt,
     terraform = formatters.lsp,
-    typescript = formatters.prettierd,
+    -- typescript = formatters.prettierd,
     typescriptreact = formatters.prettierd,
     yaml = formatters.lsp,
 
