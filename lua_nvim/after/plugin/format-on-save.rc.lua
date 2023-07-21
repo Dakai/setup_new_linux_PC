@@ -10,12 +10,12 @@ format_on_save.setup({
     css = formatters.lsp,
     html = formatters.lsp,
     java = formatters.lsp,
-    -- javascript = formatters.lsp,
+    javascript = formatters.lsp,
     svelte = formatters.lsp,
     json = formatters.lsp,
     lua = formatters.lsp,
     markdown = formatters.prettierd,
-    javascript = formatters.prettierd,
+    -- javascript = formatters.prettierd,
     openscad = formatters.lsp,
     -- python = formatters.black,
     rust = formatters.lsp,
@@ -28,7 +28,7 @@ format_on_save.setup({
     yaml = formatters.lsp,
 
     -- Add your own shell formatters:
-    myfiletype = formatters.shell({ cmd = { "myformatter", "%" } }),
+    -- myfiletype = formatters.shell({ cmd = { "myformatter", "%" } }),
 
     -- Add lazy formatter that will only run when formatting:
     my_custom_formatter = function()
@@ -40,14 +40,14 @@ format_on_save.setup({
     end,
 
     -- Add custom formatter
-    filetype1 = formatters.remove_trailing_whitespace,
-    filetype2 = formatters.custom({
-      format = function(lines)
-        return vim.tbl_map(function(line)
-          return line:gsub("true", "false")
-        end, lines)
-      end
-    }),
+    -- filetype1 = formatters.remove_trailing_whitespace,
+    -- filetype2 = formatters.custom({
+    --   format = function(lines)
+    --     return vim.tbl_map(function(line)
+    --       return line:gsub("true", "false")
+    --     end, lines)
+    --   end
+    -- }),
 
     -- Concatenate formatters
     python = {
@@ -71,6 +71,6 @@ format_on_save.setup({
   -- Optional: fallback formatter to use when no formatters match the current filetype
   fallback_formatter = {
     formatters.remove_trailing_whitespace,
-    formatters.prettierd,
+    -- formatters.prettierd,
   }
 })
