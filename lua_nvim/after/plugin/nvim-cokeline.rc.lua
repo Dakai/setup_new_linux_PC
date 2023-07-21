@@ -31,11 +31,12 @@ local function get_second_to_last_dir(path)
   end
 
   local name = dirs[#dirs - 1]
-  if name:match("%[id%]") then
-    name = dirs[#dirs - 2] .. '/' .. name
+  if name ~= nil then
+    if name:match("%[id%]") then
+      name = dirs[#dirs - 2] .. '/' .. name
+    end
+    return name .. "/"
   end
-
-  return name .. "/"
 end
 
 require("cokeline").setup(
@@ -110,7 +111,11 @@ require("cokeline").setup(
       {
         text = function(buffer)
           --return buffer.unique_prefix .. buffer.filename .. "⠀"
-          return get_second_to_last_dir(buffer.path) .. buffer.filename .. "⠀"
+          if get_second_to_last_dir(buffer.path) ~= nil then
+            return get_second_to_last_dir(buffer.path) .. buffer.filename .. "⠀"
+          else
+            return buffer.filename .. "⠀"
+          end
         end,
         style = function(buffer)
           return buffer.is_focused and "bold" or nil
