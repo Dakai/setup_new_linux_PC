@@ -14,13 +14,27 @@ local high = "#63f2f1"
 local text = "#caddaf"
 local dark = "#2d2b40"
 
-function get_second_to_last_dir(path)
+--local function get_second_to_last_dir(path)
+--  local dirs = {}
+--  for dir in string.gmatch(path, "([^/]+)") do
+--    table.insert(dirs, dir)
+--  end
+--
+--  local name = dirs[#dirs - 1]
+--  return name .. "/"
+--end
+
+local function get_second_to_last_dir(path)
   local dirs = {}
   for dir in string.gmatch(path, "([^/]+)") do
     table.insert(dirs, dir)
   end
 
   local name = dirs[#dirs - 1]
+  if name:match("%[id%]") then
+    name = dirs[#dirs - 2] .. '/' .. name
+  end
+
   return name .. "/"
 end
 
