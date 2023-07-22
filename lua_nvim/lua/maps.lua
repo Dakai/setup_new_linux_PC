@@ -1,7 +1,7 @@
 local keymap = vim.keymap
 
 -- Do not yank with x
-keymap.set("n", "x", '"_x')
+-- keymap.set("n", "x", '"_x')
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
@@ -68,6 +68,6 @@ vim.api.nvim_set_keymap('n', 'gt', ':bn<CR>', { noremap = true, silent = true })
 -- From ThePrimeagen
 vim.o.lazyredraw = false
 vim.keymap.set("i", "<C-c>", "<Esc>")
-vim.keymap.set('n', 'n','nzzzv')
-vim.keymap.set('n', 'n','nzzzv')
-vim.keymap.set('n', 'N','Nzzzv')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
