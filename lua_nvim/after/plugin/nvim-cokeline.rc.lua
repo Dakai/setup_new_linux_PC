@@ -70,7 +70,9 @@ local function get_path_parts(path)
 
   local filename = dirs[#dirs]
   local ext = filename:match("^.+(%..+)$")
-  filename = filename:gsub("%." .. ext, "")
+  if ext ~= nil then
+    filename = filename:gsub("%." .. ext, "")
+  end
 
   if path:match("api") and filename == "+server.ts" then
     local api_index = 0
@@ -84,6 +86,9 @@ local function get_path_parts(path)
   elseif ext == ".svelte" then
     local last_dir = dirs[#dirs - 1]
     filename = filename:gsub("%.svelte$", "") -- strip .svelte
+    return last_dir .. "/" .. filename
+  elseif ext == nil then
+    local last_dir = dirs[#dirs - 1]
     return last_dir .. "/" .. filename
   else
     local last_dir = dirs[#dirs - 1]
