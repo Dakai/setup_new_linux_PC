@@ -87,13 +87,33 @@ local function get_path_parts(path)
     elseif ext == ".svelte" then
       local last_dir = dirs[#dirs - 1]
       filename = filename:gsub("%.svelte$", "") -- strip .svelte
-      return last_dir .. "/" .. filename
+      if last_dir == '[id]' then
+        local id_index = 0
+        for i, dir in ipairs(dirs) do
+          if dir == "[id]" then
+            id_index = i
+          end
+        end
+        local new_dir = dirs[id_index - 1]
+        return new_dir .. "/" .. filename
+      elseif last_dir == '[slug]' then
+        local id_index = 0
+        for i, dir in ipairs(dirs) do
+          if dir == "[slug]" then
+            id_index = i
+          end
+        end
+        local new_dir = dirs[id_index - 1]
+        return new_dir .. "/" .. filename
+      else
+        return last_dir .. "/" .. filename
+      end
     elseif ext == nil then
       local last_dir = dirs[#dirs - 1]
       return last_dir .. "/" .. filename
     else
       local last_dir = dirs[#dirs - 1]
-      return last_dir .. "/" .. filename .. "." .. ext
+      return last_dir .. "/" .. filename
     end
   end
 end
