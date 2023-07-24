@@ -69,30 +69,32 @@ local function get_path_parts(path)
   end
 
   local filename = dirs[#dirs]
-  local ext = filename:match("^.+(%..+)$")
-  if ext ~= nil then
-    filename = filename:gsub("%." .. ext, "")
-  end
-
-  if path:match("api") and filename == "+server.ts" then
-    local api_index = 0
-    for i, dir in ipairs(dirs) do
-      if dir == "api" then
-        api_index = i
-      end
+  if filename ~= nil then
+    local ext = filename:match("^.+(%..+)$")
+    if ext ~= nil then
+      filename = filename:gsub("%." .. ext, "")
     end
-    local api_next_dir = dirs[api_index + 1]
-    return "api/" .. api_next_dir
-  elseif ext == ".svelte" then
-    local last_dir = dirs[#dirs - 1]
-    filename = filename:gsub("%.svelte$", "") -- strip .svelte
-    return last_dir .. "/" .. filename
-  elseif ext == nil then
-    local last_dir = dirs[#dirs - 1]
-    return last_dir .. "/" .. filename
-  else
-    local last_dir = dirs[#dirs - 1]
-    return last_dir .. "/" .. filename .. "." .. ext
+
+    if path:match("api") and filename == "+server.ts" then
+      local api_index = 0
+      for i, dir in ipairs(dirs) do
+        if dir == "api" then
+          api_index = i
+        end
+      end
+      local api_next_dir = dirs[api_index + 1]
+      return "api/" .. api_next_dir
+    elseif ext == ".svelte" then
+      local last_dir = dirs[#dirs - 1]
+      filename = filename:gsub("%.svelte$", "") -- strip .svelte
+      return last_dir .. "/" .. filename
+    elseif ext == nil then
+      local last_dir = dirs[#dirs - 1]
+      return last_dir .. "/" .. filename
+    else
+      local last_dir = dirs[#dirs - 1]
+      return last_dir .. "/" .. filename .. "." .. ext
+    end
   end
 end
 
@@ -169,7 +171,11 @@ require("cokeline").setup(
         text = function(buffer)
           -- return buffer.unique_prefix .. buffer.filename .. "⠀"
           -- return buffer.path .. buffer.filename .. "⠀"
-          return get_path_parts(buffer.path) .. "⠀"
+          if get_path_parts(buffer.path) ~= nil then
+            return get_path_parts(buffer.path) .. "⠀"
+          else
+            return buffer.filename .. "⠀"
+          end
         end,
         style = function(buffer)
           return buffer.is_focused and "bold" or nil
