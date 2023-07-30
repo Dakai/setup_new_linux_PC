@@ -28,6 +28,15 @@ vim.keymap.set("n", "<Space>f", function()
   vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
 end, { desc = "Toggle Diagnostics" })
 
+nvim_lsp.svelte.setup {
+  on_attach = function(client)
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      pattern = { "+page.server.ts", "+page.ts", "+layout.server.ts", "+layout.ts" },
+      command = "LspRestart svelte",
+    })
+  end
+}
+
 -- nvim_lsp.tsserver.setup({
 --   handlers = {
 --     ["textDocument/publishDiagnostics"] = function(
