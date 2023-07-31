@@ -80,7 +80,7 @@ plugins=(
 		history-substring-search
 		zsh-autosuggestions
 		colored-man-pages
-		zsh-syntax-highlighting
+		#zsh-syntax-highlighting
 		pip
 )
 
