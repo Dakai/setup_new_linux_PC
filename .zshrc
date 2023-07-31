@@ -191,8 +191,8 @@ function aic() {
 }
 bindkey "^[l" forward-char
 bindkey "^[h" backward-char
-bindkey "^[k" history-incremental-pattern-search-backward
-bindkey "^[j" history-search-backward
+bindkey "^[k" history-substring-search-up
+bindkey "^[j" history-substring-search-down
 #foot integration
 #function osc7 {
 #    local LC_ALL=C
