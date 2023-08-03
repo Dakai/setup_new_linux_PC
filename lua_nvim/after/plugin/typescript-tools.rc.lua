@@ -5,5 +5,10 @@ if not status then
 end
 
 ts_tools.setup {
-  filetypes = { "typescript", "javascript" },
+  filetypes = { "typescript", "javascript", "svelte" },
+  on_attach = function(client, bufnr)
+    if vim.bo[bufnr].filetype == "svelte" then
+      client.stop()
+    end
+  end
 }

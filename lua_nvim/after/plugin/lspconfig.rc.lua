@@ -29,15 +29,14 @@ vim.keymap.set("n", "<Space>f", function()
 end, { desc = "Toggle Diagnostics" })
 
 nvim_lsp.svelte.setup {
-  filetypes = { 'typescript', 'javascript', 'svelte', 'html', 'css' },
+  filetypes = { 'svelte', 'html', 'css' },
   on_attach = function()
     vim.api.nvim_create_autocmd("BufWritePost", {
-      pattern = { "+page.server.ts", "+page.ts", "+layout.server.ts", "+layout.ts" },
+      pattern = { "+page.server.ts", "+page.ts", "+layout.server.ts", "+layout.ts", 'stores.ts', '.svelte' },
       command = "LspRestart svelte",
     })
   end
 }
-
 -- nvim_lsp.tsserver.setup({
 --   handlers = {
 --     ["textDocument/publishDiagnostics"] = function(
