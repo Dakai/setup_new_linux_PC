@@ -29,7 +29,8 @@ vim.keymap.set("n", "<Space>f", function()
 end, { desc = "Toggle Diagnostics" })
 
 nvim_lsp.svelte.setup {
-  on_attach = function(client)
+  filetypes = { 'typescript', 'javascript', 'svelte', 'html', 'css' },
+  on_attach = function()
     vim.api.nvim_create_autocmd("BufWritePost", {
       pattern = { "+page.server.ts", "+page.ts", "+layout.server.ts", "+layout.ts" },
       command = "LspRestart svelte",
