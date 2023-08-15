@@ -34,10 +34,22 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 vim.api.nvim_set_keymap("n", "<Space>w", ":w<CR>", { noremap = true })
 
 -- map <Space>q to quit neovim
-vim.api.nvim_set_keymap("n", "<Space>q", ":q<CR>", { noremap = true })
+--vim.api.nvim_set_keymap("n", "<Space>q", ":q<CR>", { noremap = true })
 
 -- map <Space>d to delele buffer
-vim.api.nvim_set_keymap("n", "<Space>d", ":bd<CR>", { noremap = true })
+--vim.api.nvim_set_keymap("n", "<Space>d", ":bd<CR>", { noremap = true })
+
+function Delete_buffer_or_exit()
+  local buflisted = vim.fn.getbufinfo({ buflisted = 1 })
+  if #buflisted > 1 then
+    vim.cmd('bdelete')
+  else
+    vim.cmd('q')
+  end
+end
+
+-- Map <Space>q to the delete_buffer_or_exit function in normal mode
+vim.api.nvim_set_keymap("n", "<Space>q", ":lua Delete_buffer_or_exit()<CR>", { silent = true })
 
 vim.api.nvim_set_keymap("n", "<Space>m", "<Plug>MarkdownPreviewToggle", {})
 
