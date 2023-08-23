@@ -72,10 +72,20 @@ vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv==jgvo<esc>=jgvo", {})
 vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv==kgvo<esc>=kgvo", {})
 
 -- Map gt to next buff
-vim.api.nvim_set_keymap('n', 'gT', ':bp<CR>', { noremap = true, silent = true })
-
+-- The problem with this mapping is it goes to next buffer by buffnr, not tab position
+--vim.api.nvim_set_keymap('n', 'gT', ':bp<CR>', { noremap = true, silent = true })
 -- Map gT to previous buff
-vim.api.nvim_set_keymap('n', 'gt', ':bn<CR>', { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', 'gt', ':bn<CR>', { noremap = true, silent = true })
+
+-- Map tab to next buffer or number + tab directly to certain buffer
+vim.keymap.set('n', '<tab>', function()
+  return ('<Plug>(cokeline-focus-%s)'):format(vim.v.count > 0 and vim.v.count or 'next')
+end, { silent = true, expr = true })
+
+vim.keymap.set('n', '<S-tab>', function()
+  return ('<Plug>(cokeline-focus-%s)'):format(vim.v.count > 0 and vim.v.count or 'prev')
+end, { silent = true, expr = true })
+
 
 -- From ThePrimeagen
 vim.o.lazyredraw = false
