@@ -77,12 +77,12 @@ vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv==kgvo<esc>=kgvo", {})
 -- Map gT to previous buff
 --vim.api.nvim_set_keymap('n', 'gt', ':bn<CR>', { noremap = true, silent = true })
 
--- Map tab to next buffer or number + tab directly to certain buffer
-vim.keymap.set('n', '<tab>', function()
+-- Map gt to next buffer or gT directly to certain buffer
+vim.keymap.set('n', 'gt', function()
   return ('<Plug>(cokeline-focus-%s)'):format(vim.v.count > 0 and vim.v.count or 'next')
 end, { silent = true, expr = true })
 
-vim.keymap.set('n', '<S-tab>', function()
+vim.keymap.set('n', 'gT', function()
   return ('<Plug>(cokeline-focus-%s)'):format(vim.v.count > 0 and vim.v.count or 'prev')
 end, { silent = true, expr = true })
 
