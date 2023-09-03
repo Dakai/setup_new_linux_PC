@@ -203,5 +203,12 @@ require("lazy").setup({
         desc = "Search diagnostic with Google",
       },
     },
+  },
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("rainbow-delimiters").setup()
+    end,
   }
 })
