@@ -72,7 +72,6 @@ require("lazy").setup({
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
-    config = true,
   },
   { "lukas-reineke/indent-blankline.nvim" },
   { "karb94/neoscroll.nvim" },
