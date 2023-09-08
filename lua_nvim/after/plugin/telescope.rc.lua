@@ -152,3 +152,5 @@ end)
 vim.keymap.set("n", ";e", function()
   builtin.diagnostics()
 end)
+-- Show Todos in Trouble
+vim.keymap.set("n", ";t", ":TodoTelescope<Return>", { silent = true })

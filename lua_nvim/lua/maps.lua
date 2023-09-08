@@ -93,6 +93,3 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
-
--- Show Todos in Telescope
-keymap.set("n", "<Space>r", ":TodoTelescope<Return>", { silent = true })
