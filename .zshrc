@@ -153,7 +153,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 
 # bun completions
-[ -s "/Users/dakai/.bun/_bun" ] && source "/Users/dakai/.bun/_bun"
+#[ -s "/Users/dakai/.bun/_bun" ] && source "/Users/dakai/.bun/_bun"
 
 #npm global packages
 NPM_PACKAGES="${HOME}/.npm-global"
@@ -163,10 +163,6 @@ export PATH="$PATH:$NPM_PACKAGES/bin"
 # Preserve MANPATH if you already defined it somewhere in your config.
 # # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
 #export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
-
-
-# bun completions
-[ -s "/home/dakai/.bun/_bun" ] && source "/home/dakai/.bun/_bun"
 
 export GRADLE_USER_HOME="$HOME/.gradle"
 
