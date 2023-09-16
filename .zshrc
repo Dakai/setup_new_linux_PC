@@ -90,7 +90,7 @@ source $ZSH/oh-my-zsh.sh
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
-#alias vim='nvim'
+alias vim='nvim'
 
 alias ls="exa"
 alias ll="exa -alh"
@@ -184,6 +184,12 @@ function lg() {
 function aic() {
     git add .
    	aicommits
+}
+
+function pgap() {  # Proxychains  Git add, Ai Commits, git push
+  proxychains git add .
+  proxychains aicommits
+  proxychains git push
 }
 bindkey "^[l" forward-char
 bindkey "^[h" backward-char

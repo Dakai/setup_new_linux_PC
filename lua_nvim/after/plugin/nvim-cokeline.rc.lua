@@ -71,11 +71,21 @@ local function get_path_parts(path)
   local filename = dirs[#dirs]
   if filename ~= nil then
     local ext = filename:match("^.+(%..+)$")
-    if ext ~= nil then
-      filename = filename:gsub("%." .. ext, "")
-    end
-
-    if path:match("api") and filename == "+server.ts" then
+    local last_dir = dirs[#dirs - 1]
+    -- if ext ~= nil then
+    --   filename = filename:gsub("%." .. ext, "")
+    -- end
+    if last_dir == '[id]' and path:match('api') and filename == "+server.ts" then
+      local id_index = 0
+      for i, dir in ipairs(dirs) do
+        if dir == "[id]" then
+          id_index = i
+        end
+      end
+      local new_dir = dirs[id_index - 1]
+      return new_dir .. "/[id]/" .. filename
+    elseif
+        path:match("api") and filename == "+server.ts" then
       local api_index = 0
       for i, dir in ipairs(dirs) do
         if dir == "api" then
@@ -83,37 +93,13 @@ local function get_path_parts(path)
         end
       end
       local api_next_dir = dirs[api_index + 1]
-      return "api/" .. api_next_dir
-    elseif ext == ".svelte" then
-      local last_dir = dirs[#dirs - 1]
-      filename = filename:gsub("%.svelte$", "") -- strip .svelte
-      if last_dir == '[id]' then
-        local id_index = 0
-        for i, dir in ipairs(dirs) do
-          if dir == "[id]" then
-            id_index = i
-          end
-        end
-        local new_dir = dirs[id_index - 1]
-        return new_dir .. "/" .. filename
-      elseif last_dir == '[slug]' then
-        local id_index = 0
-        for i, dir in ipairs(dirs) do
-          if dir == "[slug]" then
-            id_index = i
-          end
-        end
-        local new_dir = dirs[id_index - 1]
-        return new_dir .. "/" .. filename
-      else
-        return last_dir .. "/" .. filename
-      end
+      return "api/" .. api_next_dir .. '/' .. filename
     elseif ext == nil then
-      local last_dir = dirs[#dirs - 1]
-      return last_dir .. "/" .. filename
+      local dir = dirs[#dirs - 1]
+      return dir .. "/" .. filename
     else
-      local last_dir = dirs[#dirs - 1]
-      return last_dir .. "/" .. filename
+      local dir = dirs[#dirs - 1]
+      return dir .. "/" .. filename
     end
   end
 end
