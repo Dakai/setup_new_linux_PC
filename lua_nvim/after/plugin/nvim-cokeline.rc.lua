@@ -14,54 +14,6 @@ local high = "#63f2f1"
 local text = "#caddaf"
 local dark = "#2d2b40"
 
---local function get_second_to_last_dir(path)
---  local dirs = {}
---  for dir in string.gmatch(path, "([^/]+)") do
---    table.insert(dirs, dir)
---  end
---
---  local name = dirs[#dirs - 1]
---  return name .. "/"
---end
-
-local function get_second_to_last_dir(path)
-  local dirs = {}
-  for dir in string.gmatch(path, "([^/]+)") do
-    table.insert(dirs, dir)
-  end
-
-  local name = dirs[#dirs - 1]
-  if name ~= nil then
-    if name:match("%[id%]") then
-      name = dirs[#dirs - 2] .. '/' .. name
-    end
-    return name .. "/"
-  end
-end
-
-local function processFilePath(filePath)
-  local apiDirectory = "/api/"
-  local svelteExtension = ".svelte"
-
-  -- Extract directory and file information from file path
-  local directory, fileNameWithExt = filePath:match("(.*/)(.*)")
-  local fileName, fileExtension = fileNameWithExt:match("(.*)(%.%w+)")
-
-  -- Extract the last directory from the directory path
-  local lastDir = directory:match(".*/(.*)/")
-
-  if fileExtension == svelteExtension and directory:find(apiDirectory) then
-    -- File is a Svelte file and contains the API directory
-    return apiDirectory .. lastDir
-  elseif fileExtension == svelteExtension then
-    -- File is a Svelte file only
-    return lastDir .. "/" .. fileName
-  else
-    -- Any other file type
-    return lastDir .. "/" .. fileNameWithExt
-  end
-end
-
 local function get_path_parts(path)
   local dirs = {}
   for dir in string.gmatch(path, "([^/]+)") do
@@ -69,7 +21,7 @@ local function get_path_parts(path)
   end
 
   local filename = dirs[#dirs]
-  if filename ~= nil then
+  if string.sub(filename, 1, 1) == "+" then
     local ext = filename:match("^.+(%..+)$")
     local last_dir = dirs[#dirs - 1]
     -- if ext ~= nil then
@@ -84,8 +36,17 @@ local function get_path_parts(path)
       end
       local new_dir = dirs[id_index - 1]
       return new_dir .. "/[id]/" .. filename
+    elseif last_dir == '[id]' then
+      local id_index = 0
+      for i, dir in ipairs(dirs) do
+        if dir == "[id]" then
+          id_index = i
+        end
+      end
+      local new_dir = dirs[id_index - 1]
+      return new_dir .. "/[id]/" .. filename
     elseif
-        path:match("api") and filename == "+server.ts" then
+        path:match("api") then
       local api_index = 0
       for i, dir in ipairs(dirs) do
         if dir == "api" then
