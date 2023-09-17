@@ -2,6 +2,7 @@ require('base')
 require('highlights')
 require('maps')
 require('plugins')
+-- require('statusline')
 
 -- prevent insert mode when open file from telescope
 -- https://github.com/nvim-telescope/telescope.nvim/issues/2027#issuecomment-1561836585

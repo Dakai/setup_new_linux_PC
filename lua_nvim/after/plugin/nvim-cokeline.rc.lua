@@ -21,7 +21,7 @@ local function get_path_parts(path)
   end
 
   local filename = dirs[#dirs]
-  if string.sub(filename, 1, 1) == "+" then
+  if filename ~= nil and string.sub(filename, 1, 1) == "+" then
     local ext = filename:match("^.+(%..+)$")
     local last_dir = dirs[#dirs - 1]
     -- if ext ~= nil then
