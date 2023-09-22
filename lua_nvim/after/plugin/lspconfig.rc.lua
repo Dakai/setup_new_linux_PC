@@ -30,37 +30,49 @@ end, { desc = "Toggle Diagnostics" })
 
 -- hack for svelte-language-server watcher doesn't work in neovim lspconfig #2008
 -- https://github.com/sveltejs/language-tools/issues/2008
-local function on_attach(on_attach)
-  vim.api.nvim_create_autocmd("LspAttach", {
-    callback = function(args)
-      local buffer = args.buf
-      local client = vim.lsp.get_client_by_id(args.data.client_id)
-      on_attach(client, buffer)
-    end,
-  })
-end
+-- local function on_attach(on_attach)
+--   vim.api.nvim_create_autocmd("LspAttach", {
+--     callback = function(args)
+--       local buffer = args.buf
+--       local client = vim.lsp.get_client_by_id(args.data.client_id)
+--       on_attach(client, buffer)
+--     end,
+--   })
+-- end
+--
+-- on_attach(function(client)
+--   vim.api.nvim_create_autocmd("BufWritePost", {
+--     pattern = { "*.js", "*.ts" },
+--     callback = function(ctx)
+--       if client.name == "svelte" then
+--         client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
+--       end
+--     end,
+--   })
+-- end)
+-- -- hack end
+-- --
+--
+-- nvim_lsp.svelte.setup {
+--   filetypes = { 'svelte', 'html', 'css' },
+--   on_attach = function()
+--     vim.api.nvim_create_autocmd("BufWritePost", {
+--       pattern = { "+page.server.ts", "+page.ts", "+layout.server.ts", "+layout.ts", 'stores.ts', '.svelte' },
+--       command = "LspRestart svelte",
+--     })
+--   end
+-- }
 
-on_attach(function(client, bufnr)
-  vim.api.nvim_create_autocmd("BufWritePost", {
-    pattern = { "*.js", "*.ts" },
-    callback = function(ctx)
-      if client.name == "svelte" then
+nvim_lsp.svelte.setup {
+  on_attach = function(client)
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      pattern = { "*.js", "*.ts" },
+      callback = function(ctx)
         client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-      end
-    end,
-  })
-end)
--- hack end
-
---nvim_lsp.svelte.setup {
---  filetypes = { 'svelte', 'html', 'css' },
---  on_attach = function()
---    vim.api.nvim_create_autocmd("BufWritePost", {
---      pattern = { "+page.server.ts", "+page.ts", "+layout.server.ts", "+layout.ts", 'stores.ts', '.svelte' },
---      command = "LspRestart svelte",
---    })
---  end
---}
+      end,
+    })
+  end
+}
 -- nvim_lsp.tsserver.setup({
 --   handlers = {
 --     ["textDocument/publishDiagnostics"] = function(
