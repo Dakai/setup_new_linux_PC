@@ -186,7 +186,7 @@ function aic() {
    	aicommits
 }
 
-function pgap() {  # Proxychains  Git add, Ai Commits, git push
+function pgas() {  # Proxychains  Git add, Ai Commits, git push
   proxychains git add .
   proxychains aicommits
   proxychains git push
