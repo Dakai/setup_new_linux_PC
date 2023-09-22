@@ -1,18 +1,20 @@
 local is_picking_focus = require("cokeline/mappings").is_picking_focus
 local is_picking_close = require("cokeline/mappings").is_picking_close
-local get_hex = require("cokeline/utils").get_hex
+-- local get_hex = require("cokeline/utils").get_hex
 
 local red = vim.g.terminal_color_1
 local yellow = vim.g.terminal_color_4
 local space = { text = " " }
 -- local dark = get_hex("Normal", "bg")
 -- local text = get_hex("Comment", "fg")
-local grey = get_hex("ColorColumn", "bg")
-local light = get_hex("Comment", "fg")
+-- local grey = get_hex("ColorColumn", "bg")
+-- local light = get_hex("Comment", "fg")
 -- local high = "#a6d120"
+-- local text = "#caddaf"
 local high = "#63f2f1"
-local text = "#caddaf"
-local dark = "#2d2b40"
+local text = "#63f2f1"
+local grey = "#2d2b40"
+local dark = "#1d1b2f"
 
 local function get_path_parts(path)
   local dirs = {}
