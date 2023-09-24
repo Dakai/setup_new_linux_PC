@@ -1,10 +1,8 @@
 local status, nvim_lsp = pcall(require, "lspconfig")
 
-
 if not status then
   return
 end
-
 
 -- https://levelup.gitconnected.com/a-step-by-step-guide-to-configuring-lsp-in-neovim-for-coding-in-next-js-a052f500da2#5f0e
 -- signs at line number
@@ -57,12 +55,24 @@ end, { desc = "Toggle Diagnostics" })
 -- -- hack end
 
 nvim_lsp.svelte.setup {
-  filetypes = { "typescript", "javascript", "svelte" },
+  filetypes = { "svelte" },
   on_attach = function(client, bufnr)
     if vim.bo[bufnr].filetype == "svelte" then
       vim.api.nvim_create_autocmd("BufWritePost", {
         command = "LspRestart svelte",
       })
+    end
+  end
+}
+
+nvim_lsp.svelte.setup {
+  filetypes = { "typescript", "javascript", 'svelte' },
+  on_attach = function(client, bufnr)
+    if vim.bo[bufnr].filetype == "typescript" then
+      client.stop()
+    end
+    if vim.bo[bufnr].filetype == "javascript" then
+      client.stop()
     end
   end
 }
