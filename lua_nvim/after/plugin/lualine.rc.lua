@@ -3,8 +3,8 @@ if (not status) then return end
 
 local function Codeium()
   local fn_result = vim.fn['codeium#GetStatusString']() -- call the function you want to use
-  local new_string = "{…} " .. tostring(fn_result)    -- concatenate the string and the function's return value
-  return new_string                                     -- return the new string
+  local new_string = "{…} " .. tostring(fn_result) -- concatenate the string and the function's return value
+  return new_string -- return the new string
 end
 
 lualine.setup {
@@ -21,7 +21,7 @@ lualine.setup {
     lualine_c = { {
       'filename',
       file_status = true, -- display file status
-      path = 0            -- 0 = just filename
+      path = 1            -- 0 = just filename
     } },
     lualine_x = {
       Codeium,
