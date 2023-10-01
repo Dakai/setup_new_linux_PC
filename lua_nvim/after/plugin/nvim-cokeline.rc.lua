@@ -12,8 +12,9 @@ local space = { text = " " }
 -- local high = "#a6d120"
 -- local text = "#caddaf"
 local high = "#63f2f1"
+local light = '#f3f3f3'
 -- local text = "#63f2f1"
-local text = "#caddaf"
+local text = "#f3f3f3"
 local grey = "#2d2b40"
 local dark = "#1d1b2f"
 
