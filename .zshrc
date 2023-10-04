@@ -173,7 +173,7 @@ if [[ $(ps --no-header -p $PPID -o comm) =~ '^alacritty$' ]]; then
 fi
 
 #Wayland fix for flameshot
-export QT_SCREEN_SCALE_FACTORS="1;1"
+# export QT_SCREEN_SCALE_FACTORS="1;1"
 
 function lg() {
     git add .
