@@ -167,10 +167,20 @@ export PATH="$PATH:$NPM_PACKAGES/bin"
 export GRADLE_USER_HOME="$HOME/.gradle"
 
 #alacritty hack for blur (X11 only)
-if [[ $(ps --no-header -p $PPID -o comm) =~ '^alacritty$' ]]; then
-        for wid in $(xdotool search --pid $PPID); do
-            xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
-fi
+#if [[ $(ps --no-header -p $PPID -o comm) =~ '^alacritty$' ]]; then
+#        for wid in $(xdotool search --pid $PPID); do
+#            xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
+#fi
+blur_alacritty_windows() {
+    for pid in $(ps -C alacritty -o pid= | xargs); do
+        for wid in $(xdotool search --pid $pid); do
+            xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c \
+            -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid
+        done
+    done
+}
+
+blur_alacritty_windows
 
 #Wayland fix for flameshot
 # export QT_SCREEN_SCALE_FACTORS="1;1"
