@@ -54,7 +54,7 @@ format_on_save.setup({
     python = {
       formatters.remove_trailing_whitespace,
       -- formatters.shell({ cmd = "tidy-imports" }),
-      formatters.black,
+      formatters.lsp(),
     },
 
     -- Use a tempfile instead of stdin
