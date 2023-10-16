@@ -98,7 +98,12 @@ require("lazy").setup({
   --{ "jose-elias-alvarez/null-ls.nvim" },
   { "elentok/format-on-save.nvim" },
   --{ "MunifTanjim/prettier.nvim" },
-  { "lewis6991/gitsigns.nvim" },
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup()
+    end,
+  },
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
