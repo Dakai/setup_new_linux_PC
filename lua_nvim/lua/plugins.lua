@@ -29,7 +29,7 @@ require("lazy").setup({
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  { "Xuyuanp/nerdtree-git-plugin" },
+  -- { "Xuyuanp/nerdtree-git-plugin" },
   {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v2.x",
@@ -61,7 +61,7 @@ require("lazy").setup({
       "nvim-tree/nvim-web-devicons",
     },
   },
-  { "nvim-tree/nvim-web-devicons" },
+  -- { "nvim-tree/nvim-web-devicons" },
   { "nvim-treesitter/nvim-treesitter" },
   { "windwp/nvim-ts-autotag" },
   { "windwp/nvim-autopairs" },
@@ -117,6 +117,9 @@ require("lazy").setup({
       vim.g.mkdp_filetypes = { "markdown" }
     end,
     ft = { "markdown" },
+    config = function()
+      vim.g.mkdp_auto_close = 0
+    end,
   },
   {
     "dpayne/CodeGPT.nvim",
