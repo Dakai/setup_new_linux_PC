@@ -29,7 +29,6 @@ require("lazy").setup({
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  -- { "Xuyuanp/nerdtree-git-plugin" },
   {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v2.x",
@@ -61,7 +60,6 @@ require("lazy").setup({
       "nvim-tree/nvim-web-devicons",
     },
   },
-  -- { "nvim-tree/nvim-web-devicons" },
   { "nvim-treesitter/nvim-treesitter" },
   { "windwp/nvim-ts-autotag" },
   { "windwp/nvim-autopairs" },
@@ -73,7 +71,7 @@ require("lazy").setup({
       "nvim-tree/nvim-web-devicons",
     },
   },
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+  -- { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
   { "karb94/neoscroll.nvim" },
   {
     "Exafunction/codeium.vim",
@@ -95,9 +93,7 @@ require("lazy").setup({
     end,
   },
   { 'davidosomething/format-ts-errors.nvim' },
-  --{ "jose-elias-alvarez/null-ls.nvim" },
   { "elentok/format-on-save.nvim" },
-  --{ "MunifTanjim/prettier.nvim" },
   {
     "lewis6991/gitsigns.nvim",
     config = function()
@@ -181,11 +177,13 @@ require("lazy").setup({
   },
   { 'nvim-treesitter/nvim-treesitter-context' },
   { 'RRethy/vim-illuminate' },
-  --{ 'echasnovski/mini.animate', version = '*' ,
-  --	config = function()
-  --    require('mini.animate').setup()
-  --	end,
-  --},
+  -- {
+  --   'echasnovski/mini.animate',
+  --   version = '*',
+  --   config = function()
+  --     require('mini.animate').setup()
+  --   end,
+  -- },
   {
     "piersolenski/wtf.nvim",
     dependencies = {
@@ -212,10 +210,10 @@ require("lazy").setup({
       },
     },
   },
-  {
-    "HiPhish/rainbow-delimiters.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
-  },
+  -- {
+  --   "HiPhish/rainbow-delimiters.nvim",
+  --   dependencies = { "nvim-treesitter/nvim-treesitter" },
+  -- },
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
