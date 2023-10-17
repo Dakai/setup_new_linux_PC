@@ -71,7 +71,13 @@ require("lazy").setup({
       "nvim-tree/nvim-web-devicons",
     },
   },
-  -- { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+  --{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("ibl").setup {}
+    end,
+  },
   { "karb94/neoscroll.nvim" },
   {
     "Exafunction/codeium.vim",
