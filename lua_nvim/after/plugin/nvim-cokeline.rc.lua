@@ -140,12 +140,12 @@ require("cokeline").setup(
       },
       {
         text = function(buffer)
-          -- return buffer.unique_prefix .. buffer.filename .. "⠀"
           -- return buffer.path .. buffer.filename .. "⠀"
           if get_path_parts(buffer.path) ~= nil then
             return get_path_parts(buffer.path) .. "⠀"
           else
-            return buffer.filename .. "⠀"
+            --return buffer.filename .. "⠀"
+            return buffer.unique_prefix .. buffer.filename .. "⠀"
           end
         end,
         style = function(buffer)
