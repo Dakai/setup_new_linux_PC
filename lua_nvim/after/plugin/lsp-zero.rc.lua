@@ -6,9 +6,17 @@ lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({ buffer = bufnr })
 end)
 
-require('lspconfig').lua_ls.setup({})
-require('lspconfig').svelte.setup({})
-require('lspconfig').tailwindcss.setup({})
+--require('lspconfig').lua_ls.setup({})
+--require('lspconfig').svelte.setup({})
+--require('lspconfig').tailwindcss.setup({})
+--require('lspconfig').php.setup({})
+
+lsp.setup_servers({
+  'tsserver',
+  'svelte',
+  'tailwindcss',
+  'intelephense'
+})
 
 lsp.setup()
 
