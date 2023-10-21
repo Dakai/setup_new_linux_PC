@@ -18,7 +18,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   { "xiyaowong/nvim-transparent" },
-  { "nvim-lua/plenary.nvim" },
   {
     "dakai/embark-theme-vim",
     config = function()
