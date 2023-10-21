@@ -4,6 +4,45 @@ if not status then
   return
 end
 
+--nvim_lsp.tsserver.setup({
+--  handlers = {
+--    ["textDocument/publishDiagnostics"] = function(
+--      _,
+--      result,
+--      ctx,
+--      config
+--    )
+--      if result.diagnostics == nil then
+--        return
+--      end
+--
+--      -- ignore some tsserver diagnostics
+--      local idx = 1
+--      while idx <= #result.diagnostics do
+--        local entry = result.diagnostics[idx]
+--
+--        local formatter = require('format-ts-errors')[entry.code]
+--        entry.message = formatter and formatter(entry.message) or entry.message
+--
+--        -- codes: https://github.com/microsoft/TypeScript/blob/main/src/compiler/diagnosticMessages.json
+--        if entry.code == 80001 then
+--          -- { message = "File is a CommonJS module; it may be converted to an ES module.", }
+--          table.remove(result.diagnostics, idx)
+--        else
+--          idx = idx + 1
+--        end
+--      end
+--
+--      vim.lsp.diagnostic.on_publish_diagnostics(
+--        _,
+--        result,
+--        ctx,
+--        config
+--      )
+--    end,
+--  },
+--})
+
 -- https://levelup.gitconnected.com/a-step-by-step-guide-to-configuring-lsp-in-neovim-for-coding-in-next-js-a052f500da2#5f0e
 -- signs at line number
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

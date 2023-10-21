@@ -43,7 +43,13 @@ require("lazy").setup({
       { "williamboman/mason-lspconfig.nvim" },
 
       -- Autocompletion
-      { "onsails/lspkind-nvim" },
+      { "hrsh7th/nvim-cmp" },
+      { "hrsh7th/cmp-buffer" },
+      { "hrsh7th/cmp-path" },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "hrsh7th/cmp-nvim-lua" },
+
       {
         "L3MON4D3/LuaSnip",
         -- follow latest release.
@@ -53,10 +59,7 @@ require("lazy").setup({
           require("luasnip.loaders.from_vscode").lazy_load()
         end,
       },
-      { "hrsh7th/cmp-nvim-lsp" },
-      { "hrsh7th/cmp-buffer" },
-      { "hrsh7th/cmp-path" },
-      { "hrsh7th/nvim-cmp" }
+      { "onsails/lspkind-nvim" },
     }
   },
   {
@@ -103,7 +106,7 @@ require("lazy").setup({
       end, { expr = true })
     end,
   },
-  { 'davidosomething/format-ts-errors.nvim' },
+  -- { 'davidosomething/format-ts-errors.nvim' },
   { "elentok/format-on-save.nvim" },
   {
     "lewis6991/gitsigns.nvim",

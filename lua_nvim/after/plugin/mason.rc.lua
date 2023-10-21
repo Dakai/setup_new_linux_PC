@@ -10,5 +10,5 @@ end
 mason.setup({})
 
 lspconfig.setup({
-  ensure_installed = { "tailwindcss", "tailwindcss" },
+  ensure_installed = { "tailwindcss" },
 })
