@@ -56,9 +56,8 @@ require("lazy").setup({
       { "hrsh7th/cmp-nvim-lsp" },
       { "hrsh7th/cmp-buffer" },
       { "hrsh7th/cmp-path" },
-      { "hrsh7th/nvim-cmp" },
-      --{ "rafamadriz/friendly-snippets" },
-    },
+      { "hrsh7th/nvim-cmp" }
+    }
   },
   {
     "nvim-tree/nvim-tree.lua",
