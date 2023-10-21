@@ -6,8 +6,9 @@ lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({ buffer = bufnr })
 end)
 
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require('lspconfig').lua_ls.setup({})
+require('lspconfig').svelte.setup({})
+require('lspconfig').tailwindcss.setup({})
 
 lsp.setup()
 
@@ -17,6 +18,12 @@ local cmp = require('cmp')
 local lspkind = require('lspkind')
 
 cmp.setup({
+  -- Make the first item in completion menu always be selected.
+  preselect = 'item',
+  completion = {
+    completeopt = 'menu,menuone,noinsert'
+  },
+
   mapping = cmp.mapping.preset.insert({
     ['<Tab>'] = cmp.mapping.select_next_item(),
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),

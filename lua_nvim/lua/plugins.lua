@@ -31,37 +31,41 @@ require("lazy").setup({
   {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v3.x",
+    lazy = true,
+    config = false,
+  },
+  {
+    "neovim/nvim-lspconfig",
     dependencies = {
-      -- LSP Support
-      { "neovim/nvim-lspconfig" },
-      {
-        "williamboman/mason.nvim",
-        build = function()
-          vim.cmd("MasonUpdate")
-        end,
-      },
-      { "williamboman/mason-lspconfig.nvim" },
-
-      -- Autocompletion
-      { "hrsh7th/nvim-cmp" },
-      { "hrsh7th/cmp-buffer" },
-      { "hrsh7th/cmp-path" },
-      { 'saadparwaiz1/cmp_luasnip' },
-      { "hrsh7th/cmp-nvim-lsp" },
-      { "hrsh7th/cmp-nvim-lua" },
-
-      {
-        "L3MON4D3/LuaSnip",
-        -- follow latest release.
-        version = "v2.*",
-        dependencies = { "rafamadriz/friendly-snippets" },
-        config = function()
-          require("luasnip.loaders.from_vscode").lazy_load()
-        end,
-      },
-      { "onsails/lspkind-nvim" },
+      { 'hrsh7th/cmp-nvim-lsp' },
     }
   },
+  {
+    "williamboman/mason.nvim",
+    build = function()
+      vim.cmd("MasonUpdate")
+    end,
+  },
+  { "williamboman/mason-lspconfig.nvim" },
+
+  -- Autocompletion
+  { "hrsh7th/nvim-cmp" },
+  { "hrsh7th/cmp-buffer" },
+  { "hrsh7th/cmp-path" },
+  { 'saadparwaiz1/cmp_luasnip' },
+  { "hrsh7th/cmp-nvim-lsp" },
+  { "hrsh7th/cmp-nvim-lua" },
+
+  {
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    version = "v2.*",
+    dependencies = { "rafamadriz/friendly-snippets" },
+    config = function()
+      require("luasnip.loaders.from_vscode").lazy_load()
+    end,
+  },
+  { "onsails/lspkind-nvim" },
   {
     "nvim-tree/nvim-tree.lua",
     version = "*",
