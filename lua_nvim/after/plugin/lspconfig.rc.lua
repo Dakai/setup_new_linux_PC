@@ -104,14 +104,14 @@ nvim_lsp.svelte.setup {
   end
 }
 
-nvim_lsp.svelte.setup {
-  filetypes = { "typescript", "javascript", 'svelte' },
-  on_attach = function(client, bufnr)
-    if vim.bo[bufnr].filetype == "typescript" then
-      client.stop()
-    end
-    if vim.bo[bufnr].filetype == "javascript" then
-      client.stop()
-    end
-  end
-}
+--nvim_lsp.svelte.setup {
+--  filetypes = { "typescript", "javascript", 'svelte' },
+--  on_attach = function(client, bufnr)
+--    if vim.bo[bufnr].filetype == "typescript" then
+--      client.stop()
+--    end
+--    if vim.bo[bufnr].filetype == "javascript" then
+--      client.stop()
+--    end
+--  end
+--}
