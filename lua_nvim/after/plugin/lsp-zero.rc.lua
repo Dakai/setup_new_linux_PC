@@ -1,4 +1,4 @@
-local lsp = require('lsp-zero').preset({})
+local lsp = require('lsp-zero')
 -- local lsp = require('lsp-zero')
 lsp.extend_lspconfig()
 
