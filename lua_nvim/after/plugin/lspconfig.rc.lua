@@ -93,16 +93,16 @@ end, { desc = "Toggle Diagnostics" })
 -- end)
 -- -- hack end
 
-nvim_lsp.svelte.setup {
-  filetypes = { "svelte" },
-  on_attach = function(client, bufnr)
-    if vim.bo[bufnr].filetype == "svelte" then
-      vim.api.nvim_create_autocmd("BufWritePost", {
-        command = "LspRestart svelte",
-      })
-    end
-  end
-}
+--nvim_lsp.svelte.setup {
+--  filetypes = { "svelte" },
+--  on_attach = function(client, bufnr)
+--    if vim.bo[bufnr].filetype == "svelte" then
+--      vim.api.nvim_create_autocmd("BufWritePost", {
+--        command = "LspRestart svelte",
+--      })
+--    end
+--  end
+--}
 
 --nvim_lsp.svelte.setup {
 --  filetypes = { "typescript", "javascript", 'svelte' },
