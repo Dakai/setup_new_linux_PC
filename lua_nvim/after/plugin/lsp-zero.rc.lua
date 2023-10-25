@@ -15,7 +15,8 @@ lsp.setup_servers({
   'lua_ls',
   'svelte',
   'tailwindcss',
-  'intelephense'
+  'intelephense',
+  'pyright'
 })
 
 lsp.setup()

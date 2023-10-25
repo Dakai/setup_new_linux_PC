@@ -19,7 +19,7 @@ format_on_save.setup({
     markdown = formatters.prettierd,
     javascript = formatters.prettierd,
     openscad = formatters.lsp,
-    -- python = formatters.black,
+    python = formatters.lsp,
     rust = formatters.lsp,
     scad = formatters.lsp,
     scss = formatters.lsp,
@@ -28,14 +28,6 @@ format_on_save.setup({
     typescript = formatters.prettierd,
     typescriptreact = formatters.prettierd,
     yaml = formatters.lsp,
-
-    -- Concatenate formatters
-    python = {
-      formatters.remove_trailing_whitespace,
-      formatters.shell({ cmd = "tidy-imports" }),
-      formatters.black,
-      formatters.ruff,
-    },
 
     -- Optional: fallback formatter to use when no formatters match the current filetype
     fallback_formatter = {
