@@ -77,7 +77,10 @@ require("lazy").setup({
   { "windwp/nvim-ts-autotag" },
   { "windwp/nvim-autopairs" },
   { "nvim-telescope/telescope.nvim" },
-  { "nvim-telescope/telescope-file-browser.nvim" },
+  -- {
+  --   "nvim-telescope/telescope-file-browser.nvim",
+  --   dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  -- },
   {
     "willothy/nvim-cokeline",
     dependencies = {
