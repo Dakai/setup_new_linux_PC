@@ -12,6 +12,7 @@ end)
 --require('lspconfig').php.setup({})
 
 lsp.setup_servers({
+  'bashls',
   'html',
   'lua_ls',
   'svelte',

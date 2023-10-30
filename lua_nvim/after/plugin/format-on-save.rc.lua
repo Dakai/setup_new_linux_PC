@@ -23,7 +23,7 @@ format_on_save.setup({
     rust = formatters.lsp,
     scad = formatters.lsp,
     scss = formatters.lsp,
-    sh = formatters.shfmt,
+    sh = formatters.lsp,
     terraform = formatters.lsp,
     typescript = formatters.prettierd,
     typescriptreact = formatters.prettierd,
