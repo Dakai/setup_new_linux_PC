@@ -6,11 +6,6 @@ lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({ buffer = bufnr })
 end)
 
---require('lspconfig').lua_ls.setup({})
---require('lspconfig').svelte.setup({})
---require('lspconfig').tailwindcss.setup({})
---require('lspconfig').php.setup({})
-
 lsp.setup_servers({
   'bashls',
   'html',
@@ -18,7 +13,7 @@ lsp.setup_servers({
   'svelte',
   'tailwindcss',
   'intelephense',
-  'pyright'
+  'pyright',
 })
 
 lsp.setup()
