@@ -3,6 +3,7 @@
 *.rpm
 *.zip
 *.log
+*.lst
 /lua_nvim/lazy-lock.json
 lua_nvim/lazy-lock.json
 *lazy*
