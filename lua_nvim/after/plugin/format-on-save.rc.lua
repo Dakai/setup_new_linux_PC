@@ -17,7 +17,7 @@ format_on_save.setup({
     json = formatters.lsp,
     lua = formatters.lsp,
     markdown = formatters.prettierd,
-    javascript = formatters.prettierd,
+    javascript = formatters.lsp,
     openscad = formatters.lsp,
     python = formatters.lsp,
     rust = formatters.lsp,
