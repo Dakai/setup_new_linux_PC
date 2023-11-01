@@ -128,7 +128,7 @@ vim.keymap.set("n", "<Space>e", function()
   builtin.diagnostics()
 end)
 -- Show Todos
-vim.keymap.set("n", "<space>f", ":TodoTelescope<Return>", { silent = true })
+vim.keymap.set("n", "<space>d", ":TodoTelescope<Return>", { silent = true })
 
 --vim.keymap.set("n", "sf", function()
 --  telescope.extensions.file_browser.file_browser({
