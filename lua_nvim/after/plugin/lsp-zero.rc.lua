@@ -1,6 +1,7 @@
+vim.g.lsp_zero_extend_lspconfig = 0
 local lsp = require('lsp-zero')
 -- local lsp = require('lsp-zero')
-lsp.extend_lspconfig()
+--lsp.extend_lspconfig()
 
 lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({ buffer = bufnr })
@@ -14,6 +15,7 @@ lsp.setup_servers({
   'tailwindcss',
   'intelephense',
   'pyright',
+  'eslint'
 })
 
 lsp.setup()

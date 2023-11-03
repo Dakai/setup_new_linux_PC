@@ -31,7 +31,7 @@ require("lazy").setup({
   {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v3.x",
-    lazy = true,
+    lazy = false,
     config = false,
   },
   {
@@ -186,7 +186,7 @@ require("lazy").setup({
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {},
-    event = "VeryLazy",
+    --event = "VeryLazy",
   },
   {
     "folke/trouble.nvim",
