@@ -44,6 +44,7 @@ vim.api.nvim_set_hl(0, 'PmenuSel', { bg = '#1C1A2E', fg = 'NONE' })
 
 -- You need to setup `cmp` after lsp-zero
 local cmp = require('cmp')
+local compare = cmp.config.compare
 -- local cmp_action = require('lsp-zero').cmp_action()
 local lspkind = require('lspkind')
 
@@ -69,11 +70,21 @@ cmp.setup({
     }),
   }),
   sources = cmp.config.sources({
+    { name = "jupynium", priority = 1000 }, -- consider higher priority than LSP
     { name = 'path' },
-    { name = 'nvim_lsp' },
-    { name = 'buffer',  keyword_length = 3 },
-    { name = 'luasnip', keyword_length = 2 },
+    { name = "nvim_lsp", priority = 100 },
+    { name = 'buffer',   keyword_length = 3 },
+    { name = 'luasnip',  keyword_length = 2 },
   }),
+  --  configure nvim-cmp to show Jupyter kernel completion
+  sorting = {
+    priority_weight = 1.0,
+    comparators = {
+      compare.score, -- Jupyter kernel completion shows prior to LSP
+      compare.recently_used,
+      compare.locality,
+    },
+  },
   formatting = {
     fields = {
       cmp.ItemField.Menu,
