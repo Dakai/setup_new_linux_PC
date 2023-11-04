@@ -293,13 +293,19 @@ require("lazy").setup({
     end
   },
   {
-    "kiyoon/jupynium.nvim",
-    build = "pipx install .",
-    dependencies = {
-      "rcarriga/nvim-notify",
-      "stevearc/dressing.nvim"
-    }
-    -- build = "conda run --no-capture-output -n jupynium pip install .",
-    -- enabled = vim.fn.isdirectory(vim.fn.expand "~/miniconda3/envs/jupynium"),
+    "rcarriga/nvim-notify",
   },
+  {
+    "stevearc/dressing.nvim"
+  },
+  --{
+  --  "kiyoon/jupynium.nvim",
+  --  build = "pipx install .",
+  --  dependencies = {
+  --    "rcarriga/nvim-notify",
+  --    "stevearc/dressing.nvim"
+  --  }
+  --  -- build = "conda run --no-capture-output -n jupynium pip install .",
+  --  -- enabled = vim.fn.isdirectory(vim.fn.expand "~/miniconda3/envs/jupynium"),
+  --},
 })
