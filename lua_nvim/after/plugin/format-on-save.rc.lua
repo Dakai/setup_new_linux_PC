@@ -7,6 +7,7 @@ format_on_save.setup({
     ".local/share/nvim/lazy",
   },
   formatter_by_ft = {
+    -- php = formatter.lsp,
     css = formatters.lsp,
     html = formatters.lsp,
     java = formatters.lsp,

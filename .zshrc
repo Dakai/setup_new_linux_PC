@@ -221,3 +221,5 @@ export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 #source '/usr/share/zsh/plugins/zsh-thefuck-git/zsh-thefuck.plugin.zsh'
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+#noproxy
