@@ -10,5 +10,14 @@ end
 mason.setup({})
 
 lspconfig.setup({
-  ensure_installed = { "tailwindcss" },
+  ensure_installed = {
+    'bashls',
+    'html',
+    'lua_ls',
+    'svelte',
+    'tailwindcss',
+    'intelephense',
+    'pyright',
+    'eslint'
+  },
 })
