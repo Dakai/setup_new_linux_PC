@@ -308,4 +308,12 @@ require("lazy").setup({
   --  -- build = "conda run --no-capture-output -n jupynium pip install .",
   --  -- enabled = vim.fn.isdirectory(vim.fn.expand "~/miniconda3/envs/jupynium"),
   --},
+  --{
+  {
+    'cljoly/telescope-repo.nvim',
+    'airblade/vim-rooter',
+    config = function()
+      g['rooter_cd_cmd'] = 'lcd'
+    end
+  },
 })

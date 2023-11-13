@@ -5,6 +5,7 @@ end
 -- local actions = require("telescope.actions")
 local builtin = require("telescope.builtin")
 
+telescope.load_extension('repo')
 --local function telescope_buffer_dir()
 --  return vim.fn.expand("%:p:h")
 --end
