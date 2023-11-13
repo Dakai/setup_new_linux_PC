@@ -5,6 +5,17 @@ end
 -- local actions = require("telescope.actions")
 local builtin = require("telescope.builtin")
 
+telescope.setup({
+  extensions = {
+    repo = {
+      list = {
+        fd_opts = { "--no-ignore-vcs" },
+        search_dirs = { "~/repos", "~/Apps", './' },
+
+      }
+    }
+  }
+})
 telescope.load_extension('repo')
 --local function telescope_buffer_dir()
 --  return vim.fn.expand("%:p:h")
