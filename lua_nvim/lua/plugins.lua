@@ -151,6 +151,9 @@ require("lazy").setup({
     },
     config = function()
       require("codegpt.config")
+      vim.g["codegpt_commands_defaults"] = {
+        model = 'gpt-4-1106-preview'
+      }
     end,
   },
   {
@@ -295,9 +298,9 @@ require("lazy").setup({
   {
     "rcarriga/nvim-notify",
   },
-  {
-    "stevearc/dressing.nvim"
-  },
+  --  {
+  --    "stevearc/dressing.nvim"
+  --  },
   --{
   --  "kiyoon/jupynium.nvim",
   --  build = "pipx install .",
