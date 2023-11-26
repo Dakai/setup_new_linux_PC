@@ -4,13 +4,14 @@ local keymap = vim.keymap
 -- keymap.set("n", "x", '"_x')
 
 -- Increment/decrement
-keymap.set("n", "=", "<C-a>")
+keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
 -- Delete a word backwords
 keymap.set("n", "dw", 'vb"_d')
+
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap.set("n", "<C-a>", "g<S-v>G")
 
 -- New tab
 keymap.set("n", "te", ":tabedit<Return>", { silent = true })
@@ -18,10 +19,10 @@ keymap.set("n", "te", ":tabedit<Return>", { silent = true })
 keymap.set("n", "ss", ":split<Return><C-w>w", { silent = true })
 keymap.set("n", "sv", ":vsplit<Return><C-w>w", { silent = true })
 -- Move window
-keymap.set("n", "sh", "<C-w>h") -- left
+keymap.set("n", "sj", "<C-w>h") -- left
 keymap.set("n", "sl", "<C-w>l") -- right
-keymap.set("n", "sk", "<C-w>k") -- up
-keymap.set("n", "sj", "<C-w>j") -- down
+keymap.set("n", "si", "<C-w>k") -- up
+keymap.set("n", "sk", "<C-w>j") -- down
 
 -- Resize window
 keymap.set("n", "<C-w>k", "<C-w><")
@@ -89,5 +90,6 @@ end, { silent = true, expr = true })
 -- From ThePrimeagen
 vim.o.lazyredraw = false
 vim.keymap.set("i", "<C-c>", "<Esc>")
-vim.keymap.set('n', 'n', 'nzzzv')
-vim.keymap.set('n', 'N', 'Nzzzv')
+-- vim.keymap.set('n', 'n', 'nzzzv')
+-- vim.keymap.set('n', 'n', 'nzzzv')
+-- vim.keymap.set('n', 'N', 'Nzzzv')
