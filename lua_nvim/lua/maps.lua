@@ -66,10 +66,6 @@ vim.api.nvim_set_keymap(
   { desc = "Enter in normal mode to delete entire word and into insert mode" }
 )
 
--- move highlighted text up and down"
-vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv==jgvo<esc>=jgvo", {})
-vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv==kgvo<esc>=kgvo", {})
-
 -- Map gt to next buff
 -- The problem with this mapping is it goes to next buffer by buffnr, not tab position
 --vim.api.nvim_set_keymap('n', 'gT', ':bp<CR>', { noremap = true, silent = true })
@@ -87,6 +83,11 @@ end, { silent = true, expr = true })
 
 
 -- From ThePrimeagen
+
+-- move highlighted text up and down"
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 vim.o.lazyredraw = false
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set('n', 'n', 'nzzzv')
