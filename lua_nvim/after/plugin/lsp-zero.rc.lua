@@ -15,7 +15,10 @@ lsp.setup_servers({
   'tailwindcss',
   'intelephense',
   'pyright',
-  'eslint'
+  'eslint',
+  -- 'grammerly',
+  --'jasonls',
+  'yamlls'
 })
 
 lsp.setup()

@@ -151,9 +151,9 @@ require("lazy").setup({
     },
     config = function()
       require("codegpt.config")
-      vim.g["codegpt_commands_defaults"] = {
-        model = 'gpt-4-1106-preview'
-      }
+      --vim.g["codegpt_commands_defaults"] = {
+      --  model = 'gpt-4-1106-preview'
+      --}
     end,
   },
   {
@@ -314,9 +314,9 @@ require("lazy").setup({
   --{
   {
     'cljoly/telescope-repo.nvim',
-    'airblade/vim-rooter',
-    config = function()
-      g['rooter_cd_cmd'] = 'lcd'
-    end
+    -- 'airblade/vim-rooter',
+    --config = function()
+    --  g['rooter_cd_cmd'] = 'lcd'
+    --end
   },
 })
