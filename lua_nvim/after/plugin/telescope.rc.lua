@@ -144,7 +144,6 @@ vim.keymap.set("n", "<space>d", ":TodoTelescope<Return>", { silent = true })
 -- repo list
 vim.keymap.set("n", "<space>p", ":Telescope repo list<Return>", { silent = true })
 
-
 --vim.keymap.set("n", "sf", function()
 --  telescope.extensions.file_browser.file_browser({
 --    path = "%:p:h",

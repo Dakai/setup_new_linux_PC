@@ -1,5 +1,8 @@
 local keymap = vim.keymap
 
+-- new Leader key
+vim.g.mapleader = ";"
+
 -- Do not yank with x
 -- keymap.set("n", "x", '"_x')
 
