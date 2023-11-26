@@ -95,3 +95,7 @@ vim.o.lazyredraw = false
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
+
+-- next greatest remap ever : asbjornHaland
+-- vim.keymap.set({ "n", "v" }, "<Space>y", [["+y]])
+-- vim.keymap.set("n", "<Space>Y", [["+Y]])
