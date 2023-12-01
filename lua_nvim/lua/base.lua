@@ -74,3 +74,7 @@ vim.opt.formatoptions:append { 'r' }
 
 -- Enable 'splitright' option
 vim.opt.splitright = true
+
+-- vim.opt.conceallevel = 3
+-- Neorg setup
+vim.opt.conceallevel = 3

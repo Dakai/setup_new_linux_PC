@@ -280,6 +280,11 @@ require("lazy").setup({
               },
             },
           },
+          ["core.completion"] = {
+            config = {
+              engine = "nvim-cmp"
+            }
+          },
         },
       }
     end,
