@@ -327,5 +327,22 @@ require("lazy").setup({
       "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons"
     },
+  },
+  {
+    "epwalsh/pomo.nvim",
+    version = "*", -- Recommended, use latest release instead of latest commit
+    lazy = true,
+    cmd = { "TimerStart", "TimerStop", "TimerRepeat" },
+    dependencies = {
+      -- Optional, but highly recommended if you want to use the "Default" timer
+      "rcarriga/nvim-notify",
+      config = function()
+        vim.notify = require("notify")
+      end
+
+    },
+    opts = {
+      -- See below for full list of options 👇
+    },
   }
 })
