@@ -18,6 +18,7 @@ lspconfig.setup({
     'tailwindcss',
     'intelephense',
     'pyright',
-    'eslint'
+    'eslint',
+    'ymalls',
   },
 })
