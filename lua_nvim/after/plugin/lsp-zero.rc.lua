@@ -18,7 +18,7 @@ lsp.setup_servers({
   'eslint',
   -- 'grammerly',
   'jsonls',
-  'yamlls'
+  'yamlls',
 })
 
 lsp.setup()

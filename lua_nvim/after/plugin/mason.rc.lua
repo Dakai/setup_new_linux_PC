@@ -19,6 +19,6 @@ lspconfig.setup({
     'intelephense',
     'pyright',
     'eslint',
-    'ymalls',
+    'yamlls',
   },
 })
