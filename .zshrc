@@ -132,7 +132,7 @@ alias youtube-dl='yt-dlp'
 #export PATH=/home/pi/.local/bin:$PATH
 #export PATH=/home/dakai/.local/bin:$PATH
 #export PATH="$HOME/.local/bin:$PATH"
-##eval $(thefuck --alias)
+eval $(thefuck --alias)
 
 
 export NVM_DIR="$HOME/.nvm"
@@ -219,7 +219,7 @@ bindkey "^[j" history-substring-search-down
 #add-zsh-hook -Uz chpwd osc7
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-#source '/usr/share/zsh/plugins/zsh-thefuck-git/zsh-thefuck.plugin.zsh'
+source '/usr/share/zsh/plugins/zsh-thefuck-git/zsh-thefuck.plugin.zsh'
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 #noproxy
