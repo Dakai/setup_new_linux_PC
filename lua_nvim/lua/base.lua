@@ -1,3 +1,5 @@
+-- Speed up loading Lua modules in Neovim to improve startup time.
+vim.loader.enable()
 -- disable netrw at the very start of your init.lua per nvim-tree/nvim-tree.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
