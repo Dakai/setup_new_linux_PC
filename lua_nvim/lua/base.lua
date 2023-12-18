@@ -4,6 +4,9 @@ vim.loader.enable()
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- display relative line number
+vim.wo.relativenumber = true
+
 -- remove all previously defined autocmds and start with a clean slate
 vim.cmd('autocmd!')
 
