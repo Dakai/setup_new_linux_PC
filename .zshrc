@@ -82,7 +82,7 @@ plugins=(
 		colored-man-pages
 		zsh-syntax-highlighting
 		pip
-    zsh-proxy
+    #zsh-proxy
 )
 
 source $ZSH/oh-my-zsh.sh
