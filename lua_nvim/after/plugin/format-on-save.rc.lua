@@ -1,4 +1,5 @@
-local format_on_save = require("format-on-save")
+local status, format_on_save = pcall(require, "format_on_save")
+if (not status) then return end
 local formatters = require("format-on-save.formatters")
 
 format_on_save.setup({

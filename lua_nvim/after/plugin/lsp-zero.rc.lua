@@ -15,13 +15,33 @@ lsp.setup_servers({
   'tailwindcss',
   'intelephense',
   'pyright',
-  'eslint',
+  'tsserver',
+  --'eslint',
   -- 'grammerly',
   'jsonls',
   'yamlls',
 })
 
 lsp.setup()
+
+lsp.format_on_save({
+  format_opts = {
+    async = false,
+    timeout_ms = 5000,
+  },
+  servers = {
+    ['jsonls'] = { 'json' },
+    ['lua_ls'] = { 'lua' },
+    ['pyright'] = { 'python' },
+    ['yamlls'] = { 'yaml' },
+    ['svelte'] = { 'svelte' },
+    ['tailwindcss'] = { 'css' },
+    ['intelephense'] = { 'php' },
+    ['tsserver'] = { 'javascript', 'typescript' },
+    ['bashls'] = { 'bash' },
+    ['html'] = { 'html' },
+  }
+})
 
 -- CMP popup window color
 -- gray

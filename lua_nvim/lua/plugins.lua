@@ -114,7 +114,7 @@ require("lazy").setup({
     end,
   },
   -- { 'davidosomething/format-ts-errors.nvim' },
-  { "elentok/format-on-save.nvim" },
+  -- { "elentok/format-on-save.nvim" },
   {
     "lewis6991/gitsigns.nvim",
     config = function()
@@ -185,12 +185,12 @@ require("lazy").setup({
       { "nvim-telescope/telescope-fzy-native.nvim" },
     },
   },
-  {
-    "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    opts = {},
-    event = "VeryLazy",
-  },
+  --{
+  --  "pmizio/typescript-tools.nvim",
+  --  dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+  --  opts = {},
+  --  event = "VeryLazy",
+  --},
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
