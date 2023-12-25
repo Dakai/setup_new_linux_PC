@@ -33,7 +33,7 @@ lsp.format_on_save({
     ['jsonls'] = { 'json' },
     ['lua_ls'] = { 'lua' },
     ['pyright'] = { 'python' },
-    ['yamlls'] = { 'yaml' },
+    ['prettierd'] = { 'yaml' },
     ['svelte'] = { 'svelte' },
     ['tailwindcss'] = { 'css' },
     ['intelephense'] = { 'php' },
