@@ -30,7 +30,7 @@ background = "0x1e1c31"
 foreground = "0xcbe3e7"
 
 [font]
-size = 8
+size = 10.5
 
 [font.normal]
 #family = "Intel One Mono"
