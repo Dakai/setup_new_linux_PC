@@ -3,10 +3,6 @@ vim.api.nvim_set_keymap("n", "<Space>n", "::NvimTreeToggle<CR>", { noremap = tru
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
--- Set NvimTree background color
-vim.cmd([[
-  highlight NvimTreeNormal guibg=#1d1b2f
-]])
 
 --local function copy_file_to(node)
 --	local file_src = node["absolute_path"]

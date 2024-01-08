@@ -19,24 +19,11 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   { "xiyaowong/nvim-transparent" },
   {
-    "gmr458/vscode_modern_theme.nvim",
-    lazy = false,
-    priority = 1000,
+    "dakai/embark-theme-vim",
     config = function()
-      require("vscode_modern").setup({
-        cursorline = true,
-        transparent_background = false,
-        nvim_tree_darker = true,
-      })
-      vim.cmd.colorscheme("vscode_modern")
+      vim.cmd("colorscheme embark")
     end,
   },
-  -- {
-  --   "dakai/embark-theme-vim",
-  --   config = function()
-  --     vim.cmd("colorscheme embark")
-  --   end,
-  -- },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },

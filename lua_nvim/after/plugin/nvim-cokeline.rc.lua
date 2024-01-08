@@ -5,21 +5,18 @@ local is_picking_close = require("cokeline/mappings").is_picking_close
 local red = vim.g.terminal_color_1
 local yellow = vim.g.terminal_color_4
 local space = { text = " " }
-
--- Embark theme
---local high = "#62f2f1"
---local light = '#f3f3f3'
---local text = "#f3f3f3"
---local grey = "#2d2b40"
---local dark = "#1d1b2f"
-
--- codedark/vscode theme
-local high = "#569cd6"
+-- local dark = get_hex("Normal", "bg")
+-- local text = get_hex("Comment", "fg")
+-- local grey = get_hex("ColorColumn", "bg")
+-- local light = get_hex("Comment", "fg")
+-- local high = "#a6d120"
+-- local text = "#caddaf"
+local high = "#63f2f1"
 local light = '#f3f3f3'
-local text = "#cbd3d4"
+-- local text = "#63f2f1"
+local text = "#f3f3f3"
 local grey = "#2d2b40"
 local dark = "#1d1b2f"
-
 
 local function get_path_parts(path)
   local dirs = {}
@@ -79,11 +76,10 @@ require("cokeline").setup(
       components = {
         {
           text = "  NvimTree",
-          fg = light,
-          bg = dark,
+          fg = dark,
+          bg = high,
           style = 'bold'
-        }
-      }
+        } }
     },
     default_hl = {
       fg = function(buffer)
@@ -166,6 +162,6 @@ require("cokeline").setup(
         end,
         bg = dark
       }
-    },
+    }
   }
 )
