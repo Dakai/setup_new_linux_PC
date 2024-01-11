@@ -36,7 +36,7 @@ lsp.format_on_save({
     ['prettierd'] = { 'yaml' },
     ['svelte'] = { 'svelte' },
     ['tailwindcss'] = { 'css' },
-    ['intelephense'] = { 'php' },
+    -- ['intelephense'] = { 'php' },
     ['tsserver'] = { 'javascript', 'typescript' },
     ['bashls'] = { 'bash' },
     ['html'] = { 'html' },
