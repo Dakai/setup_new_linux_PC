@@ -180,7 +180,7 @@ export GRADLE_USER_HOME="$HOME/.gradle"
 #blur_alacritty_windows
 
 #Wayland fix for flameshot
-#export QT_SCREEN_SCALE_FACTORS="1;1"
+export QT_SCREEN_SCALE_FACTORS="1;1"
 
 function lg() {
     git add .
