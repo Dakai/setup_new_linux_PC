@@ -20,7 +20,6 @@ lsp.setup_servers({
   -- 'grammerly',
   'jsonls',
   'yamlls',
-  'toml',
 })
 
 lsp.setup()
@@ -41,7 +40,6 @@ lsp.format_on_save({
     ['tsserver'] = { 'javascript', 'typescript' },
     ['bashls'] = { 'bash' },
     ['html'] = { 'html' },
-    ['taplo'] = { 'toml' },
   }
 })
 
