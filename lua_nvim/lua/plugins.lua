@@ -74,7 +74,7 @@ require("lazy").setup({
     },
   },
   { "nvim-treesitter/nvim-treesitter" },
-  -- { "windwp/nvim-ts-autotag" },
+  { "windwp/nvim-ts-autotag" },
   { "windwp/nvim-autopairs" },
   { "nvim-telescope/telescope.nvim" },
   -- {
